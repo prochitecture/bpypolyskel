@@ -6,8 +6,8 @@ from functools import cmp_to_key
 # v0 is the center and v1,v2 are the neighbors.
 # it is assumed that the edges v1 - v0 - v2 are not on one line (but this gets not tested!)
 def is_less(v1, v2, v0):
-    d1 = v1 - v0
-    d2 = v2 - v0
+    d1 = v1.xy - v0.xy
+    d2 = v2.xy - v0.xy
     c = d2.cross(d1)
     sign = lambda x: (1, -1)[x < 0]     # Python is still missing a sign operator !!!
     return sign(c)

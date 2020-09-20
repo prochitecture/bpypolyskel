@@ -20,7 +20,6 @@ def examplePoly():
         verts.append(mathutils.Vector((0,0,0)))
 
     verts.extend(polygon)
-    # verts.extend(hole)
 
     numVerts = len(polygon)
     numVertsHoles = []

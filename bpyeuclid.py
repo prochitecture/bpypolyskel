@@ -16,16 +16,18 @@ def _intersect_line2_line2(A, B):
 
     return mathutils.Vector((A.p.x + ua * A.v.x, A.p.y + ua * A.v.y))
 
-class LineSegment2:
-    def __init__(self, _p1, _p2):
-        self.p =  _p1
-        self.p1 = _p1
-        self.p2 = _p2
-        self.v = _p2 - _p1
+class Edge2:
+    def __init__(self, _p1, _p2, _norm=None):  # evtl. conversion from 3D to 2D
+        self.p1 = mathutils.Vector((_p1[0],_p1[1]))
+        self.p2 = mathutils.Vector((_p2[0],_p2[1]))
+        if _norm is None:
+            self.norm = (_p2-_p1).normalized()
+        else:
+            self.norm = mathutils.Vector((_norm[0],_norm[1]))
 
     def __repr__(self):
-        return 'LineSegment2(<%.2f, %.2f> to <%.2f, %.2f>)' % \
-            (self.p.x, self.p.y, self.p.x + self.v.x, self.p.y + self.v.y)
+        return 'Edge2(<%.2f, %.2f> to <%.2f, %.2f>)' % \
+            (self.p1.x, self.p1.y, self.p2.x, self.p2.y)
 
 class Ray2:
     def __init__(self, _p, _v):
@@ -47,8 +49,8 @@ class Ray2:
 class Line2:
     def __init__(self, p1, p2=None, ptype=None):
         if p2 is None: # p1 is a LineSegment2, a Line2 or a Ray2
-            self.p = p1.p.copy()
-            self.v = p1.v.copy()
+            self.p = p1.p1.copy()
+            self.v = (p1.p2-p1.p1).copy()
         elif ptype == 'pp':
             self.p = p1.p.copy()
             self.v = p2-p1

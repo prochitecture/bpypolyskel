@@ -99,7 +99,7 @@ class _LAVertex:
 		self.lav = None
 		self._valid = True  # TODO this might be handled better. Maybe membership in lav implies validity?
 
-		creator_vectors = (edge_left.v.normalized() * -1, edge_right.v.normalized())
+		creator_vectors = (edge_left.norm * -1, edge_right.norm)
 		if direction_vectors is None:
 			direction_vectors = creator_vectors
 
@@ -143,8 +143,8 @@ class _LAVertex:
 				# angle between the tested edge and any one of our own edges.
 
 				# we choose the "less parallel" edge (in order to exclude a potentially parallel edge)
-				leftdot = abs(self.edge_left.v.normalized().dot(edge.edge.v.normalized()))
-				rightdot = abs(self.edge_right.v.normalized().dot(edge.edge.v.normalized()))
+				leftdot = abs(self.edge_left.norm.dot(edge.edge.norm))
+				rightdot = abs(self.edge_right.norm.dot(edge.edge.norm))
 				selfedge = self.edge_left if leftdot < rightdot else self.edge_right
 				# otheredge = self.edge_left if leftdot > rightdot else self.edge_right		# *** adapted for bpypolyskel
 
@@ -152,7 +152,7 @@ class _LAVertex:
 				if i is not None and not _approximately_equals(i, self.point):
 					# locate candidate b
 					linvec = (self.point - i).normalized()
-					edvec = edge.edge.v.normalized()
+					edvec = edge.edge.norm
 					if linvec.dot(edvec) < 0:
 						edvec = -edvec
 
@@ -173,7 +173,7 @@ class _LAVertex:
 					# xedge	= _cross(edge.edge.v.normalized(), (b - edge.edge.p).normalized()) < -EPSILON
 					xleft	= ( (edge.bisector_left.v.normalized()).cross( (b - edge.bisector_left.p).normalized() )) > EPSILON
 					xright	= ( (edge.bisector_right.v.normalized()).cross( (b - edge.bisector_right.p).normalized() )) < -EPSILON
-					xedge	= ( (edge.edge.v.normalized()).cross( (b - edge.edge.p).normalized() )) < -EPSILON
+					xedge	= ( edge.edge.norm.cross( (b - edge.edge.p1).normalized() )) < -EPSILON
 
 					if not (xleft and xright and xedge):
 						log.debug("\t\tDiscarded candidate %s (%s-%s-%s)", b, xleft, xright, xedge)
@@ -182,9 +182,6 @@ class _LAVertex:
 					log.debug("\t\tFound valid candidate %s", b)
 					events.append(_SplitEvent(Line2(edge.edge).distance(b), b, self, edge.edge))
 
-		a = self.bisector
-		b = self.prev.bisector
-		c = self.next.bisector
 		i_prev = self.bisector.intersect(self.prev.bisector)
 		i_next = self.bisector.intersect(self.next.bisector)
 
@@ -224,9 +221,9 @@ class _LAVertex:
 
 class _SLAV:
 	# *** adapted for bpypolyskel
-	# use directly contours instead of polygon and holes,
+	# use directly edgeContours instead of polygon and holes,
 	# assume that normalization has already been node
-	def __init__(self, contours):#polygon, holes):
+	def __init__(self, edgeContours):#polygon, holes):
 		# *** adapted for bpypolyskel
 		# contourtest = [_normalize_contour(polygon)]
 		# contourtest.extend([_normalize_contour(hole) for hole in holes])
@@ -234,11 +231,12 @@ class _SLAV:
 		# for hole in holes:
 		# 	contours.extend([hole])
 
-		self._lavs = [_LAV.from_polygon(contour, self) for contour in contours]
+		self._lavs = [_LAV.from_polygon(edgeContour, self) for edgeContour in edgeContours]
 
 		# store original polygon edges for calculating split events
 		self._original_edges = [
-			_OriginalEdge(LineSegment2(vertex.prev.point, vertex.point), vertex.prev.bisector, vertex.bisector)
+			# _OriginalEdge(Edge2(vertex.prev.point, vertex.point), vertex.prev.bisector, vertex.bisector)
+			_OriginalEdge(vertex.edge_left, vertex.prev.bisector, vertex.bisector)
 			for vertex in chain.from_iterable(self._lavs)
 		]
 
@@ -286,13 +284,13 @@ class _SLAV:
 		vertices = []
 		x = None  # right vertex
 		y = None  # left vertex
-		norm = event.opposite_edge.v.normalized()
+		norm = event.opposite_edge.norm
 		for v in chain.from_iterable(self._lavs):
 			log.debug("%s in %s", v, v.lav)
-			if norm == v.edge_left.v.normalized() and event.opposite_edge.p == v.edge_left.p:
+			if norm == v.edge_left.norm and event.opposite_edge.p1 == v.edge_left.p1:
 				x = v
 				y = x.prev
-			elif norm == v.edge_right.v.normalized() and event.opposite_edge.p == v.edge_right.p:
+			elif norm == v.edge_right.norm and event.opposite_edge.p1 == v.edge_right.p1:
 				y = v
 				x = y.next
 
@@ -365,11 +363,12 @@ class _LAV:
 		log.debug("Created LAV %s", self)
 
 	@classmethod
-	def from_polygon(cls, polygon, slav):
+	def from_polygon(cls, edgeContour, slav):
 		lav = cls(slav)
-		for prev, point, next in _window(polygon):
+		for prev, item, next in _window(edgeContour):
 			lav._len += 1
-			vertex = _LAVertex(point, LineSegment2(prev, point), LineSegment2(point, next))
+			# vertex = _LAVertex(point, LineSegment2(prev, point), LineSegment2(point, next))
+			vertex = _LAVertex(item.p1, prev, item)
 			vertex.lav = lav
 			if lav.head is None:
 				lav.head = vertex
@@ -491,8 +490,8 @@ def _merge_sources(skeleton):
 
 			
 # *** adapted for bpypolyskel
-# use directly contours instead of polygon and holes,
-def skeletonize(contours):#polygon, holes=None):
+# use directly edgeContours instead of polygon and holes,
+def skeletonize(edgeContours):#polygon, holes=None):
 	"""
 	Compute the straight skeleton of a polygon.
 
@@ -507,7 +506,7 @@ def skeletonize(contours):#polygon, holes=None):
 	"""
 	# *** adapted for bpypolyskel
 	# use directly contours instead of polygon and holes,
-	slav = _SLAV(contours)#polygon, holes)
+	slav = _SLAV(edgeContours)#polygon, holes)
 	output = []
 	prioque = _EventQueue()
 
@@ -538,58 +537,35 @@ def skeletonize(contours):#polygon, holes=None):
 	_merge_sources(output)
 	return output
 
-def polygonize(verts, firstVertIndex, numVerts, numVertsHoles=None, height=0., tan=0., faces=None):
+def polygonize(verts, firstVertIndex, numVerts, unitVectors=None, numVertsHoles=None, height=0., tan=0., faces=None):
 	# assume that all vertices of polygon and holes have the same z-value
 	zBase = verts[firstVertIndex].z
 
-	# create 2D vertices for skeletonization and graph construction
-	totalVerts = numVerts + (sum(numVertsHoles) if numVertsHoles is not None else 0)
-	verts2D = [mathutils.Vector((vertice[0],vertice[1])) for vertice in verts[firstVertIndex:firstVertIndex+totalVerts]]
+	# create 2D edges as list and as contours for skeletonization and graph construction
+	vIndex = firstVertIndex
+	poly = verts[vIndex:vIndex+numVerts] # required to construct pairs of vertices
+	if unitVectors is None:
+		edges2D = [Edge2(p1,p2,(p2-p1).normalized()) for p1,p2 in zip(poly, poly[1:] + poly[:1])]
+	else:
+		edges2D = [Edge2(p1,p2,norm) for p1,p2,norm in zip(poly, poly[1:] + poly[:1], unitVectors[vIndex:])]
+	edgeContours = [edges2D.copy()]
 
-	# create contours for skeletonization
-	vIndex = 0
-	contours = [verts2D[vIndex:numVerts]]
 	vIndex += numVerts
 	if numVertsHoles is not None:
 		for numHole in numVertsHoles:
-			contours.extend( [verts2D[vIndex:vIndex+numHole]] )
+			hole = verts[vIndex:vIndex+numHole] # required to construct pairs of vertices
+			if unitVectors is None:
+				holeEdges = [Edge2(p1,p2,(p2-p1).normalized()) for p1,p2 in zip(hole, hole[1:] + hole[:1])]
+			else:
+				holeEdges = [Edge2(p1,p2,norm) for p1,p2,norm in zip(hole, hole[1:] + hole[:1], unitVectors[vIndex:])]
+			edges2D.extend(holeEdges)
+			edgeContours.extend([holeEdges.copy()])
 			vIndex += numHole
-	nrOfPolyVerts = len(verts2D)
+	
+	nrOfEdges = len(edges2D)
 
 	# compute skeleton
-	skeleton = skeletonize(contours)
-
-	# add skeleton nodes to verts2D
-	for arc in skeleton:
-		verts2D.append(arc.source)
-
-	# instantiate the graph for faces
-	graph = poly2FacesGraph()
-
-	# add polygon and holes to graph using indices of verts2D
-	_L = list(range(numVerts))
-	for edge in zip(_L, _L[1:] + _L[:1]):	# I did not find a better way to construct pairs of indices
-		graph.add_edge(edge)
-	vIndex = numVerts
-	if numVertsHoles is not None:
-		for numHole in numVertsHoles:
-			_L = list(range(vIndex,vIndex+numHole))
-			for edge in zip(_L, _L[1:] + _L[:1]):
-				graph.add_edge(edge)
-			vIndex += numHole
-
-	# add skeleton edges
-	for arc in skeleton:
-		aIndex = verts2D.index(arc.source)
-		for sink in arc.sinks:
-			sIndex = verts2D.index(sink)
-			graph.add_edge( (aIndex,sIndex) )
-			
-	# generate clockwise circular embedding
-	embedding = graph.circular_embedding(verts2D,'CW')
-
-	# compute list of faces, the vertex indices are still related to verts2D
-	faces2D = graph.faces(embedding, nrOfPolyVerts)
+	skeleton = skeletonize(edgeContours)
 
 	# compute skeleton node heights and append nodes to original verts list,
 	# see also issue #4 at https://github.com/prochitecture/bpypolyskel
@@ -599,16 +575,48 @@ def polygonize(verts, firstVertIndex, numVerts, numVertsHoles=None, height=0., t
 		tan_alpha = tan
 	skeleton_nodes3D = []
 	for arc in skeleton:
-		hi = arc.height*tan_alpha
 		node = mathutils.Vector((arc.source.x,arc.source.y,arc.height*tan_alpha+zBase))
 		skeleton_nodes3D.append(node)
 	firstSkelIndex = len(verts) # first skeleton index in verts
 	verts.extend(skeleton_nodes3D)
 
-	# convert face indices from verts2D to verts
-	faces3D = []
-	for face in faces2D:
-		faces3D.append( [indx+firstVertIndex if indx<nrOfPolyVerts else indx+firstSkelIndex-nrOfPolyVerts for indx in face] )
+	# instantiate the graph for faces
+	graph = poly2FacesGraph()
+
+	# add polygon and hole indices to graph using indices in verts
+	vIndex = firstVertIndex
+	_L = list(range(vIndex,vIndex+numVerts))
+	for edge in zip(_L, _L[1:] + _L[:1]):
+		graph.add_edge(edge)
+	vIndex += numVerts
+	if numVertsHoles is not None:
+		for numHole in numVertsHoles:
+			_L = list(range(vIndex,vIndex+numHole))
+			for edge in zip(_L, _L[1:] + _L[:1]):
+				graph.add_edge(edge)
+			vIndex += numHole
+
+	# add skeleton edges to graph using indices in verts
+	for index, arc in enumerate(skeleton):
+		aIndex = index + firstSkelIndex
+		for sink in arc.sinks:
+			# first search in input edges
+			edgIndex = [index for index, edge in enumerate(edges2D) if edge.p1==sink]
+			if len(edgIndex):
+				sIndex = edgIndex[0] + firstVertIndex
+			else: # then it should be a skeleton node
+				skelIndex = [index for index, arc in enumerate(skeleton) if arc.source==sink]
+				if len(skelIndex):
+					sIndex = skelIndex[0] + firstSkelIndex
+				else:
+					sIndex = -1 # error
+			graph.add_edge( (aIndex,sIndex) )
+			
+	# generate clockwise circular embedding
+	embedding = graph.circular_embedding(verts,'CW')
+
+	# compute list of faces, the vertex indices are still related to verts2D
+	faces3D = graph.faces(embedding, nrOfEdges+firstVertIndex)
 
 	if faces is None:
 		return faces3D

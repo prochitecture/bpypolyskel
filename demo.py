@@ -20,7 +20,7 @@ from examples.holey import examplePoly
 verts, numVerts, firstVertIndex, numVertsHoles = examplePoly()
 
 start_time = time.time()
-faces = bpypolyskel.polygonize(verts, firstVertIndex, numVerts, numVertsHoles, 5.0, 0.5, None)
+faces = bpypolyskel.polygonize(verts, firstVertIndex, numVerts, None, numVertsHoles, 5.0, 0.5, None)
 print("--- %s seconds ---" % (time.time() - start_time))
 
 fig = plt.figure()

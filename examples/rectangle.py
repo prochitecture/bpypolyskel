@@ -19,10 +19,8 @@ def examplePoly():
         verts.append(mathutils.Vector((0,0,0)))
 
     verts.extend(polygon)
-    # verts.extend(hole)
-
+ 
     numVerts = len(polygon)
-    numVertsHoles = []
-    # numVertsHoles.append(len(hole))
+    numVertsHoles = []    # numVertsHoles.append(len(hole))
     return verts, numVerts, firstVertIndex, numVertsHoles
 
