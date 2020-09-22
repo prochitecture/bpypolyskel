@@ -27,10 +27,10 @@ import logging
 import heapq
 # *** adapted for bpypolyskel
 # from euclid3 import *
-from bpyeuclid import *
+from .bpyeuclid import *
 from itertools import *
 from collections import namedtuple
-from poly2FacesGraph import poly2FacesGraph
+from .poly2FacesGraph import poly2FacesGraph
 
 log = logging.getLogger("__name__")
 

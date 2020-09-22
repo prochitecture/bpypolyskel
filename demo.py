@@ -16,11 +16,12 @@ import bpypolyskel
 from examples.holey import examplePoly
 # from examples.half_iron_cross import examplePoly
 # from examples.rectangle import examplePoly
+# from examples.rectangle_annex import examplePoly
 
 verts, numVerts, firstVertIndex, numVertsHoles = examplePoly()
 
 start_time = time.time()
-faces = bpypolyskel.polygonize(verts, firstVertIndex, numVerts, None, numVertsHoles, 5.0, 0.5, None)
+faces = bpypolyskel.polygonize(verts, firstVertIndex, numVerts, None, numVertsHoles, 0.0, 0.0, None)
 print("--- %s seconds ---" % (time.time() - start_time))
 
 fig = plt.figure()
