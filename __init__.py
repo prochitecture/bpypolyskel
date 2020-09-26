@@ -23,12 +23,12 @@ def add_object(self, context):
     scale_x = self.scale.x
     scale_y = self.scale.y
 
-    # vertices for base footprint
+    # vertices for base footprint, counterclockwise order
     verts = [
-        Vector((-5 * scale_x, 3 * scale_y, 0)),
-        Vector((5 * scale_x, 3 * scale_y, 0)),
-        Vector((5 * scale_x, -3 * scale_y, 0)),
         Vector((-5 * scale_x, -3 * scale_y, 0)),
+        Vector((5 * scale_x, -3 * scale_y, 0)),
+        Vector((5 * scale_x, 3 * scale_y, 0)),
+        Vector((-5 * scale_x, 3 * scale_y, 0))
     ]
 
     # vertices for polygon footprint, same as base, but with z=3
@@ -41,14 +41,12 @@ def add_object(self, context):
     # faces of base and sidewalls
     faces = [[0, 1, 2, 3], [0, 1, 5, 4], [1, 2, 6, 5], [2, 3, 7, 6], [3, 0, 4, 7]]
 
-    # now add faces of straight polygon
-    faces = bpypolyskel.polygonize(verts, firstVertIndex, numVerts, None, None, 3.0, 0.0, faces)
+    # now extend 'faces' by faces of straight polygon
+    faces = bpypolyskel.polygonize(verts, firstVertIndex, numVerts, None, 0.0, 0.5,faces)
 
     # construct mesh
     mesh = bpy.data.meshes.new(name="New Object Mesh")
     mesh.from_pydata(verts, edges, faces)
-    # useful for development when the mesh may be invalid.
-    mesh.validate(verbose=True)
     object_data_add(context, mesh, operator=self)
 
 
