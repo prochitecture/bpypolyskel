@@ -527,20 +527,22 @@ def polygonize(verts, firstVertIndex, numVerts, numVertsHoles=None, height=0., t
     if unitVectors is None:
         edges2D = [Edge2(p1,p2,(p2-p1).normalized()) for p1,p2 in zip(poly, poly[1:] + poly[:1])]
     else:
-        edges2D = [Edge2(p1,p2,norm) for p1,p2,norm in zip(poly, poly[1:] + poly[:1], unitVectors[vIndex:])]
+        edges2D = [Edge2(p1,p2,v) for p1,p2,v in zip(poly, poly[1:] + poly[:1], unitVectors)]
     edgeContours = [edges2D.copy()]
 
     vIndex += numVerts
+    uIndex = numVerts
     if numVertsHoles is not None:
         for numHole in numVertsHoles:
             hole = verts[vIndex:vIndex+numHole] # required to construct pairs of vertices
             if unitVectors is None:
                 holeEdges = [Edge2(p1,p2,(p2-p1).normalized()) for p1,p2 in zip(hole, hole[1:] + hole[:1])]
             else:
-                holeEdges = [Edge2(p1,p2,norm) for p1,p2,norm in zip(hole, hole[1:] + hole[:1], unitVectors[vIndex:])]
+                holeEdges = [Edge2(p1,p2,v) for p1,p2,v in zip(hole, hole[1:] + hole[:1], unitVectors[uIndex:])]
             edges2D.extend(holeEdges)
             edgeContours.extend([holeEdges.copy()])
             vIndex += numHole
+            uIndex += numHole
 
     nrOfEdges = len(edges2D)
 
