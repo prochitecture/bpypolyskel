@@ -401,6 +401,31 @@ def _merge_sources(skeleton):
     for i in reversed(to_remove):
         skeleton.pop(i)
 
+def clean_skeleton(skeleton):
+    # remove loops
+    for arc in skeleton:
+        if arc.source in arc.sinks:
+            arc.sinks.remove(arc.source)
+    # find and resolve parallel skeleton edges
+    for arc in skeleton:
+        # search for parallel skeleton edges in all egdes from this node
+        combs = combinations(arc.sinks,2)
+        s = arc.source
+        for pair in combs:
+            s0 = pair[0]-s
+            s1 = pair[1]-s
+            # check if this pair of edges is parallel
+            if s0.dot(s1) == (s0.magnitude*s1.magnitude):
+                # then one of them must point to a skeleton node, find its index
+                nodeIndex = [i for i, node in enumerate(skeleton) if node.source in pair][0]
+                # move sink to this node and remove it from actual node
+                if pair[0] == skeleton[nodeIndex].source:
+                    skeleton[nodeIndex].sinks.append(pair[1])
+                    arc.sinks.remove(pair[1])
+                else:
+                    skeleton[nodeIndex].sinks.append(pair[0])
+                    arc.sinks.remove(pair[0])
+
 def skeletonize(edgeContours):
     """
     Compute the straight skeleton of a polygon.
@@ -445,6 +470,7 @@ def skeletonize(edgeContours):
             output.append(arc)
 
     _merge_sources(output)
+    clean_skeleton(output)
     return output
 
 def polygonize(verts, firstVertIndex, numVerts, numVertsHoles=None, height=0., tan=0., faces=None, unitVectors=None):
