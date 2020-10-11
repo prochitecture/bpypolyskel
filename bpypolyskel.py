@@ -421,10 +421,12 @@ def clean_skeleton(skeleton):
                 # move sink to this node and remove it from actual node
                 if pair[0] == skeleton[nodeIndex].source:
                     skeleton[nodeIndex].sinks.append(pair[1])
+                    arc.sinks.remove(pair[0])
                     arc.sinks.remove(pair[1])
                 else:
                     skeleton[nodeIndex].sinks.append(pair[0])
                     arc.sinks.remove(pair[0])
+                    arc.sinks.remove(pair[1])
 
 def skeletonize(edgeContours):
     """
