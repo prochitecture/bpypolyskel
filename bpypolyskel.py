@@ -428,14 +428,6 @@ def clean_skeleton(skeleton):
                     skeleton[nodeIndex].sinks.append(pair[0])
                     arc.sinks.remove(pair[0])
                     arc.sinks.remove(pair[1])
-            # check if this pair of edges is anti-parallel
-            elif abs(dotCosine + 1.0) < EPSILON:
-                # then both of them should point to a skeleton node
-                nodeIndices = [i for i, node in enumerate(skeleton) if node.source in pair]
-                if len(nodeIndices) == 2:   # Yes? -> fix them
-                    skeleton[nodeIndices[0]].sinks.append(pair[1])
-                    arc.sinks.remove(pair[0])
-                    arc.sinks.remove(pair[1])
 
 def skeletonize(edgeContours):
     """
@@ -639,6 +631,19 @@ def polygonize(verts, firstVertIndex, numVerts, numVertsHoles=None, height=0., t
 
     # compute list of faces, the vertex indices are still related to verts2D
     faces3D = graph.faces(embedding, nrOfEdges+firstVertIndex)
+
+    # fix adjacent parallel edges in faces
+    for face in faces3D:
+        if len(face) > 3:   # a triangle cant have parallel edges
+            verticesToRemove = []
+            for prev, this, next in _iterCircularPrevThisNext(face):
+                s0 = verts[this]-verts[prev]
+                s1 = verts[next]-verts[this]
+                dotCosine = s0.dot(s1) / (s0.magnitude*s1.magnitude)
+                if abs(dotCosine - 1.0) < EPSILON: # found adjacent parallel edges
+                    verticesToRemove.append(this)
+            for item in verticesToRemove:
+                face.remove(item) 
 
     if faces is None:
         return faces3D
