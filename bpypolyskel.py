@@ -416,7 +416,7 @@ def clean_skeleton(skeleton):
             s1 = pair[1]-s
             dotCosine = s0.dot(s1) / (s0.magnitude*s1.magnitude)
             # check if this pair of edges is parallel
-            if dotCosine == 1:
+            if abs(dotCosine - 1.0) < EPSILON:
                 # then one of them must point to a skeleton node, find its index
                 nodeIndex = [i for i, node in enumerate(skeleton) if node.source in pair][0]
                 # move sink to this node and remove it from actual node
@@ -429,16 +429,13 @@ def clean_skeleton(skeleton):
                     arc.sinks.remove(pair[0])
                     arc.sinks.remove(pair[1])
             # check if this pair of edges is anti-parallel
-            elif dotCosine == -1:
+            elif abs(dotCosine + 1.0) < EPSILON:
                 # then both of them should point to a skeleton node
                 nodeIndices = [i for i, node in enumerate(skeleton) if node.source in pair]
                 if len(nodeIndices) == 2:   # Yes? -> fix them
                     skeleton[nodeIndices[0]].sinks.append(pair[1])
                     arc.sinks.remove(pair[0])
                     arc.sinks.remove(pair[1])
-
-    # should we have constructed solitair nodes, remove them
-    skeleton = [arc for arc in skeleton if len(arc.sinks) > 0]
 
 def skeletonize(edgeContours):
     """
@@ -485,6 +482,9 @@ def skeletonize(edgeContours):
 
     _merge_sources(output)
     clean_skeleton(output)
+
+    # should we have constructed singular nodes, remove them
+    output = [arc for arc in output if len(arc.sinks) > 0]
     return output
 
 def polygonize(verts, firstVertIndex, numVerts, numVertsHoles=None, height=0., tan=0., faces=None, unitVectors=None):
