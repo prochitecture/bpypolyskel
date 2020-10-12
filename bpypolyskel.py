@@ -40,6 +40,12 @@ def _iterCircularPrevNext(lst):
     prevs = islice(cycle(prevs), len(lst) - 1, None)
     return zip(prevs,nexts)
 
+def _iterCircularPrevThisNext(lst):
+    prevs, this, nexts = tee(lst, 3)
+    prevs = islice(cycle(prevs), len(lst) - 1, None)
+    nexts = islice(cycle(nexts), 1, None)
+    return zip(prevs, this, nexts)
+    
 def _approximately_equals(a, b):
     return a == b or ( (a-b).magnitude <= max( a.magnitude, b.magnitude) * 0.001)
 
