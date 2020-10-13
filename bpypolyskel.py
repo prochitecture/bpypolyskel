@@ -150,9 +150,9 @@ class _LAVertex:
 
 					# check eligibility of b
 					# a valid b should lie within the area limited by the edge and the bisectors of its two vertices:
-                    xprev	= ( (edge.bisector_prev.v.normalized()).cross( (b - edge.bisector_prev.p).normalized() )) < -EPSILON
-                    xnext	= ( (edge.bisector_next.v.normalized()).cross( (b - edge.bisector_next.p).normalized() )) > EPSILON
-                    xedge	= ( edge.edge.norm.cross( (b - edge.edge.p1).normalized() )) > EPSILON
+                    xprev	= ( (edge.bisector_prev.v.normalized()).cross( (b - edge.bisector_prev.p).normalized() )) < EPSILON
+                    xnext	= ( (edge.bisector_next.v.normalized()).cross( (b - edge.bisector_next.p).normalized() )) < EPSILON
+                    xedge	= ( edge.edge.norm.cross( (b - edge.edge.p1).normalized() )) > -EPSILON
 
                     if not (xprev and xnext and xedge):
                         # Candidate discarded
@@ -306,8 +306,8 @@ class _SLAV:
                 x = y.next
 
             if x:
-                xprev	= (y.bisector.v.normalized()).cross((event.intersection_point - y.point).normalized()) <= -EPSILON
-                xnext	= (x.bisector.v.normalized()).cross((event.intersection_point - x.point).normalized()) >= EPSILON
+                xprev	= (y.bisector.v.normalized()).cross((event.intersection_point - y.point).normalized()) <= EPSILON
+                xnext	= (x.bisector.v.normalized()).cross((event.intersection_point - x.point).normalized()) >= -EPSILON
 
                 if xprev and xnext:
                     break
