@@ -13,10 +13,11 @@ from mpl_toolkits.mplot3d import Axes3D
 # import time
 import bpypolyskel
 
-# uncomment one of the examples
-from examples.rectangle import examplePoly
+# uncomment one of these examples
+# from examples.rectangle import examplePoly
 # from examples.rectangle_annex import examplePoly
 # from examples.half_iron_cross import examplePoly
+from examples.hole_symmetrical import examplePoly
 # from examples.holey import examplePoly
 
 verts, numVerts, firstVertIndex, numVertsHoles = examplePoly()

@@ -151,7 +151,7 @@ class _LAVertex:
 					# check eligibility of b
 					# a valid b should lie within the area limited by the edge and the bisectors of its two vertices:
                     xprev	= ( (edge.bisector_prev.v.normalized()).cross( (b - edge.bisector_prev.p).normalized() )) < EPSILON
-                    xnext	= ( (edge.bisector_next.v.normalized()).cross( (b - edge.bisector_next.p).normalized() )) < EPSILON
+                    xnext	= ( (edge.bisector_next.v.normalized()).cross( (b - edge.bisector_next.p).normalized() )) > -EPSILON
                     xedge	= ( edge.edge.norm.cross( (b - edge.edge.p1).normalized() )) > -EPSILON
 
                     if not (xprev and xnext and xedge):
@@ -606,13 +606,13 @@ def polygonize(verts, firstVertIndex, numVerts, numVertsHoles=None, height=0., t
     # add polygon and hole indices to graph using indices in verts
     vIndex = firstVertIndex
     _L = list(range(vIndex,vIndex+numVerts))
-    for edge in zip(_L, _L[1:] + _L[:1]):
+    for edge in _iterCircularPrevNext(_L):
         graph.add_edge(edge)
     vIndex += numVerts
     if numVertsHoles is not None:
         for numHole in numVertsHoles:
             _L = list(range(vIndex,vIndex+numHole))
-            for edge in zip(_L, _L[1:] + _L[:1]):
+            for edge in _iterCircularPrevNext(_L):
                 graph.add_edge(edge)
             vIndex += numHole
 
@@ -633,7 +633,7 @@ def polygonize(verts, firstVertIndex, numVerts, numVertsHoles=None, height=0., t
             graph.add_edge( (aIndex,sIndex) )
 
     # generate clockwise circular embedding
-    embedding = graph.circular_embedding(verts,'CW')
+    embedding = graph.circular_embedding(verts,'CCW')
 
     # compute list of faces, the vertex indices are still related to verts2D
     faces3D = graph.faces(embedding, nrOfEdges+firstVertIndex)
