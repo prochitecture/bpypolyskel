@@ -17,8 +17,8 @@ import bpypolyskel
 # from examples.rectangle import examplePoly
 # from examples.rectangle_annex import examplePoly
 # from examples.half_iron_cross import examplePoly
-from examples.hole_symmetrical import examplePoly
-# from examples.holey import examplePoly
+# from examples.hole_symmetrical import examplePoly
+from examples.holey import examplePoly
 
 verts, numVerts, firstVertIndex, numVertsHoles = examplePoly()
 

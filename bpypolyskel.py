@@ -29,8 +29,8 @@ import heapq
 from collections import namedtuple
 from itertools import *
 
-from .bpyeuclid import *
-from .poly2FacesGraph import poly2FacesGraph
+from bpyeuclid import *
+from poly2FacesGraph import poly2FacesGraph
 
 
 EPSILON = 0.00001
@@ -561,6 +561,7 @@ def polygonize(verts, firstVertIndex, numVerts, holesInfo=None, height=0., tan=0
 
     # create 2D edges as list and as contours for skeletonization and graph construction
     poly = verts[firstVertIndex:firstVertIndex+numVerts] # required to construct pairs of vertices
+    indx2DtoVerts = [i for i in range(firstVertIndex,firstVertIndex+numVerts)]
     if unitVectors is None:
         edges2D = [Edge2(p1,p2,(p2-p1).normalized()) for p1,p2 in zip(poly, poly[1:] + poly[:1])]
     else:
@@ -571,11 +572,13 @@ def polygonize(verts, firstVertIndex, numVerts, holesInfo=None, height=0., tan=0
     if holesInfo:
         for holeOffset,numVertsHole in holesInfo:
             hole = verts[holeOffset:holeOffset+numVertsHole] # required to construct pairs of vertices
+            indx = [i for i in range(holeOffset,holeOffset+numVertsHole)]
             if unitVectors is None:
                 holeEdges = [Edge2(p1,p2,(p2-p1).normalized()) for p1,p2 in zip(hole, hole[1:] + hole[:1])]
             else:
                 holeEdges = [Edge2(p1,p2,v) for p1,p2,v in zip(hole, hole[1:] + hole[:1], unitVectors[uIndex:])]
             edges2D.extend(holeEdges)
+            indx2DtoVerts.extend(indx)
             edgeContours.extend([holeEdges.copy()])
             uIndex += numVertsHole
 
@@ -618,7 +621,7 @@ def polygonize(verts, firstVertIndex, numVerts, holesInfo=None, height=0., tan=0
             # first search in input edges
             edgIndex = [index for index, edge in enumerate(edges2D) if edge.p1==sink]
             if len(edgIndex):
-                sIndex = edgIndex[0] + firstVertIndex
+                sIndex = indx2DtoVerts[edgIndex[0]] #edgIndex[0] + firstVertIndex
             else: # then it should be a skeleton node
                 skelIndex = [index for index, arc in enumerate(skeleton) if arc.source==sink]
                 if len(skelIndex):

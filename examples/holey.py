@@ -25,16 +25,13 @@ def examplePoly():
 
     verts = []
 
-    # create a random number of vertices before the polygon
-    firstVertIndex = random.randrange(100)
-    for i in range(firstVertIndex):
-        verts.append(mathutils.Vector((0,0,0)))
 
     verts.extend(polygon)
     verts.extend(hole)
 
+    firstVertIndex = 0
     numVerts = len(polygon)
     numVertsHoles = []
-    numVertsHoles.append(len(hole))
+    numVertsHoles.append((len(polygon),len(hole)))
     return verts, numVerts, firstVertIndex, numVertsHoles
 
