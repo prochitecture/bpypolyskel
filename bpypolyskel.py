@@ -557,28 +557,43 @@ def polygonize(verts, firstVertIndex, numVerts, holesInfo=None, height=0., tan=0
                             ]
     """
     # assume that all vertices of polygon and holes have the same z-value
-    zBase = verts[firstVertIndex].z
+    zBase = verts[firstVertIndex][2]
 
     # create 2D edges as list and as contours for skeletonization and graph construction
-    poly = verts[firstVertIndex:firstVertIndex+numVerts] # required to construct pairs of vertices
-    indx2DtoVerts = [i for i in range(firstVertIndex,firstVertIndex+numVerts)]
-    if unitVectors is None:
-        edges2D = [Edge2(p1,p2,(p2-p1).normalized()) for p1,p2 in zip(poly, poly[1:] + poly[:1])]
+    lastUIndex = numVerts-1
+    lastVertIndex = firstVertIndex + lastUIndex
+    if unitVectors:
+        edges2D = [
+            Edge2(index, index+1, unitVectors[uIndex], verts)\
+                for index, uIndex in zip( range(firstVertIndex, lastVertIndex), range(lastUIndex) )
+        ]
+        edges2D.append(Edge2(lastVertIndex, firstVertIndex, unitVectors[lastUIndex], verts))
     else:
-        edges2D = [Edge2(p1,p2,v) for p1,p2,v in zip(poly, poly[1:] + poly[:1], unitVectors)]
+        edges2D = [
+            Edge2(index, index+1, None, verts) for index in range(firstVertIndex, lastVertIndex)
+        ]
+        edges2D.append(Edge2(lastVertIndex, firstVertIndex, None, verts))
     edgeContours = [edges2D.copy()]
     
     uIndex = numVerts
     if holesInfo:
-        for holeOffset,numVertsHole in holesInfo:
-            hole = verts[holeOffset:holeOffset+numVertsHole] # required to construct pairs of vertices
-            indx = [i for i in range(holeOffset,holeOffset+numVertsHole)]
-            if unitVectors is None:
-                holeEdges = [Edge2(p1,p2,(p2-p1).normalized()) for p1,p2 in zip(hole, hole[1:] + hole[:1])]
+        for firstVertIndexHole,numVertsHole in holesInfo:
+            #indx = [i for i in range(firstVertIndexHole,firstVertIndexHole+numVertsHole)]
+            lastVertIndexHole = firstVertIndexHole + numVertsHole-1
+            if unitVectors:
+                lastUIndex = uIndex+numVertsHole-1
+                holeEdges = [
+                    Edge2(index, index+1, unitVectors[uIndex], verts)\
+                    for index, uIndex in zip(range(firstVertIndexHole, lastVertIndexHole), range(uIndex, lastUIndex))
+                ]
+                holeEdges.append(Edge2(lastVertIndexHole, firstVertIndexHole, unitVectors[lastUIndex], verts))
             else:
-                holeEdges = [Edge2(p1,p2,v) for p1,p2,v in zip(hole, hole[1:] + hole[:1], unitVectors[uIndex:])]
+                holeEdges = [
+                    Edge2(index, index+1, None, verts) for index in range(firstVertIndexHole, lastVertIndexHole)
+                ]
+                holeEdges.append(Edge2(lastVertIndexHole, firstVertIndexHole, None, verts))
             edges2D.extend(holeEdges)
-            indx2DtoVerts.extend(indx)
+            #indx2DtoVerts.extend(indx)
             edgeContours.extend([holeEdges.copy()])
             uIndex += numVertsHole
 
@@ -589,13 +604,13 @@ def polygonize(verts, firstVertIndex, numVerts, holesInfo=None, height=0., tan=0
 
 	# compute skeleton node heights and append nodes to original verts list,
 	# see also issue #4 at https://github.com/prochitecture/bpypolyskel
-    if height != 0.:
+    if height:
         tan_alpha = height/skeleton[-1].height  # the last skeleton node is highest
     else:
         tan_alpha = tan
     skeleton_nodes3D = []
     for arc in skeleton:
-        node = mathutils.Vector((arc.source.x,arc.source.y,arc.height*tan_alpha+zBase))
+        node = mathutils.Vector((arc.source.x, arc.source.y, arc.height*tan_alpha+zBase))
         skeleton_nodes3D.append(node)
     firstSkelIndex = len(verts) # first skeleton index in verts
     verts.extend(skeleton_nodes3D)
@@ -609,8 +624,8 @@ def polygonize(verts, firstVertIndex, numVerts, holesInfo=None, height=0., tan=0
         graph.add_edge(edge)
     
     if holesInfo:
-        for holeOffset,numVertsHole in holesInfo:
-            _L = list(range(holeOffset,holeOffset+numVertsHole))
+        for firstVertIndexHole,numVertsHole in holesInfo:
+            _L = list(range(firstVertIndexHole, firstVertIndexHole+numVertsHole))
             for edge in _iterCircularPrevNext(_L):
                 graph.add_edge(edge)
 
@@ -619,15 +634,17 @@ def polygonize(verts, firstVertIndex, numVerts, holesInfo=None, height=0., tan=0
         aIndex = index + firstSkelIndex
         for sink in arc.sinks:
             # first search in input edges
-            edgIndex = [index for index, edge in enumerate(edges2D) if edge.p1==sink]
-            if len(edgIndex):
-                sIndex = indx2DtoVerts[edgIndex[0]] #edgIndex[0] + firstVertIndex
+            edge = [edge for edge in edges2D if edge.p1==sink]
+            if edge:
+                sIndex = edge[0].i1
+                print(sIndex)
             else: # then it should be a skeleton node
-                skelIndex = [index for index, arc in enumerate(skeleton) if arc.source==sink]
-                if len(skelIndex):
+                skelIndex = [index for index, _ in enumerate(skeleton) if arc.source==sink]
+                if skelIndex:
                     sIndex = skelIndex[0] + firstSkelIndex
                 else:
                     sIndex = -1 # error
+            print((aIndex,sIndex))
             graph.add_edge( (aIndex,sIndex) )
 
     # generate clockwise circular embedding
