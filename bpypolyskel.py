@@ -637,14 +637,12 @@ def polygonize(verts, firstVertIndex, numVerts, holesInfo=None, height=0., tan=0
             edge = [edge for edge in edges2D if edge.p1==sink]
             if edge:
                 sIndex = edge[0].i1
-                print(sIndex)
             else: # then it should be a skeleton node
-                skelIndex = [index for index, _ in enumerate(skeleton) if arc.source==sink]
+                skelIndex = [index for index, arc in enumerate(skeleton) if arc.source==sink]
                 if skelIndex:
                     sIndex = skelIndex[0] + firstSkelIndex
                 else:
                     sIndex = -1 # error
-            print((aIndex,sIndex))
             graph.add_edge( (aIndex,sIndex) )
 
     # generate clockwise circular embedding
