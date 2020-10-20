@@ -649,7 +649,7 @@ def polygonize(verts, firstVertIndex, numVerts, holesInfo=None, height=0., tan=0
     embedding = graph.circular_embedding(verts,'CCW')
 
     # compute list of faces, the vertex indices are still related to verts2D
-    faces3D = graph.faces(embedding, nrOfEdges+firstVertIndex)
+    faces3D = graph.faces(embedding, firstSkelIndex)
 
     # fix adjacent parallel edges in faces
     for face in faces3D:
