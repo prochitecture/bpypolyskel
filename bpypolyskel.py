@@ -578,7 +578,6 @@ def polygonize(verts, firstVertIndex, numVerts, holesInfo=None, height=0., tan=0
     uIndex = numVerts
     if holesInfo:
         for firstVertIndexHole,numVertsHole in holesInfo:
-            #indx = [i for i in range(firstVertIndexHole,firstVertIndexHole+numVertsHole)]
             lastVertIndexHole = firstVertIndexHole + numVertsHole-1
             if unitVectors:
                 lastUIndex = uIndex+numVertsHole-1
@@ -593,8 +592,7 @@ def polygonize(verts, firstVertIndex, numVerts, holesInfo=None, height=0., tan=0
                 ]
                 holeEdges.append(Edge2(lastVertIndexHole, firstVertIndexHole, None, verts))
             edges2D.extend(holeEdges)
-            #indx2DtoVerts.extend(indx)
-            edgeContours.extend([holeEdges.copy()])
+            edgeContours.append(holeEdges)
             uIndex += numVertsHole
 
     nrOfEdges = len(edges2D)
