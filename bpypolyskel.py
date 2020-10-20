@@ -619,14 +619,12 @@ def polygonize(verts, firstVertIndex, numVerts, holesInfo=None, height=0., tan=0
     graph = poly2FacesGraph()
 
     # add polygon and hole indices to graph using indices in verts
-    _L = list(range(firstVertIndex, firstVertIndex+numVerts))
-    for edge in _iterCircularPrevNext(_L):
+    for edge in _iterCircularPrevNext( range(firstVertIndex, firstVertIndex+numVerts) ):
         graph.add_edge(edge)
     
     if holesInfo:
         for firstVertIndexHole,numVertsHole in holesInfo:
-            _L = list(range(firstVertIndexHole, firstVertIndexHole+numVertsHole))
-            for edge in _iterCircularPrevNext(_L):
+            for edge in _iterCircularPrevNext( range(firstVertIndexHole, firstVertIndexHole+numVertsHole) ):
                 graph.add_edge(edge)
 
     # add skeleton edges to graph using indices in verts
