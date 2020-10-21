@@ -7,22 +7,20 @@ where the library mathutils is installed as standalone library.
 Use 'pip install mathutils'
 """
 import mathutils
-# import re
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
-# import time
 import bpypolyskel
 
 # uncomment one of these examples
-# from examples.rectangle import examplePoly
+from examples.rectangle import examplePoly
 # from examples.rectangle_annex import examplePoly
 # from examples.half_iron_cross import examplePoly
 # from examples.hole_symmetrical import examplePoly
-from examples.holey import examplePoly
+# from examples.holey import examplePoly
 
-verts, numVerts, firstVertIndex, numVertsHoles = examplePoly()
+verts, numPolygonVerts, firstVertIndex, holesInfo, unitVectors = examplePoly()
 
-faces = bpypolyskel.polygonize(verts, firstVertIndex, numVerts, numVertsHoles, 0.0, 0.5)
+faces = bpypolyskel.polygonize(verts, firstVertIndex, numPolygonVerts, holesInfo, 0.0, 0.5, None, unitVectors)
 
 fig = plt.figure()
 ax = fig.gca(projection='3d')

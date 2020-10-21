@@ -34,15 +34,17 @@ def add_object(self, context):
     # vertices for polygon footprint, same as base, but with z=3
     polygon = [v + Vector((0,0,3)) for v in verts]
     firstVertIndex = len(verts)
-    numVerts = len(polygon)
+    numPolygonVerts = len(polygon)
 
     verts.extend(polygon)
     edges = []
     # faces of base and sidewalls
     faces = [[0, 1, 2, 3], [0, 1, 5, 4], [1, 2, 6, 5], [2, 3, 7, 6], [3, 0, 4, 7]]
 
+    holesInfo = None
+
     # now extend 'faces' by faces of straight polygon
-    faces = bpypolyskel.polygonize(verts, firstVertIndex, numVerts, None, 0.0, 0.5,faces)
+    faces = bpypolyskel.polygonize(verts, firstVertIndex, numPolygonVerts, holesInfo, 0.0, 0.5, faces)
 
     # construct mesh
     mesh = bpy.data.meshes.new(name="New Object Mesh")

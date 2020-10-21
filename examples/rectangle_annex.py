@@ -2,8 +2,14 @@ import mathutils
 import random
 
 def examplePoly():
-    # counterclockwise order, seen from top, the polygon is on the left of this contour
-    polygon = [
+    verts = [
+        0,
+        0,
+        0,
+        0,
+        0,
+        # polygon contour in clockwise order, seen from top, 
+        # the polygon is on the right of this contour
         mathutils.Vector((-5, -3, 0)),
         mathutils.Vector((5, -3, 0)),
         mathutils.Vector((5, -1.5, 0)),
@@ -14,16 +20,9 @@ def examplePoly():
         mathutils.Vector((-5, 3, 0)),
     ]
 
-    verts = []
+    unitVectors = None
 
-    # create a random number of vertices before the polygon
-    firstVertIndex = random.randrange(100)
-    for i in range(firstVertIndex):
-        verts.append(mathutils.Vector((0,0,0)))
-
-    verts.extend(polygon)
- 
-    numVerts = len(polygon)
-    numVertsHoles = []
-    return verts, numVerts, firstVertIndex, numVertsHoles
-
+    firstVertIndex = 5
+    numPolygonVerts = 8
+    holesInfo = None
+    return verts, numPolygonVerts, firstVertIndex, holesInfo, unitVectors
