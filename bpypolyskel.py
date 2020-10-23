@@ -128,14 +128,14 @@ class _LAVertex:
                 # we choose the "less parallel" edge (in order to exclude a potentially parallel edge)
                 prevdot = abs(self.edge_prev.norm.dot(edge.edge.norm))
                 nextdot = abs(self.edge_next.norm.dot(edge.edge.norm))
-                selfedge = self.edge_prev if prevdot > nextdot else self.edge_next 
+                selfedge = self.edge_prev if prevdot < nextdot else self.edge_next 
 
                 i = Line2(selfedge).intersect(Line2(edge.edge))
                 if i is not None and not _approximately_equals(i, self.point):
                     # locate candidate b
                     linvec = (self.point - i).normalized()
                     edvec = edge.edge.norm
-                    if linvec.dot(edvec) < 0: 
+                    if self.bisector.v.cross(linvec) < 0:
                         edvec = -edvec
 
                     bisecvec = edvec + linvec
