@@ -456,26 +456,88 @@ def clean_skeleton(skeleton):
                     arc.sinks.remove(pair[0])
                     arc.sinks.remove(pair[1])
 
-def mergeNearbyNodes(skeleton,mindist=0.001):
-    comb = combinations(skeleton,2)
-    for pair in comb:
-        arc1 = pair[0]
-        arc2 = pair[1]
-        d = (arc1.source-arc2.source).magnitude
-        if abs(d)< mindist: # if these sources are nearby, merge the arcs
-            # arc1 gets merged into arc2, first make all sinks pointing to arc1 to point onto arc2
-            for arc in skeleton:
-                for i,sink in enumerate(arc.sinks):
-                    if arc1.source == sink:
-                        arc.sinks[i] = arc2.source
-            # then add all sinks of arc1 to arc2, when they are not already there
-            for sink in arc1.sinks:
-                if sink not in arc2.sinks:
-                    arc2.sinks.append(sink)
-            # remove arc1
-            skeleton.remove(arc1)
+def mergeNodeClusters(skeleton,mergeRange = 0.15):
 
-def skeletonize(edgeContours):
+    # sort arcs by x-position of nodes
+    skeleton = sorted(skeleton, key=lambda arc: arc.source.x )
+
+    # find pairs of nodes where the sources are in a square of size mergeRange.
+    # the entry in 'candidates' is the index of the node in 'skeleton'
+    candidates = []
+    for i,pair in enumerate(_iterCircularPrevNext(range(len(skeleton)))):
+        distx = abs(skeleton[pair[1]].source.x - skeleton[pair[0]].source.x)
+        disty = abs(skeleton[pair[1]].source.y - skeleton[pair[0]].source.y)
+        if distx<mergeRange and disty<mergeRange:
+            candidates.extend(pair)
+
+    # remove duplicates
+    candidates = list(dict.fromkeys(candidates))
+
+    # check if there are cluster candidates
+    if len(candidates) == 0:
+        return skeleton
+
+    # keep for later use
+    nodesToMerge = candidates.copy()
+
+    # define clusters
+    clusters = []
+    while len(candidates)>0:
+        # add the first node in candidates to the new cluster
+        c0 = candidates[0]
+        cluster = [c0]
+        # compute the Manhattan distance to the other candidate nodes. If this distance is close 
+        # to the original limit 'squareSize' (using a multiple of this here?), the node is assumed
+        # to belong to the same cluster.
+        cluster.extend([c1 for c1 in candidates[1:] if abs(skeleton[c0].source.x-skeleton[c1].source.x) + \
+                                                    abs(skeleton[c0].source.y-skeleton[c1].source.y) < 5*mergeRange])
+        # remove cluster nodes from candidates
+        for c in cluster:
+            candidates.remove(c)
+        clusters.append(cluster)
+
+    # find new centers of merged clusters as center of gravity.
+    # in the same time, collect all sinks of the merged nodes
+    newNodes = []
+    for cluster in clusters:
+        # compute center of gravity as source of merged node
+        x,y,height = (0.0,0.0,0.0)
+        mergedSources = []
+        for node in cluster:
+            x += skeleton[node].source.x
+            y += skeleton[node].source.y
+            height += skeleton[node].height
+            mergedSources.append(skeleton[node].source)
+        N = len(cluster)
+        new_source = mathutils.Vector((x/N,y/N))
+        new_height = height/N
+
+        # collect all sinks of merged nodes that are not part of merged nodes
+        new_sinks = []
+        for node in cluster:
+            for sink in skeleton[node].sinks:
+                if sink not in mergedSources and sink not in new_sinks:
+                    new_sinks.append(sink)
+
+        # create the merged node and remember it for later use
+        newnode = Subtree(new_source, new_height, new_sinks)
+        newNodes.append(newnode)
+
+        # redirect all sinks that pointed to one of the clustered nodes to the new node
+        for arc in skeleton:
+            for i,sink in enumerate(arc.sinks):
+                if sink in mergedSources:
+                    arc.sinks[i] = new_source
+
+    # remove clustered nodes from skeleton
+    # and add clusters
+    for i in sorted(nodesToMerge, reverse = True):
+        del skeleton[i]
+    skeleton.extend(newNodes)
+
+    return skeleton
+
+def skeletonize(edgeContours,mergeRange=0.15):
     """
     Compute the straight skeleton of a polygon.
 
@@ -517,8 +579,7 @@ def skeletonize(edgeContours):
             if arc is not None:
                 output.append(arc)
 
-    # _merge_sources(output)
-    mergeNearbyNodes(output)
+    output = mergeNodeClusters(output,mergeRange)
     clean_skeleton(output)
 
     # should we have constructed singular nodes, remove them
@@ -533,7 +594,7 @@ def skeletonize(edgeContours):
 
     return output
 
-def polygonize(verts, firstVertIndex, numVerts, holesInfo=None, height=0., tan=0., faces=None, unitVectors=None):
+def polygonize(verts, firstVertIndex, numVerts, holesInfo=None, height=0., tan=0., faces=None, unitVectors=None,mergeRange=0.15):
     """
     Compute the faces of a polygon, skeletonized by a straight skeleton.
 
@@ -653,7 +714,7 @@ def polygonize(verts, firstVertIndex, numVerts, holesInfo=None, height=0., tan=0
     nrOfEdges = len(edges2D)
 
 	# compute skeleton
-    skeleton = skeletonize(edgeContours)
+    skeleton = skeletonize(edgeContours,mergeRange)
 
 	# compute skeleton node heights and append nodes to original verts list,
 	# see also issue #4 at https://github.com/prochitecture/bpypolyskel
