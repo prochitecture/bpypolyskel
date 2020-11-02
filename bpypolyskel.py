@@ -457,7 +457,7 @@ def clean_skeleton(skeleton):
                             skeleton[nodeIndex].sinks.append(pair[1])
                         else:
                             skeleton[nodeIndex].sinks.append(pair[0])
-                       if pair[0] in arc.sinks:
+                        if pair[0] in arc.sinks:
                             arc.sinks.remove(pair[0])
                         if pair[1] in arc.sinks:
                             arc.sinks.remove(pair[1])
