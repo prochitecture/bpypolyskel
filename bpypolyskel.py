@@ -441,20 +441,23 @@ def clean_skeleton(skeleton):
         for pair in combs:
             s0 = pair[0]-s
             s1 = pair[1]-s
-            dotCosine = s0.dot(s1) / (s0.magnitude*s1.magnitude)
-            # check if this pair of edges is parallel
-            if abs(dotCosine - 1.0) < 1.0e-4: # set to abs(1-cos(alpha)), where alpha is max. angle accepted as 'parallel'.
-                # then one of them must point to a skeleton node, find its index
-                nodeIndex = [i for i, node in enumerate(skeleton) if node.source in pair][0]
-                # move sink to this node and remove it from actual node
-                if pair[0] == skeleton[nodeIndex].source:
-                    skeleton[nodeIndex].sinks.append(pair[1])
-                    arc.sinks.remove(pair[0])
-                    arc.sinks.remove(pair[1])
-                else:
-                    skeleton[nodeIndex].sinks.append(pair[0])
-                    arc.sinks.remove(pair[0])
-                    arc.sinks.remove(pair[1])
+            s0m = s0.magnitude
+            s1m = s1.magnitude
+            if s0m!=0.0 and s1m!=0.0:
+                dotCosine = s0.dot(s1) / (s0m*s1m)
+                # check if this pair of edges is parallel
+                if abs(dotCosine - 1.0) < 1.0e-2: # set to abs(1-cos(alpha)), where alpha is max. angle accepted as 'parallel'.
+                    # then one of them must point to a skeleton node, find its index
+                    nodeIndex = [i for i, node in enumerate(skeleton) if node.source in pair][0]
+                    # move sink to this node and remove it from actual node
+                    if pair[0] == skeleton[nodeIndex].source:
+                        skeleton[nodeIndex].sinks.append(pair[1])
+                        arc.sinks.remove(pair[0])
+                        arc.sinks.remove(pair[1])
+                    else:
+                        skeleton[nodeIndex].sinks.append(pair[0])
+                        arc.sinks.remove(pair[0])
+                        arc.sinks.remove(pair[1])
 
 def mergeNodeClusters(skeleton,mergeRange = 0.15):
 
@@ -523,11 +526,19 @@ def mergeNodeClusters(skeleton,mergeRange = 0.15):
         newnode = Subtree(new_source, new_height, new_sinks)
         newNodes.append(newnode)
 
-        # redirect all sinks that pointed to one of the clustered nodes to the new node
+       # redirect all sinks that pointed to one of the clustered nodes to the new node
         for arc in skeleton:
-            for i,sink in enumerate(arc.sinks):
-                if sink in mergedSources:
-                    arc.sinks[i] = new_source
+            if arc.source not in mergedSources:
+                for i,sink in enumerate(arc.sinks):
+                    if sink in mergedSources:
+                        arc.sinks[i] = new_source
+
+        # redirect eventual sinks of new nodes that point to one of the clustered nodes to the new node
+        for arc in newNodes:
+            if arc.source not in mergedSources:
+                for i,sink in enumerate(arc.sinks):
+                    if sink in mergedSources:
+                        arc.sinks[i] = new_source
 
     # remove clustered nodes from skeleton
     # and add clusters
