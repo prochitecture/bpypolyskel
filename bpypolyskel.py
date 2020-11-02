@@ -32,8 +32,9 @@ from itertools import *
 from bpyeuclid import *
 from poly2FacesGraph import poly2FacesGraph
 
-
 EPSILON = 0.00001
+PARALLEL = 1.0e-2   # set this value to 1-cos(alpha), where alpha is the largest angle 
+                    # between lines to accept them as parallelaccepted as 'parallel'.
 
 def _iterCircularPrevNext(lst):
     prevs, nexts = tee(lst)
@@ -446,7 +447,7 @@ def clean_skeleton(skeleton):
             if s0m!=0.0 and s1m!=0.0:
                 dotCosine = s0.dot(s1) / (s0m*s1m)
                 # check if this pair of edges is parallel
-                if abs(dotCosine - 1.0) < 1.0e-2: # set to abs(1-cos(alpha)), where alpha is max. angle accepted as 'parallel'.
+                if abs(dotCosine - 1.0) < PARALLEL:
                     # then one of them must point to a skeleton node, find its index
                     nodeIndex = [i for i, node in enumerate(skeleton) if node.source in pair]
                     if len(nodeIndex):
@@ -788,7 +789,7 @@ def polygonize(verts, firstVertIndex, numVerts, holesInfo=None, height=0., tan=0
                 s1m = s1.magnitude
                 if s0m!=0.0 and s1m!=0.0:
                     dotCosine = s0.dot(s1) / (s0m*s1m)
-                    if abs(dotCosine - 1.0) < EPSILON: # found adjacent parallel edges
+                    if abs(dotCosine - 1.0) < PARALLEL: # found adjacent parallel edges
                         verticesToRemove.append(this)
             for item in verticesToRemove:
                 face.remove(item) 
