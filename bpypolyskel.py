@@ -443,7 +443,7 @@ def clean_skeleton(skeleton):
             s1 = pair[1]-s
             dotCosine = s0.dot(s1) / (s0.magnitude*s1.magnitude)
             # check if this pair of edges is parallel
-            if abs(dotCosine - 1.0) < EPSILON:
+            if abs(dotCosine - 1.0) < 1.0e-4: # set to abs(1-cos(alpha)), where alpha is max. angle accepted as 'parallel'.
                 # then one of them must point to a skeleton node, find its index
                 nodeIndex = [i for i, node in enumerate(skeleton) if node.source in pair][0]
                 # move sink to this node and remove it from actual node
@@ -719,7 +719,8 @@ def polygonize(verts, firstVertIndex, numVerts, holesInfo=None, height=0., tan=0
 	# compute skeleton node heights and append nodes to original verts list,
 	# see also issue #4 at https://github.com/prochitecture/bpypolyskel
     if height:
-        tan_alpha = height/skeleton[-1].height  # the last skeleton node is highest
+        maxSkelHeight = max([arc.height for arc in skeleton])
+        tan_alpha = height/maxSkelHeight
     else:
         tan_alpha = tan
     skeleton_nodes3D = []
@@ -770,9 +771,12 @@ def polygonize(verts, firstVertIndex, numVerts, holesInfo=None, height=0., tan=0
             for prev, this, _next in _iterCircularPrevThisNext(face):
                 s0 = verts[this]-verts[prev]
                 s1 = verts[_next]-verts[this]
-                dotCosine = s0.dot(s1) / (s0.magnitude*s1.magnitude)
-                if abs(dotCosine - 1.0) < EPSILON: # found adjacent parallel edges
-                    verticesToRemove.append(this)
+                s0m = s0.magnitude
+                s1m = s1.magnitude
+                if s0m!=0.0 and s1m!=0.0:
+                    dotCosine = s0.dot(s1) / (s0m*s1m)
+                    if abs(dotCosine - 1.0) < EPSILON: # found adjacent parallel edges
+                        verticesToRemove.append(this)
             for item in verticesToRemove:
                 face.remove(item) 
 
