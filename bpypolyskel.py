@@ -33,7 +33,7 @@ from bpyeuclid import *
 from poly2FacesGraph import poly2FacesGraph
 
 EPSILON = 0.00001
-PARALLEL = 1.0e-2   # set this value to 1-cos(alpha), where alpha is the largest angle 
+PARALLEL = 0.01   # set this value to 1-cos(alpha), where alpha is the largest angle 
                     # between lines to accept them as parallelaccepted as 'parallel'.
 
 def _iterCircularPrevNext(lst):
@@ -146,7 +146,7 @@ class _LAVertex:
                         edvec = -edvec
 
                     bisecvec = edvec + linvec
-                    if bisecvec.magnitude == 0:
+                    if not bisecvec.magnitude:
                         continue
                     bisector = Line2(i, bisecvec, 'pv')
 
@@ -272,7 +272,7 @@ class _SLAV:
             yield lav
 
     def empty(self):
-        return len(self._lavs) == 0
+        return not self._lavs
 
     def handle_edge_event(self, event):
         sinks = []
@@ -388,7 +388,7 @@ class _EventQueue:
         equalDistanceList = [item]
         samePositionList = []
         # from top of queue, get all events that have the same distance as the one on top
-        while len(self.__data) != 0 and robustFloatEqual( self.__data[0].distance, item.distance):
+        while self.__data and robustFloatEqual( self.__data[0].distance, item.distance):
             queueTop = heapq.heappop(self.__data)
             # don't extract queueTop if identical position with item
             if _approximately_equals(queueTop.intersection_point,item.intersection_point ):
@@ -399,7 +399,7 @@ class _EventQueue:
         return equalDistanceList
 
     def empty(self):
-        return len(self.__data) == 0
+        return not self.__data
 
     def peek(self):
             return self.__data[0]
@@ -450,7 +450,7 @@ def clean_skeleton(skeleton):
                 if abs(dotCosine - 1.0) < PARALLEL:
                     # then one of them must point to a skeleton node, find its index
                     nodeIndex = [i for i, node in enumerate(skeleton) if node.source in pair]
-                    if len(nodeIndex):
+                    if nodeIndex:
                         nodeIndex = nodeIndex[0]
                         # move sink to this node and remove it from actual node
                         if pair[0] == skeleton[nodeIndex].source:
@@ -480,7 +480,7 @@ def mergeNodeClusters(skeleton,mergeRange = 0.15):
     candidates = list(dict.fromkeys(candidates))
 
     # check if there are cluster candidates
-    if len(candidates) == 0:
+    if not candidates:
         return skeleton
 
     # keep for later use
@@ -488,7 +488,7 @@ def mergeNodeClusters(skeleton,mergeRange = 0.15):
 
     # define clusters
     clusters = []
-    while len(candidates)>0:
+    while candidates:
         # add the first node in candidates to the new cluster
         c0 = candidates[0]
         cluster = [c0]
@@ -597,14 +597,14 @@ def skeletonize(edgeContours,mergeRange=0.15):
     clean_skeleton(output)
 
     # should we have constructed singular nodes, remove them
-    singleNodes =  [arc.source for arc in output if len(arc.sinks) == 0]
+    singleNodes =  [arc.source for arc in output if not arc.sinks]
     # first remove eventual sinks to these nodes
     for arc in output:
         for sink in arc.sinks:
             if sink in singleNodes:
                 arc.sinks.remove(sink)
     # then remove these nodes
-    output = [arc for arc in output if len(arc.sinks) > 0]
+    output = [arc for arc in output if arc.sinks]
 
     return output
 
@@ -733,7 +733,7 @@ def polygonize(verts, firstVertIndex, numVerts, holesInfo=None, height=0., tan=0
 	# compute skeleton node heights and append nodes to original verts list,
 	# see also issue #4 at https://github.com/prochitecture/bpypolyskel
     if height:
-        maxSkelHeight = max([arc.height for arc in skeleton])
+        maxSkelHeight = max(arc.height for arc in skeleton)
         tan_alpha = height/maxSkelHeight
     else:
         tan_alpha = tan
