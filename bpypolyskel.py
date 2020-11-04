@@ -33,7 +33,7 @@ from bpyeuclid import *
 from poly2FacesGraph import poly2FacesGraph
 
 EPSILON = 0.00001
-PARALLEL = 0.01   # set this value to 1-cos(alpha), where alpha is the largest angle 
+PARALLEL = 0.01     # set this value to 1-cos(alpha), where alpha is the largest angle 
                     # between lines to accept them as parallelaccepted as 'parallel'.
 
 def _iterCircularPrevNext(lst):
@@ -429,12 +429,12 @@ def _merge_sources(skeleton):
     for i in reversed(to_remove):
         skeleton.pop(i)
 
-def clean_skeleton(skeleton):
+def removeGhosts(skeleton):
     # remove loops
     for arc in skeleton:
         if arc.source in arc.sinks:
             arc.sinks.remove(arc.source)
-    # find and resolve parallel or anti-parallel skeleton edges
+    # find and resolve parallel skeleton edges
     for arc in skeleton:
         # search for parallel skeleton edges in all egdes from this node
         combs = combinations(arc.sinks,2)
@@ -447,7 +447,7 @@ def clean_skeleton(skeleton):
             if s0m!=0.0 and s1m!=0.0:
                 dotCosine = s0.dot(s1) / (s0m*s1m)
                 # check if this pair of edges is parallel
-                if abs(dotCosine - 1.0) < PARALLEL:
+                if abs(dotCosine - 1.0) < EPSILON:
                     # then one of them must point to a skeleton node, find its index
                     nodeIndex = [i for i, node in enumerate(skeleton) if node.source in pair]
                     if nodeIndex:
@@ -594,7 +594,7 @@ def skeletonize(edgeContours,mergeRange=0.15):
                 output.append(arc)
 
     output = mergeNodeClusters(output,mergeRange)
-    clean_skeleton(output)
+    removeGhosts(output)
 
     # should we have constructed singular nodes, remove them
     singleNodes =  [arc.source for arc in output if not arc.sinks]
@@ -777,6 +777,74 @@ def polygonize(verts, firstVertIndex, numVerts, holesInfo=None, height=0., tan=0
 
     # compute list of faces, the vertex indices are still related to verts2D
     faces3D = graph.faces(embedding, firstSkelIndex)
+
+    # find and remove spikes in faces
+    hadSpikes = True
+    while hadSpikes:
+        hadSpikes = False
+        # find spike
+        for face in faces3D:
+            if len(face) <= 3:   # a triangle cant have parallel edges
+                continue
+            for prev, this, _next in _iterCircularPrevThisNext(face):
+                s0 = verts[this]-verts[prev]
+                s1 = verts[_next]-verts[this]
+                s0m = s0.magnitude
+                s1m = s1.magnitude
+                if s0m and s1m:
+                    dotCosine = s0.dot(s1) / (s0m*s1m)
+                else:
+                    continue
+                if abs(dotCosine + 1.0) < PARALLEL: # no spike edge
+                    # the spike's peak is at 'this'
+                    hadSpikes = True
+                    break
+                else:
+                   continue
+
+            if not hadSpikes:
+                continue   # try next face
+
+            # find faces adjacent to spike,
+            # on right side it must have adjacent vertices in the order 'this' -> 'prev',
+            # on left side it must have adjacent vertices in the order '_next' -> 'this',
+            rightIndx, leftIndx = (None,None)
+            for i,f in enumerate(faces3D):
+                if [ p for p,n in _iterCircularPrevNext(f) if p == this and n== prev ]:
+                    rightIndx = i
+                if [ p for p,n in _iterCircularPrevNext(f) if p == _next and n== this ]:
+                    leftIndx = i
+
+            if rightIndx is None or leftIndx is None:   # should not happen, but who knows?
+                continue
+
+            if rightIndx == leftIndx:   # single line into a face, but not separating it
+                commonFace = faces3D[rightIndx]
+                # just remove the spike vertice
+                commonFace.remove(this)
+                if this in face:
+                    face.remove(this)
+                continue   # that's it for this face
+
+            # rotate right face so that 'prev' is in first place
+            rightFace = faces3D[rightIndx]
+            rotIndex = next(x[0] for x in enumerate(rightFace)  if x[1] == prev )
+            rightFace = rightFace[rotIndex:] + rightFace[:rotIndex]
+
+            # rotate left face so that 'this' is in first place
+            leftFace = faces3D[leftIndx]
+            rotIndex = next(x[0] for x in enumerate(leftFace)  if x[1] == this )
+            leftFace = leftFace[rotIndex:] + leftFace[:rotIndex]
+
+            mergedFace = rightFace + leftFace[1:]
+
+            face.remove(this) # remove the spike
+            for i in sorted([rightIndx,leftIndx], reverse = True):
+                del faces3D[i]
+            faces3D.append(mergedFace)
+
+            break   # brake looping through faces and restart main while loop,
+                    # because it is possible that new spikes have been generated
 
     # fix adjacent parallel edges in faces
     for face in faces3D:
