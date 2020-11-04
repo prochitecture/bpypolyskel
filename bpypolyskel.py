@@ -838,6 +838,10 @@ def polygonize(verts, firstVertIndex, numVerts, holesInfo=None, height=0., tan=0
 
             mergedFace = rightFace + leftFace[1:]
 
+            # rotate edge list so that edge of original polygon is first edge
+            nextOrigIndex = next(x[0] for x in enumerate(mergedFace) if x[0]<firstSkelIndex and x[1]< firstSkelIndex)
+            mergedFace = mergedFace[nextOrigIndex:] + mergedFace[:nextOrigIndex]
+
             face.remove(this) # remove the spike
             for i in sorted([rightIndx,leftIndx], reverse = True):
                 del faces3D[i]
