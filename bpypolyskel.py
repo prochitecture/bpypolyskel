@@ -863,6 +863,12 @@ def polygonize(verts, firstVertIndex, numVerts, holesInfo=None, height=0., tan=0
                     dotCosine = s0.dot(s1) / (s0m*s1m)
                     if abs(dotCosine - 1.0) < PARALLEL: # found adjacent parallel edges
                         verticesToRemove.append(this)
+                else:
+                    if this not in verticesToRemove:    # duplicate vertice, (happens always twice!)
+                        verticesToRemove.append(this)   
+            
+            # remove duplicates
+            verticesToRemove = list(dict.fromkeys(verticesToRemove))
             for item in verticesToRemove:
                 face.remove(item) 
 
