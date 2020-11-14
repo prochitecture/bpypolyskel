@@ -30,8 +30,8 @@ from collections import namedtuple
 from itertools import *
 from collections import Counter
 
-from bpyeuclid import *
-from poly2FacesGraph import poly2FacesGraph
+from .bpyeuclid import *
+from .poly2FacesGraph import poly2FacesGraph
 
 EPSILON = 0.00001
 PARALLEL = 0.01     # set this value to 1-cos(alpha), where alpha is the largest angle 
