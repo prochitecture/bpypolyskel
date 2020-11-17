@@ -26,7 +26,7 @@ Copy the whole folder [bpypolyskel](./bpypolyskel) to your addon. Include the fu
 ```
 from .bpypolyskel import bpypolyskel
 ```
-The file [__init__.py](./__init__.py) shows a simple code for usage in an addon. It adds an object created by _bpypolyskel_ to a scene. You may also install the demo addon stored in the file _bpypolyskel_demo.zip_ to your Blender application (Edit –> Preferences –> Addons -> Install). The demo object is created in Blender by 
+The file [__init__.py](./__init__.py) shows a simple code for usage in an addon. It adds an object created by _bpypolyskel_ to a scene. You may also install the demo addon stored in the file _bpypolyskel_demo.zip_ to your Blender application (Edit –> Preferences –> Addons -> Install). The demo object is created in Blender by Add -> Mesh -> Add bpypolyskel Demo Object.
 
 ### General purpose application
 The functions of _bpypolyskel_ are also usable using a Python interpreter, but then the installation of the package _mathutils_ is required. Install it using:
