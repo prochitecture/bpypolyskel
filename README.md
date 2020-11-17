@@ -9,7 +9,7 @@ The library _bpypolyskel_ provides two functions:
 
 - `polygonize()`
 
-_polygonize()_ is the main function to compute the faces of a hipped roof from the footprint of a building, it does the whole task described above. It accepts a simple description of the contour of the footprint polygon, including those of evetual holes, and returns a list of polygon faces. See more details in its [documentation](./doc/polygonize.md).
+_polygonize()_ is the main function to compute the faces of a hipped roof from the footprint of a building, it does the whole task described above. It accepts a simple description of the contour of the footprint polygon, including those of eventual holes, and returns a list of polygon faces. See more details in its [documentation](./doc/polygonize.md).
 
 - `skeletonize()`
 
