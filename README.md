@@ -1,0 +1,48 @@
+# bpypolyskel
+
+![Logo](./doc/logo.jpg)
+
+How to fit a hipped roof to the walls of a building? No problem, the _bpypolyskel_ library provides a single function that does the whole task automatically. From the footprint of a building, its [_straight skeleton_](https://en.wikipedia.org/wiki/Straight_skeleton) gets computed. From this skeleton all _faces_ get extracted and the height for every vertex of the straight skeleton is calculated. All these computations can easily be done in [Blender](https://www.blender.org/), but the library may also be used in general purpose applications.
+
+## Usage
+The library _bpypolyskel_ provides two functions:
+
+- `polygonize()`
+
+_polygonize()_ is the main function to compute the faces of a hipped roof from the footprint of a building, it does the whole task described above. It accepts a simple description of the contour of the footprint polygon, including those of evetual holes, and returns a list of polygon faces. See more details in its [documentation](./doc/polygonize.md).
+
+- `skeletonize()`
+
+_skeletonize()_ creates the [straight skeleton](https://en.wikipedia.org/wiki/Straight_skeleton) of the footprint. It gets a list of the edges of the footprint polygon, including those of evetual holes, and creates a straight skeleton. This function is called from _polygonize()_, but may also be used independantly. See more details in its [documentation](./doc/skeletonize.md)
+
+### Note
+The straight skeleton computed by _skeletonize()_ does not provide a straight skeleton in a mathematical sense. Several cleaning and merging algorithms repair issues produced by inaccuracies of the footprint and issues in the skeletonize algorithm. Its goal is to create a skeleton that fits best for a hipped roof. 
+
+## Installation and Demos
+You find all required files in the folder _bpypolyskel_. There are two main applications of this project:
+
+### Within a Blender addon
+Copy the whole folder _bpypolyskel_ to your addon. Include the functions using
+```
+from .bpypolyskel import bpypolyskel
+```
+The file _\_\_init\_\_.py_ shows a simple code for usage in an addon. It adds an object created by _bpypolyskel_ to a scene. You may also install the demo addon stored in the file _bpypolyskel_demo.zip_ to your Blender application (Edit –> Preferences –> Addons->Install). The demo object is created in Blender by 
+
+### General purpose application
+The functions of _bpypolyskel_ are also usable using a Python interpreter, but then the installation of the package _mathutils_ is required. Install it using:
+```
+pip install mathutils
+```
+A simple demo in the file demo.py shows this type of usage and displays the result using  `matplotlib`.
+
+## Credits
+The implementation of the straight skeleton algorithm is based on the description by Felkel and Obdržálek in their 1998 conference paper 
+[Straight skeleton implementation](http://www.dma.fi.upm.es/personal/mabellanas/tfcs/skeleton/html/documentacion/Straight%20Skeletons%20Implementation.pdf). The code for the function _skeletonize()_ has been ported from the implementation by [Botffy](https://github.com/Botffy/polyskel).
+
+The main adaptions compared to Botffy's original code are:
+
+- The order of the vertices of the polygon has been changed to a right-handed coordinate system (as used in Blender). The positive x and y axes point right and up, and the z axis points into your face. Positive rotation is counterclockwise around the z-axis.
+- The geometry objects used from the library `euclid3` in the implementation of Bottfy have been replaced by objects based on `mathutils.Vector`. These objects are defined in the new library `bpyeuclid`.
+- The signature of `skeletonize()` has been changed to lists of edges for the polygon and eventual hole. These are of type `Edge2`, defined in `bpyeuclid`. 
+- Some parts of the skeleton computations have been changed to fix errors produced by the original implementation.
+- Algorithms to merge clusters of skeleton nodes and to filter ghost edges have been added.
