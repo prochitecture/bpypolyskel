@@ -19,21 +19,21 @@ _skeletonize()_ creates the [straight skeleton](https://en.wikipedia.org/wiki/St
 The straight skeleton computed by _skeletonize()_ does not provide a straight skeleton in a mathematical sense. Several cleaning and merging algorithms repair issues produced by inaccuracies of the footprint and issues in the skeletonize algorithm. Its goal is to create a skeleton that fits best for a hipped roof. 
 
 ## Installation and Demos
-You find all required files in the folder _bpypolyskel_. There are two main applications of this project:
+You find all required files in the folder [bpypolyskel](./bpypolyskel). There are two main applications of this project:
 
 ### Within a Blender addon
-Copy the whole folder _bpypolyskel_ to your addon. Include the functions using
+Copy the whole folder [bpypolyskel](./bpypolyskel) to your addon. Include the functions using
 ```
 from .bpypolyskel import bpypolyskel
 ```
-The file _\_\_init\_\_.py_ shows a simple code for usage in an addon. It adds an object created by _bpypolyskel_ to a scene. You may also install the demo addon stored in the file _bpypolyskel_demo.zip_ to your Blender application (Edit –> Preferences –> Addons->Install). The demo object is created in Blender by 
+The file [__init__.py](./__init__.py) shows a simple code for usage in an addon. It adds an object created by _bpypolyskel_ to a scene. You may also install the demo addon stored in the file _bpypolyskel_demo.zip_ to your Blender application (Edit –> Preferences –> Addons -> Install). The demo object is created in Blender by 
 
 ### General purpose application
 The functions of _bpypolyskel_ are also usable using a Python interpreter, but then the installation of the package _mathutils_ is required. Install it using:
 ```
 pip install mathutils
 ```
-A simple demo in the file demo.py shows this type of usage and displays the result using  `matplotlib`.
+A simple demo in the file [demo.py](./demo.py) shows this type of usage and displays the result using  `matplotlib`.
 
 ## Credits
 The implementation of the straight skeleton algorithm is based on the description by Felkel and Obdržálek in their 1998 conference paper 
@@ -42,7 +42,7 @@ The implementation of the straight skeleton algorithm is based on the descriptio
 The main adaptions compared to Botffy's original code are:
 
 - The order of the vertices of the polygon has been changed to a right-handed coordinate system (as used in Blender). The positive x and y axes point right and up, and the z axis points into your face. Positive rotation is counterclockwise around the z-axis.
-- The geometry objects used from the library `euclid3` in the implementation of Bottfy have been replaced by objects based on `mathutils.Vector`. These objects are defined in the new library `bpyeuclid`.
-- The signature of `skeletonize()` has been changed to lists of edges for the polygon and eventual hole. These are of type `Edge2`, defined in `bpyeuclid`. 
+- The geometry objects used from the library `euclid3` in the implementation of Bottfy have been replaced by objects based on `mathutils.Vector`. These objects are defined in the new library [bpyeuclid](./bpypolyskel/bpyeuclid.py).
+- The signature of `skeletonize()` has been changed to lists of edges for the polygon and eventual hole. These are of type `Edge2`, defined in [bpyeuclid](./bpypolyskel/bpyeuclid.py). 
 - Some parts of the skeleton computations have been changed to fix errors produced by the original implementation.
 - Algorithms to merge clusters of skeleton nodes and to filter ghost edges have been added.
