@@ -13,7 +13,7 @@ _polygonize()_ is the main function to compute the faces of a hipped roof from t
 
 - `skeletonize()`
 
-_skeletonize()_ creates the [straight skeleton](https://en.wikipedia.org/wiki/Straight_skeleton) of the footprint. It gets a list of the edges of the footprint polygon, including those of evetual holes, and creates a straight skeleton. This function is called from _polygonize()_, but may also be used independantly. See more details in its [documentation](./doc/skeletonize.md)
+_skeletonize()_ creates the [straight skeleton](https://en.wikipedia.org/wiki/Straight_skeleton) of the footprint. It gets a list of the edges of the footprint polygon, including those of eventual holes, and creates a straight skeleton. This function is called from _polygonize()_, but may also be used independantly. See more details in its [documentation](./doc/skeletonize.md)
 
 ### Note
 The straight skeleton computed by _skeletonize()_ does not provide a straight skeleton in a mathematical sense. Several cleaning and merging algorithms repair issues produced by inaccuracies of the footprint and issues in the skeletonize algorithm. Its goal is to create a skeleton that fits best for a hipped roof. 
