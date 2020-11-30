@@ -1,5 +1,5 @@
 import mathutils
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 from bpypolyskel import bpypolyskel
 from collections import Counter
 
@@ -65,11 +65,15 @@ holesInfo = None
 firstVertIndex = 18
 numPolygonVerts = 18
 faces = bpypolyskel.polygonize(verts, firstVertIndex, numPolygonVerts, holesInfo, 0.0, 0.5, None, unitVectors)
-fig = plt.figure()
-ax = fig.gca(projection='3d')
+#fig = plt.figure()
+#ax = fig.gca(projection='3d')
 for face in faces:
-    for edge in zip(face, face[1:] + face[:1]):
-        p1 = verts[edge[0]]
-        p2 = verts[edge[1]]
-        ax.plot([p1.x,p2.x],[p1.y,p2.y],[p1.z,p2.z])
-plt.show()
+    if len(face) < 3:
+        raise Exception("Less than 3 verts in a face")
+    if len(face) != len(set(face)):
+        raise Exception("Duplicated indices")
+    #for edge in zip(face, face[1:] + face[:1]):
+    #    p1 = verts[edge[0]]
+    #    p2 = verts[edge[1]]
+    #    ax.plot([p1.x,p2.x],[p1.y,p2.y],[p1.z,p2.z])
+#plt.show()
