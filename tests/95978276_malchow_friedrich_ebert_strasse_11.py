@@ -47,6 +47,12 @@ holesInfo = None
 firstVertIndex = 12
 numPolygonVerts = 12
 faces = bpypolyskel.polygonize(verts, firstVertIndex, numPolygonVerts, holesInfo, 0.0, 0.5, None, unitVectors)
+for face in faces:
+    if len(face) < 3:
+        raise Exception("Less than 3 verts in a face")
+    if len(face) != len(set(face)):
+        raise Exception("Duplicated indices")
+
 fig = plt.figure()
 ax = fig.gca(projection='3d')
 for face in faces:
