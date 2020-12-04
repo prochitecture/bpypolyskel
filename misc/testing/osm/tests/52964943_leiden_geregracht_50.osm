@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-02T15:45:03Z"/>
+
+  <node id="670986462" lat="52.1538693" lon="4.4946922"/>
+  <node id="670994158" lat="52.1539410" lon="4.4947921"/>
+  <node id="671020250" lat="52.1538724" lon="4.4946901"/>
+  <node id="671027909" lat="52.1539050" lon="4.4948150"/>
+  <node id="5020867738" lat="52.1538588" lon="4.4946523"/>
+  <node id="5020868824" lat="52.1538927" lon="4.4946177"/>
+  <node id="5020868901" lat="52.1539416" lon="4.4947917"/>
+  <node id="5020869526" lat="52.1539114" lon="4.4946610"/>
+  <node id="5020869804" lat="52.1538934" lon="4.4946206"/>
+  <node id="5020869837" lat="52.1539406" lon="4.4947905"/>
+  <node id="5020870582" lat="52.1539450" lon="4.4947895"/>
+  <node id="5020871793" lat="52.1539086" lon="4.4946503"/>
+  <node id="5020872504" lat="52.1538601" lon="4.4946436"/>
+  <node id="5020872627" lat="52.1539429" lon="4.4947815"/>
+  <node id="5020873060" lat="52.1538619" lon="4.4946503"/>
+  <node id="5020873226" lat="52.1539025" lon="4.4946272"/>
+  <node id="5020873967" lat="52.1539341" lon="4.4947480"/>
+  <node id="5020875143" lat="52.1538998" lon="4.4946166"/>
+  <node id="5020876663" lat="52.1539319" lon="4.4947396"/>
+  <node id="5020877184" lat="52.1538970" lon="4.4946185"/>
+  <node id="5020878175" lat="52.1539290" lon="4.4947412"/>
+  <node id="5020879705" lat="52.1538962" lon="4.4946154"/>
+  <node id="5020881286" lat="52.1539088" lon="4.4946633"/>
+  <way id="52964943">
+    <nd ref="670994158"/>
+    <nd ref="5020868901"/>
+    <nd ref="5020870582"/>
+    <nd ref="5020872627"/>
+    <nd ref="5020873967"/>
+    <nd ref="5020876663"/>
+    <nd ref="5020878175"/>
+    <nd ref="5020881286"/>
+    <nd ref="5020869526"/>
+    <nd ref="5020871793"/>
+    <nd ref="5020873226"/>
+    <nd ref="5020875143"/>
+    <nd ref="5020877184"/>
+    <nd ref="5020879705"/>
+    <nd ref="5020868824"/>
+    <nd ref="5020869804"/>
+    <nd ref="5020872504"/>
+    <nd ref="5020873060"/>
+    <nd ref="5020867738"/>
+    <nd ref="670986462"/>
+    <nd ref="671020250"/>
+    <nd ref="671027909"/>
+    <nd ref="5020869837"/>
+    <nd ref="670994158"/>
+    <tag k="building" v="detached"/>
+    <tag k="building:levels" v="1"/>
+    <tag k="ref:bag" v="546100000041462"/>
+    <tag k="roof:levels" v="1"/>
+    <tag k="roof:shape" v="hipped"/>
+    <tag k="source" v="BAG"/>
+    <tag k="source:date" v="2017-07-08"/>
+    <tag k="start_date" v="1935"/>
+  </way>
+
+</osm>

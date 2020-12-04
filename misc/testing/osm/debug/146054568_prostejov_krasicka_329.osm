@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-02T15:45:03Z"/>
+
+  <node id="1336002229" lat="49.4655819" lon="17.0853111"/>
+  <node id="1593467138" lat="49.4653075" lon="17.0854091"/>
+  <node id="1593467143" lat="49.4653096" lon="17.0851859"/>
+  <node id="1593467147" lat="49.4653228" lon="17.0854334"/>
+  <node id="1593467149" lat="49.4653254" lon="17.0851623"/>
+  <node id="1593467170" lat="49.4654094" lon="17.0854353"/>
+  <node id="1593467176" lat="49.4654141" lon="17.0851647"/>
+  <node id="1593467191" lat="49.4654202" lon="17.0854525"/>
+  <node id="1593467195" lat="49.4654254" lon="17.0851481"/>
+  <node id="1593467202" lat="49.4654453" lon="17.0851486"/>
+  <node id="1593467203" lat="49.4654683" lon="17.0851492"/>
+  <node id="1593467205" lat="49.4654674" lon="17.0854536"/>
+  <node id="1593467216" lat="49.4654786" lon="17.0854367"/>
+  <node id="1593467217" lat="49.4654792" lon="17.0851666"/>
+  <node id="1593467257" lat="49.4655652" lon="17.0854386"/>
+  <node id="1593467267" lat="49.4655677" lon="17.0851690"/>
+  <node id="1593467273" lat="49.4655809" lon="17.0854155"/>
+  <node id="1593467277" lat="49.4655831" lon="17.0851931"/>
+  <way id="146054568">
+    <nd ref="1593467176"/>
+    <nd ref="1593467195"/>
+    <nd ref="1593467202"/>
+    <nd ref="1593467203"/>
+    <nd ref="1593467217"/>
+    <nd ref="1593467267"/>
+    <nd ref="1593467277"/>
+    <nd ref="1336002229"/>
+    <nd ref="1593467273"/>
+    <nd ref="1593467257"/>
+    <nd ref="1593467216"/>
+    <nd ref="1593467205"/>
+    <nd ref="1593467191"/>
+    <nd ref="1593467170"/>
+    <nd ref="1593467147"/>
+    <nd ref="1593467138"/>
+    <nd ref="1593467143"/>
+    <nd ref="1593467149"/>
+    <nd ref="1593467176"/>
+    <tag k="building" v="residential"/>
+    <tag k="building:flats" v="27"/>
+    <tag k="building:levels" v="4"/>
+    <tag k="building:ruian:type" v="6"/>
+    <tag k="ref:ruian:building" v="24352608"/>
+    <tag k="roof:shape" v="hipped"/>
+    <tag k="source" v="cuzk:ruian"/>
+  </way>
+
+</osm>

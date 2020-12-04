@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-02T15:45:03Z"/>
+
+  <node id="2850421189" lat="51.9377000" lon="7.1837912"/>
+  <node id="2850424878" lat="51.9375664" lon="7.1838327"/>
+  <node id="2850424881" lat="51.9375672" lon="7.1838448"/>
+  <node id="2850424883" lat="51.9375678" lon="7.1838202"/>
+  <node id="2850424886" lat="51.9375698" lon="7.1838567"/>
+  <node id="2850424888" lat="51.9375715" lon="7.1838078"/>
+  <node id="2850424890" lat="51.9375726" lon="7.1838639"/>
+  <node id="2850424892" lat="51.9375751" lon="7.1838006"/>
+  <node id="2850424894" lat="51.9375757" lon="7.1838697"/>
+  <node id="2850424895" lat="51.9375784" lon="7.1837959"/>
+  <node id="2850424897" lat="51.9375816" lon="7.1838778"/>
+  <node id="2850424899" lat="51.9375826" lon="7.1837916"/>
+  <node id="2850424906" lat="51.9375885" lon="7.1838825"/>
+  <node id="2850424910" lat="51.9375931" lon="7.1838842"/>
+  <node id="2850424915" lat="51.9375977" lon="7.1838851"/>
+  <node id="2850424917" lat="51.9376027" lon="7.1838845"/>
+  <node id="2850424927" lat="51.9376088" lon="7.1838824"/>
+  <node id="2850424940" lat="51.9376213" lon="7.1837596"/>
+  <node id="2850424950" lat="51.9376293" lon="7.1838656"/>
+  <node id="2850424953" lat="51.9376323" lon="7.1838748"/>
+  <node id="2850424959" lat="51.9376382" lon="7.1838581"/>
+  <node id="2850424961" lat="51.9376412" lon="7.1838674"/>
+  <node id="2850424966" lat="51.9376443" lon="7.1835660"/>
+  <node id="2850424979" lat="51.9376640" lon="7.1838365"/>
+  <node id="2850424980" lat="51.9376651" lon="7.1835725"/>
+  <node id="2850424987" lat="51.9376706" lon="7.1837821"/>
+  <node id="2850424990" lat="51.9376719" lon="7.1835157"/>
+  <node id="2850425008" lat="51.9377304" lon="7.1835342"/>
+  <way id="37281427">
+    <nd ref="2850424979"/>
+    <nd ref="2850424987"/>
+    <nd ref="2850421189"/>
+    <nd ref="2850425008"/>
+    <nd ref="2850424990"/>
+    <nd ref="2850424980"/>
+    <nd ref="2850424966"/>
+    <nd ref="2850424940"/>
+    <nd ref="2850424899"/>
+    <nd ref="2850424895"/>
+    <nd ref="2850424892"/>
+    <nd ref="2850424888"/>
+    <nd ref="2850424883"/>
+    <nd ref="2850424878"/>
+    <nd ref="2850424881"/>
+    <nd ref="2850424886"/>
+    <nd ref="2850424890"/>
+    <nd ref="2850424894"/>
+    <nd ref="2850424897"/>
+    <nd ref="2850424906"/>
+    <nd ref="2850424910"/>
+    <nd ref="2850424915"/>
+    <nd ref="2850424917"/>
+    <nd ref="2850424927"/>
+    <nd ref="2850424950"/>
+    <nd ref="2850424953"/>
+    <nd ref="2850424961"/>
+    <nd ref="2850424959"/>
+    <nd ref="2850424979"/>
+    <tag k="building" v="office"/>
+    <tag k="building:levels" v="1"/>
+    <tag k="name" v="SCHMIDT Gruppe Service GmbH Schulungszentrum"/>
+    <tag k="roof:colour" v="brown"/>
+    <tag k="roof:levels" v="1"/>
+    <tag k="roof:material" v="thatch"/>
+    <tag k="roof:shape" v="hipped"/>
+  </way>
+
+</osm>

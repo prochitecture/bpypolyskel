@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-02T15:45:03Z"/>
+
+  <node id="1290375071" lat="51.4787683" lon="7.1266274"/>
+  <node id="1290375131" lat="51.4787502" lon="7.1266355"/>
+  <node id="1290375141" lat="51.4787609" lon="7.1266353"/>
+  <node id="1290375186" lat="51.4787723" lon="7.1266340"/>
+  <node id="1290375241" lat="51.4787406" lon="7.1265906"/>
+  <node id="1290375246" lat="51.4788576" lon="7.1264959"/>
+  <node id="1290375306" lat="51.4787431" lon="7.1265871"/>
+  <node id="1290375308" lat="51.4787946" lon="7.1263966"/>
+  <node id="1290375318" lat="51.4787418" lon="7.1266263"/>
+  <node id="1290375341" lat="51.4787090" lon="7.1265335"/>
+  <node id="5802063618" lat="51.4788424" lon="7.1265510"/>
+  <node id="5802063619" lat="51.4788039" lon="7.1266126"/>
+  <node id="5802063620" lat="51.4787947" lon="7.1265964"/>
+  <node id="5802063621" lat="51.4788331" lon="7.1265360"/>
+  <node id="5802063622" lat="51.4787386" lon="7.1266165"/>
+  <node id="5802063623" lat="51.4787380" lon="7.1265988"/>
+  <node id="5802063624" lat="51.4787378" lon="7.1266077"/>
+  <node id="5802063625" lat="51.4787454" lon="7.1266321"/>
+  <node id="5802063626" lat="51.4787556" lon="7.1266364"/>
+  <way id="113819239">
+    <nd ref="1290375246"/>
+    <nd ref="1290375308"/>
+    <nd ref="1290375341"/>
+    <nd ref="1290375306"/>
+    <nd ref="1290375241"/>
+    <nd ref="5802063623"/>
+    <nd ref="5802063624"/>
+    <nd ref="5802063622"/>
+    <nd ref="1290375318"/>
+    <nd ref="5802063625"/>
+    <nd ref="1290375131"/>
+    <nd ref="5802063626"/>
+    <nd ref="1290375141"/>
+    <nd ref="1290375071"/>
+    <nd ref="1290375186"/>
+    <nd ref="5802063620"/>
+    <nd ref="5802063619"/>
+    <nd ref="5802063618"/>
+    <nd ref="5802063621"/>
+    <nd ref="1290375246"/>
+    <tag k="addr:city" v="Bochum"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:housenumber" v="42"/>
+    <tag k="addr:postcode" v="44866"/>
+    <tag k="addr:street" v="Berliner Straße"/>
+    <tag k="building" v="house"/>
+    <tag k="building:levels" v="2"/>
+    <tag k="building:use:residential" v="yes"/>
+    <tag k="roof:shape" v="hipped"/>
+    <tag k="source:outline" v="ALKIS NRW"/>
+  </way>
+
+</osm>

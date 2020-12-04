@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-02T15:45:03Z"/>
+
+  <node id="1116628864" lat="51.4642133" lon="7.2181723"/>
+  <node id="1116629078" lat="51.4642889" lon="7.2181621"/>
+  <node id="1758133039" lat="51.4641618" lon="7.2179755"/>
+  <node id="1758133043" lat="51.4641678" lon="7.2181796"/>
+  <node id="1758133045" lat="51.4642286" lon="7.2182029"/>
+  <node id="1758133050" lat="51.4642769" lon="7.2179576"/>
+  <node id="1826415600" lat="51.4641501" lon="7.2180960"/>
+  <node id="1826415603" lat="51.4641584" lon="7.2180137"/>
+  <node id="1826415604" lat="51.4641616" lon="7.2180765"/>
+  <node id="1826415605" lat="51.4641639" lon="7.2180129"/>
+  <node id="1826415606" lat="51.4641640" lon="7.2181150"/>
+  <node id="1826415612" lat="51.4642415" lon="7.2181687"/>
+  <node id="1826415617" lat="51.4642820" lon="7.2180465"/>
+  <node id="1826415619" lat="51.4642854" lon="7.2180999"/>
+  <node id="1826415620" lat="51.4642893" lon="7.2180578"/>
+  <node id="1826415621" lat="51.4642902" lon="7.2180876"/>
+  <way id="164152372">
+    <nd ref="1116629078"/>
+    <nd ref="1826415619"/>
+    <nd ref="1826415621"/>
+    <nd ref="1826415620"/>
+    <nd ref="1826415617"/>
+    <nd ref="1758133050"/>
+    <nd ref="1758133039"/>
+    <nd ref="1826415605"/>
+    <nd ref="1826415603"/>
+    <nd ref="1826415604"/>
+    <nd ref="1826415600"/>
+    <nd ref="1826415606"/>
+    <nd ref="1758133043"/>
+    <nd ref="1116628864"/>
+    <nd ref="1758133045"/>
+    <nd ref="1826415612"/>
+    <nd ref="1116629078"/>
+    <tag k="addr:city" v="Bochum"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:housenumber" v="92"/>
+    <tag k="addr:postcode" v="44789"/>
+    <tag k="addr:street" v="Waldring"/>
+    <tag k="building" v="apartments"/>
+    <tag k="building:levels" v="3"/>
+    <tag k="roof:levels" v="1"/>
+    <tag k="roof:shape" v="hipped"/>
+  </way>
+
+</osm>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-02T15:45:03Z"/>
+
+  <node id="1702232817" lat="60.8450294" lon="26.7164137"/>
+  <node id="1702232940" lat="60.8449634" lon="26.7164214"/>
+  <node id="1702232957" lat="60.8449593" lon="26.7162211"/>
+  <node id="1702232959" lat="60.8449578" lon="26.7161675"/>
+  <node id="1702232960" lat="60.8451273" lon="26.7163605"/>
+  <node id="1702233053" lat="60.8451286" lon="26.7164057"/>
+  <node id="1702233115" lat="60.8450655" lon="26.7164131"/>
+  <node id="1702233357" lat="60.8450282" lon="26.7163712"/>
+  <node id="1702233366" lat="60.8450642" lon="26.7163670"/>
+  <node id="1702233386" lat="60.8450614" lon="26.7161985"/>
+  <node id="1702233387" lat="60.8450267" lon="26.7162026"/>
+  <node id="1702233449" lat="60.8451509" lon="26.7163577"/>
+  <node id="1702233492" lat="60.8449621" lon="26.7163728"/>
+  <node id="1702233695" lat="60.8451237" lon="26.7161859"/>
+  <node id="1702233722" lat="60.8451461" lon="26.7161833"/>
+  <node id="1702233977" lat="60.8450601" lon="26.7161526"/>
+  <node id="1702234053" lat="60.8449317" lon="26.7162243"/>
+  <node id="1702234069" lat="60.8450255" lon="26.7161596"/>
+  <node id="1702234139" lat="60.8451226" lon="26.7161453"/>
+  <node id="1702234189" lat="60.8449359" lon="26.7163759"/>
+  <way id="157988389">
+    <nd ref="1702234053"/>
+    <nd ref="1702234189"/>
+    <nd ref="1702233492"/>
+    <nd ref="1702232940"/>
+    <nd ref="1702232817"/>
+    <nd ref="1702233357"/>
+    <nd ref="1702233366"/>
+    <nd ref="1702233115"/>
+    <nd ref="1702233053"/>
+    <nd ref="1702232960"/>
+    <nd ref="1702233449"/>
+    <nd ref="1702233722"/>
+    <nd ref="1702233695"/>
+    <nd ref="1702234139"/>
+    <nd ref="1702233977"/>
+    <nd ref="1702233386"/>
+    <nd ref="1702233387"/>
+    <nd ref="1702234069"/>
+    <nd ref="1702232959"/>
+    <nd ref="1702232957"/>
+    <nd ref="1702234053"/>
+    <tag k="addr:city" v="Kouvola"/>
+    <tag k="addr:housenumber" v="3"/>
+    <tag k="addr:street" v="Jahtikatu"/>
+    <tag k="building" v="terrace"/>
+    <tag k="building:levels" v="1"/>
+    <tag k="roof:shape" v="hipped"/>
+  </way>
+
+</osm>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-02T15:45:03Z"/>
+
+  <node id="1593467165" lat="49.4653966" lon="17.0838526"/>
+  <node id="1593467167" lat="49.4653965" lon="17.0840737"/>
+  <node id="1593467172" lat="49.4654118" lon="17.0838288"/>
+  <node id="1593467174" lat="49.4654118" lon="17.0840979"/>
+  <node id="1593467219" lat="49.4654980" lon="17.0840978"/>
+  <node id="1593467221" lat="49.4655013" lon="17.0838287"/>
+  <node id="1593467222" lat="49.4655090" lon="17.0841147"/>
+  <node id="1593467224" lat="49.4655123" lon="17.0838115"/>
+  <node id="1593467249" lat="49.4655319" lon="17.0838115"/>
+  <node id="1593467252" lat="49.4655556" lon="17.0838114"/>
+  <node id="1593467255" lat="49.4655565" lon="17.0841153"/>
+  <node id="1593467263" lat="49.4655664" lon="17.0838285"/>
+  <node id="1593467265" lat="49.4655676" lon="17.0840980"/>
+  <node id="1593467299" lat="49.4656534" lon="17.0838284"/>
+  <node id="1593467300" lat="49.4656533" lon="17.0840978"/>
+  <node id="1593467302" lat="49.4656692" lon="17.0838531"/>
+  <node id="1593467303" lat="49.4656689" lon="17.0839609">
+    <tag k="amenity" v="parking_entrance"/>
+    <tag k="parking" v="underground"/>
+  </node>
+  <node id="1593467304" lat="49.4656686" lon="17.0840742"/>
+  <way id="146054572">
+    <nd ref="1593467263"/>
+    <nd ref="1593467299"/>
+    <nd ref="1593467302"/>
+    <nd ref="1593467303"/>
+    <nd ref="1593467304"/>
+    <nd ref="1593467300"/>
+    <nd ref="1593467265"/>
+    <nd ref="1593467255"/>
+    <nd ref="1593467222"/>
+    <nd ref="1593467219"/>
+    <nd ref="1593467174"/>
+    <nd ref="1593467167"/>
+    <nd ref="1593467165"/>
+    <nd ref="1593467172"/>
+    <nd ref="1593467221"/>
+    <nd ref="1593467224"/>
+    <nd ref="1593467249"/>
+    <nd ref="1593467252"/>
+    <nd ref="1593467263"/>
+    <tag k="building" v="residential"/>
+    <tag k="building:flats" v="34"/>
+    <tag k="building:levels" v="6"/>
+    <tag k="building:ruian:type" v="6"/>
+    <tag k="ref:ruian:building" v="25261592"/>
+    <tag k="roof:shape" v="hipped"/>
+    <tag k="source" v="cuzk:ruian"/>
+    <tag k="start_date" v="2003-04-01"/>
+  </way>
+
+</osm>

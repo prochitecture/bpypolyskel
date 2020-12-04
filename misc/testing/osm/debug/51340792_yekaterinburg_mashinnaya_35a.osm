@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-02T15:45:03Z"/>
+
+  <node id="655169016" lat="56.8057540" lon="60.6344082"/>
+  <node id="655169017" lat="56.8058334" lon="60.6343829"/>
+  <node id="655169018" lat="56.8057879" lon="60.6347624"/>
+  <node id="655169019" lat="56.8056571" lon="60.6348040"/>
+  <node id="655169020" lat="56.8059954" lon="60.6346962"/>
+  <node id="655169021" lat="56.8059800" lon="60.6345354"/>
+  <node id="655169022" lat="56.8056418" lon="60.6346432"/>
+  <node id="655169023" lat="56.8058519" lon="60.6345762"/>
+  <node id="655169024" lat="56.8058673" lon="60.6347371"/>
+  <node id="655169025" lat="56.8057725" lon="60.6346015"/>
+  <node id="655169026" lat="56.8058477" lon="60.6353882"/>
+  <node id="655169027" lat="56.8056824" lon="60.6350693"/>
+  <node id="655169028" lat="56.8060402" lon="60.6351183"/>
+  <node id="655169029" lat="56.8060251" lon="60.6349601"/>
+  <node id="655169030" lat="56.8056975" lon="60.6352275"/>
+  <node id="655169031" lat="56.8059271" lon="60.6353629"/>
+  <node id="655169032" lat="56.8058926" lon="60.6350023"/>
+  <node id="655169033" lat="56.8058283" lon="60.6351858"/>
+  <node id="655169034" lat="56.8059077" lon="60.6351605"/>
+  <node id="655169035" lat="56.8058132" lon="60.6350276"/>
+  <way id="51340792">
+    <nd ref="655169016"/>
+    <nd ref="655169017"/>
+    <nd ref="655169023"/>
+    <nd ref="655169021"/>
+    <nd ref="655169020"/>
+    <nd ref="655169024"/>
+    <nd ref="655169032"/>
+    <nd ref="655169029"/>
+    <nd ref="655169028"/>
+    <nd ref="655169034"/>
+    <nd ref="655169031"/>
+    <nd ref="655169026"/>
+    <nd ref="655169033"/>
+    <nd ref="655169030"/>
+    <nd ref="655169027"/>
+    <nd ref="655169035"/>
+    <nd ref="655169018"/>
+    <nd ref="655169019"/>
+    <nd ref="655169022"/>
+    <nd ref="655169025"/>
+    <nd ref="655169016"/>
+    <tag k="addr:city" v="Екатеринбург"/>
+    <tag k="addr:country" v="RU"/>
+    <tag k="addr:housenumber" v="35А"/>
+    <tag k="addr:street" v="Машинная улица"/>
+    <tag k="building" v="yes"/>
+    <tag k="building:levels" v="2"/>
+    <tag k="roof:shape" v="hipped"/>
+    <tag k="source" v="Yahoo"/>
+  </way>
+
+</osm>

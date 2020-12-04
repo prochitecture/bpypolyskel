@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-02T15:45:03Z"/>
+
+  <node id="259084055" lat="51.1853688" lon="6.7028235"/>
+  <node id="259084056" lat="51.1852510" lon="6.7027483"/>
+  <node id="1838647842" lat="51.1852927" lon="6.7027848"/>
+  <node id="1838647843" lat="51.1852944" lon="6.7027767"/>
+  <node id="1838647848" lat="51.1853195" lon="6.7028025"/>
+  <node id="1838647851" lat="51.1853215" lon="6.7027940"/>
+  <node id="4259806837" lat="51.1854023" lon="6.7027114">
+    <tag k="entrance" v="main"/>
+  </node>
+  <node id="4715595878" lat="51.1854270" lon="6.7025887"/>
+  <node id="4715595879" lat="51.1853061" lon="6.7025161"/>
+  <node id="4715595883" lat="51.1854221" lon="6.7026469"/>
+  <node id="4715595884" lat="51.1854107" lon="6.7026537"/>
+  <node id="4715595885" lat="51.1854172" lon="6.7026278"/>
+  <node id="4715595886" lat="51.1853875" lon="6.7027858"/>
+  <node id="4715595887" lat="51.1853762" lon="6.7027932"/>
+  <node id="4715595888" lat="51.1853828" lon="6.7027669"/>
+  <node id="4715596189" lat="51.1853984" lon="6.7027269"/>
+  <node id="4715596190" lat="51.1853932" lon="6.7027246"/>
+  <node id="4715596191" lat="51.1854064" lon="6.7026949"/>
+  <node id="4715596192" lat="51.1854011" lon="6.7026919"/>
+  <node id="4715596201" lat="51.1853012" lon="6.7025671"/>
+  <node id="4715596202" lat="51.1853063" lon="6.7025466"/>
+  <node id="4715596203" lat="51.1853015" lon="6.7025334"/>
+  <node id="4715596204" lat="51.1852945" lon="6.7025631"/>
+  <node id="4715596205" lat="51.1852628" lon="6.7027032"/>
+  <node id="4715596206" lat="51.1852595" lon="6.7027015"/>
+  <way id="23903743">
+    <nd ref="4715595879"/>
+    <nd ref="4715595878"/>
+    <nd ref="4715595885"/>
+    <nd ref="4715595883"/>
+    <nd ref="4715595884"/>
+    <nd ref="4715596192"/>
+    <nd ref="4715596191"/>
+    <nd ref="4259806837"/>
+    <nd ref="4715596189"/>
+    <nd ref="4715596190"/>
+    <nd ref="4715595888"/>
+    <nd ref="4715595886"/>
+    <nd ref="4715595887"/>
+    <nd ref="259084055"/>
+    <nd ref="1838647851"/>
+    <nd ref="1838647848"/>
+    <nd ref="1838647842"/>
+    <nd ref="1838647843"/>
+    <nd ref="259084056"/>
+    <nd ref="4715596205"/>
+    <nd ref="4715596206"/>
+    <nd ref="4715596204"/>
+    <nd ref="4715596201"/>
+    <nd ref="4715596202"/>
+    <nd ref="4715596203"/>
+    <nd ref="4715595879"/>
+    <tag k="addr:city" v="Neuss"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:housenumber" v="17"/>
+    <tag k="addr:postcode" v="41464"/>
+    <tag k="addr:street" v="Meertal"/>
+    <tag k="building" v="apartments"/>
+    <tag k="building:colour" v="white"/>
+    <tag k="building:levels" v="3"/>
+    <tag k="building:material" v="plaster"/>
+    <tag k="roof:colour" v="red"/>
+    <tag k="roof:levels" v="2"/>
+    <tag k="roof:material" v="roof_tiles"/>
+    <tag k="roof:shape" v="hipped"/>
+  </way>
+
+</osm>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-02T15:45:03Z"/>
+
+  <node id="652750467" lat="49.7484822" lon="13.3982891"/>
+  <node id="652750469" lat="49.7484990" lon="13.3982275"/>
+  <node id="652750471" lat="49.7484891" lon="13.3982204"/>
+  <node id="652750472" lat="49.7487577" lon="13.3984262"/>
+  <node id="652750474" lat="49.7486969" lon="13.3983866"/>
+  <node id="652750476" lat="49.7486889" lon="13.3984171"/>
+  <node id="652750478" lat="49.7486470" lon="13.3983905"/>
+  <node id="652750480" lat="49.7486551" lon="13.3983600"/>
+  <node id="652750482" lat="49.7485750" lon="13.3983078"/>
+  <node id="652750484" lat="49.7485654" lon="13.3983431"/>
+  <node id="652750486" lat="49.7485139" lon="13.3981299"/>
+  <node id="652750488" lat="49.7485241" lon="13.3981372"/>
+  <node id="652750489" lat="49.7485405" lon="13.3980745"/>
+  <node id="652750491" lat="49.7488100" lon="13.3986770"/>
+  <node id="652750493" lat="49.7487073" lon="13.3986108"/>
+  <node id="652750495" lat="49.7489087" lon="13.3983124"/>
+  <node id="3939115782" lat="49.7486227" lon="13.3981301"/>
+  <node id="3939115783" lat="49.7486233" lon="13.3981280"/>
+  <node id="3939115786" lat="49.7487388" lon="13.3982051"/>
+  <node id="3939115787" lat="49.7487393" lon="13.3982030"/>
+  <node id="3939115789" lat="49.7488254" lon="13.3982611"/>
+  <node id="3939115790" lat="49.7488259" lon="13.3982590"/>
+  <way id="51166552">
+    <nd ref="3939115783"/>
+    <nd ref="3939115782"/>
+    <nd ref="3939115787"/>
+    <nd ref="3939115786"/>
+    <nd ref="3939115789"/>
+    <nd ref="3939115790"/>
+    <nd ref="652750495"/>
+    <nd ref="652750491"/>
+    <nd ref="652750493"/>
+    <nd ref="652750472"/>
+    <nd ref="652750474"/>
+    <nd ref="652750476"/>
+    <nd ref="652750478"/>
+    <nd ref="652750480"/>
+    <nd ref="652750482"/>
+    <nd ref="652750484"/>
+    <nd ref="652750467"/>
+    <nd ref="652750469"/>
+    <nd ref="652750471"/>
+    <nd ref="652750486"/>
+    <nd ref="652750488"/>
+    <nd ref="652750489"/>
+    <nd ref="3939115783"/>
+    <tag k="building" v="industrial"/>
+    <tag k="building:levels" v="2"/>
+    <tag k="building:ruian:type" v="1"/>
+    <tag k="ref:ruian:building" v="24140988"/>
+    <tag k="roof:levels" v="1"/>
+    <tag k="roof:shape" v="hipped"/>
+    <tag k="source" v="cuzk:ruian"/>
+  </way>
+
+</osm>

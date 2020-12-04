@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-02T15:45:03Z"/>
+
+  <node id="1112031594" lat="53.4771926" lon="12.4213200"/>
+  <node id="1112031601" lat="53.4769586" lon="12.4210698"/>
+  <node id="1112031686" lat="53.4772824" lon="12.4210827"/>
+  <node id="1112031745" lat="53.4770925" lon="12.4206763"/>
+  <node id="1112031850" lat="53.4768600" lon="12.4210300"/>
+  <node id="1112032049" lat="53.4769409" lon="12.4211165"/>
+  <node id="1112032059" lat="53.4769671" lon="12.4207388"/>
+  <node id="1112032066" lat="53.4769692" lon="12.4207410"/>
+  <node id="1112032140" lat="53.4771632" lon="12.4207519"/>
+  <node id="1112032150" lat="53.4770222" lon="12.4206011"/>
+  <node id="1112032208" lat="53.4768770" lon="12.4209768"/>
+  <node id="1112032212" lat="53.4768792" lon="12.4209792"/>
+  <node id="1112032247" lat="53.4771084" lon="12.4208966"/>
+  <way id="95978276">
+    <nd ref="1112031745"/>
+    <nd ref="1112032140"/>
+    <nd ref="1112032247"/>
+    <nd ref="1112031686"/>
+    <nd ref="1112031594"/>
+    <nd ref="1112031601"/>
+    <nd ref="1112032049"/>
+    <nd ref="1112031850"/>
+    <nd ref="1112032212"/>
+    <nd ref="1112032208"/>
+    <nd ref="1112032059"/>
+    <nd ref="1112032066"/>
+    <nd ref="1112032150"/>
+    <nd ref="1112031745"/>
+    <tag k="addr:city" v="Malchow"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:housenumber" v="11"/>
+    <tag k="addr:postcode" v="17213"/>
+    <tag k="addr:street" v="Friedrich-Ebert-Straße"/>
+    <tag k="building" v="retail"/>
+    <tag k="name" v="Netto"/>
+    <tag k="opening_hours" v="Mo-Sa 07:00-22:00; Su 12:00-18:00"/>
+    <tag k="roof:shape" v="hipped"/>
+    <tag k="shop" v="supermarket"/>
+    <tag k="wheelchair" v="yes"/>
+  </way>
+
+</osm>

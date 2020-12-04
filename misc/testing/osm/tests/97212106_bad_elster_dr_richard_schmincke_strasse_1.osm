@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-02T15:45:03Z"/>
+
+  <node id="1126130598" lat="50.2785841" lon="12.2384473"/>
+  <node id="1126130608" lat="50.2786441" lon="12.2384492"/>
+  <node id="1126130620" lat="50.2785844" lon="12.2384413"/>
+  <node id="1126130627" lat="50.2786438" lon="12.2384549"/>
+  <node id="1126130640" lat="50.2785405" lon="12.2384415"/>
+  <node id="1126130646" lat="50.2786859" lon="12.2384605"/>
+  <node id="1126130656" lat="50.2787087" lon="12.2386308"/>
+  <node id="1126130664" lat="50.2786851" lon="12.2384751"/>
+  <node id="1126130673" lat="50.2785309" lon="12.2386072"/>
+  <node id="5189134903" lat="50.2786039" lon="12.2386369"/>
+  <node id="5189134904" lat="50.2786050" lon="12.2386170"/>
+  <node id="5189134970" lat="50.2785373" lon="12.2385013"/>
+  <node id="5189134972" lat="50.2785403" lon="12.2386284"/>
+  <node id="5189134973" lat="50.2785414" lon="12.2386086"/>
+  <node id="5189134988" lat="50.2787169" lon="12.2384793"/>
+  <node id="5189135162" lat="50.2785147" lon="12.2385457"/>
+  <node id="5189135163" lat="50.2785173" lon="12.2384986"/>
+  <node id="5189135166" lat="50.2785341" lon="12.2385483"/>
+  <way id="97212106">
+    <nd ref="1126130640"/>
+    <nd ref="5189134970"/>
+    <nd ref="5189135163"/>
+    <nd ref="5189135162"/>
+    <nd ref="5189135166"/>
+    <nd ref="1126130673"/>
+    <nd ref="5189134973"/>
+    <nd ref="5189134972"/>
+    <nd ref="5189134903"/>
+    <nd ref="5189134904"/>
+    <nd ref="1126130656"/>
+    <nd ref="5189134988"/>
+    <nd ref="1126130664"/>
+    <nd ref="1126130646"/>
+    <nd ref="1126130627"/>
+    <nd ref="1126130608"/>
+    <nd ref="1126130620"/>
+    <nd ref="1126130598"/>
+    <nd ref="1126130640"/>
+    <tag k="addr:city" v="Bad Elster"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:housename" v="Haus am Kurpark"/>
+    <tag k="addr:housenumber" v="1"/>
+    <tag k="addr:postcode" v="08645"/>
+    <tag k="addr:street" v="Dr.-Richard-Schmincke-Straße"/>
+    <tag k="building" v="hotel"/>
+    <tag k="building:levels" v="2"/>
+    <tag k="roof:levels" v="2"/>
+    <tag k="roof:shape" v="hipped"/>
+    <tag k="source" v="Bing"/>
+  </way>
+
+</osm>

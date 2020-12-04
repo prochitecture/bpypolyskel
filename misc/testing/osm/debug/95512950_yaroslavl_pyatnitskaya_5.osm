@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-02T15:45:03Z"/>
+
+  <node id="1107538479" lat="57.6390448" lon="39.8816821"/>
+  <node id="1107538493" lat="57.6391899" lon="39.8815054"/>
+  <node id="1107538502" lat="57.6392430" lon="39.8820234"/>
+  <node id="1107538514" lat="57.6390746" lon="39.8816821"/>
+  <node id="1107538548" lat="57.6390448" lon="39.8820234"/>
+  <node id="1107538564" lat="57.6392430" lon="39.8816821"/>
+  <node id="1107538656" lat="57.6391899" lon="39.8816821"/>
+  <node id="1107538713" lat="57.6390746" lon="39.8815054"/>
+  <way id="95512950">
+    <nd ref="1107538564"/>
+    <nd ref="1107538502"/>
+    <nd ref="1107538548"/>
+    <nd ref="1107538479"/>
+    <nd ref="1107538514"/>
+    <nd ref="1107538713"/>
+    <nd ref="1107538493"/>
+    <nd ref="1107538656"/>
+    <nd ref="1107538564"/>
+    <tag k="amenity" v="place_of_worship"/>
+    <tag k="building" v="church"/>
+    <tag k="building:colour" v="f4f3f0"/>
+    <tag k="denomination" v="russian_orthodox"/>
+    <tag k="height" v="6"/>
+    <tag k="name" v="Церковь Праскевой Пятницы"/>
+    <tag k="name:en" v="Paraskevy Pyatnitsy Church"/>
+    <tag k="religion" v="christian"/>
+    <tag k="roof:colour" v="cccccc"/>
+    <tag k="roof:shape" v="hipped"/>
+  </way>
+
+</osm>

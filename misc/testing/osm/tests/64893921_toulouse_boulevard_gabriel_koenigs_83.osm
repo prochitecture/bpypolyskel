@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-02T15:45:03Z"/>
+
+  <node id="795347710" lat="43.5967037" lon="1.4194464"/>
+  <node id="795347829" lat="43.5967702" lon="1.4193631"/>
+  <node id="795352555" lat="43.5967355" lon="1.4194470"/>
+  <node id="795354016" lat="43.5967084" lon="1.4191030"/>
+  <node id="795355133" lat="43.5967688" lon="1.4194031"/>
+  <node id="795355865" lat="43.5967715" lon="1.4193846"/>
+  <node id="795357374" lat="43.5966514" lon="1.4194680"/>
+  <node id="795358979" lat="43.5967635" lon="1.4194178"/>
+  <node id="795359451" lat="43.5966962" lon="1.4194756"/>
+  <node id="795360297" lat="43.5966147" lon="1.4191636"/>
+  <node id="795360593" lat="43.5967533" lon="1.4194332"/>
+  <node id="795363501" lat="43.5967176" lon="1.4194498"/>
+  <node id="1754082234" lat="43.5967000" lon="1.4194612">
+    <tag k="addr:city" v="Toulouse"/>
+    <tag k="addr:country" v="FR"/>
+    <tag k="addr:housenumber" v="83"/>
+    <tag k="addr:street" v="Boulevard Gabriel Koenigs"/>
+    <tag k="source" v="GrandToulouse"/>
+  </node>
+  <node id="5770562482" lat="43.5966154" lon="1.4193407"/>
+  <node id="5770562484" lat="43.5965726" lon="1.4191891"/>
+  <node id="5779642342" lat="43.5967451" lon="1.4194413"/>
+  <node id="5779642343" lat="43.5967261" lon="1.4194496"/>
+  <node id="5779642344" lat="43.5967106" lon="1.4194487"/>
+  <node id="5779642345" lat="43.5967705" lon="1.4193936"/>
+  <node id="5779642347" lat="43.5967715" lon="1.4193749"/>
+  <node id="5779845566" lat="43.5967582" lon="1.4194271"/>
+  <way id="64893921">
+    <nd ref="795357374"/>
+    <nd ref="795359451"/>
+    <nd ref="1754082234"/>
+    <nd ref="795347710"/>
+    <nd ref="5779642344"/>
+    <nd ref="795363501"/>
+    <nd ref="5779642343"/>
+    <nd ref="795352555"/>
+    <nd ref="5779642342"/>
+    <nd ref="795360593"/>
+    <nd ref="5779845566"/>
+    <nd ref="795358979"/>
+    <nd ref="795355133"/>
+    <nd ref="5779642345"/>
+    <nd ref="795355865"/>
+    <nd ref="5779642347"/>
+    <nd ref="795347829"/>
+    <nd ref="795354016"/>
+    <nd ref="795360297"/>
+    <nd ref="5770562484"/>
+    <nd ref="5770562482"/>
+    <nd ref="795357374"/>
+    <tag k="building" v="apartments"/>
+    <tag k="building:levels" v="6"/>
+    <tag k="roof:colour" v="#B6A59B"/>
+    <tag k="roof:levels" v="1"/>
+    <tag k="roof:material" v="roof_tiles"/>
+    <tag k="roof:shape" v="hipped"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+  </way>
+
+</osm>
