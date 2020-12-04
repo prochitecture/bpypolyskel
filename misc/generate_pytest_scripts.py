@@ -6,11 +6,15 @@ blosmPath = None
 osmFilesDir = None
 outputDir = None
 assetsDir = None
+outputTemplate = None
+outputFileNamePrefix = None
 
 # read the values for the above variables from the config JSON file
 with open(os.path.join(os.path.abspath(os.getcwd()), "config_generate_pytest_scripts.txt"), 'r') as configJsonFile:
     globals().update( json.load(configJsonFile) )
 bpy.context.scene["outputDir"] = outputDir
+bpy.context.scene["outputTemplate"] = outputTemplate
+bpy.context.scene["outputFileNamePrefix"] = outputFileNamePrefix
 
 print(blosmPath, osmFilesDir, outputDir)
 

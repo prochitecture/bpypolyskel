@@ -400,21 +400,23 @@ unitVectors = [
 holesInfo = None
 firstVertIndex = 130
 numPolygonVerts = 130
-faces = bpypolyskel.polygonize(verts, firstVertIndex, numPolygonVerts, holesInfo, 0.0, 0.5, None, unitVectors)
-faces = None
+faces = []
 
 
+@pytest.mark.dependency()
 @pytest.mark.timeout(10)
 def test_polygonize():
     global faces
     faces = bpypolyskel.polygonize(verts, firstVertIndex, numPolygonVerts, holesInfo, 0.0, 0.5, None, unitVectors)
 
 
+@pytest.mark.dependency(depends=["test_polygonize"])
 def test_numVertsInFace():
     for face in faces:
         assert len(face) >= 3
 
 
+@pytest.mark.dependency(depends=["test_polygonize"])
 def test_duplication():
     for face in faces:
         assert len(face) == len(set(face))
