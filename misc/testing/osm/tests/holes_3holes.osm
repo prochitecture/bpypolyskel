@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<osm version='0.6' generator='JOSM'>
+  <node id='-111393' action='modify' visible='true' lat='43.67370313936' lon='40.19978458864' />
+  <node id='-111394' action='modify' visible='true' lat='43.67387850929' lon='40.19996291196' />
+  <node id='-111395' action='modify' visible='true' lat='43.67379933695' lon='40.20011174667' />
+  <node id='-111396' action='modify' visible='true' lat='43.67362396678' lon='40.19993342335' />
+  <node id='-111397' action='modify' visible='true' lat='43.67370882005' lon='40.1998552687' />
+  <node id='-111398' action='modify' visible='true' lat='43.67375736426' lon='40.19990731498' />
+  <node id='-111399' action='modify' visible='true' lat='43.6737286016' lon='40.19995859631' />
+  <node id='-111400' action='modify' visible='true' lat='43.67368005737' lon='40.19990655003' />
+  <node id='-111401' action='modify' visible='true' lat='43.67378118427' lon='40.19993331328' />
+  <node id='-111402' action='modify' visible='true' lat='43.67382972842' lon='40.19998535956' />
+  <node id='-111403' action='modify' visible='true' lat='43.6738009658' lon='40.20003664089' />
+  <node id='-111404' action='modify' visible='true' lat='43.67375242163' lon='40.19998459461' />
+  <way id='-102531' action='modify' visible='true'>
+    <nd ref='-111393' />
+    <nd ref='-111394' />
+    <nd ref='-111395' />
+    <nd ref='-111396' />
+    <nd ref='-111393' />
+  </way>
+  <way id='-102532' action='modify' visible='true'>
+    <nd ref='-111397' />
+    <nd ref='-111398' />
+    <nd ref='-111399' />
+    <nd ref='-111400' />
+    <nd ref='-111397' />
+  </way>
+  <way id='-102533' action='modify' visible='true'>
+    <nd ref='-111401' />
+    <nd ref='-111402' />
+    <nd ref='-111403' />
+    <nd ref='-111404' />
+    <nd ref='-111401' />
+  </way>
+  <relation id='-99783' action='modify' visible='true'>
+    <member type='way' ref='-102531' role='outer' />
+    <member type='way' ref='-102532' role='inner' />
+    <member type='way' ref='-102533' role='inner' />
+    <tag k='building' v='yes' />
+    <tag k='building:levels' v='7' />
+    <tag k='roof:height' v='5' />
+    <tag k='roof:shape' v='hipped' />
+    <tag k='type' v='multipolygon' />
+  </relation>
+</osm>

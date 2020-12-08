@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<osm version='0.6' generator='JOSM'>
+  <node id='-102184' action='modify' visible='true' lat='43.6734343226' lon='40.1996372406' />
+  <node id='-102185' action='modify' visible='true' lat='43.67337575881' lon='40.19958531574' />
+  <node id='-102186' action='modify' visible='true' lat='43.67330895958' lon='40.19972932907' />
+  <node id='-102187' action='modify' visible='true' lat='43.67336904988' lon='40.19978260733' />
+  <node id='-102188' action='modify' visible='true' lat='43.6733878914' lon='40.19974198663' />
+  <node id='-102189' action='modify' visible='true' lat='43.67335059772' lon='40.19970892068' />
+  <node id='-102190' action='modify' visible='true' lat='43.67338169834' lon='40.19964187041' />
+  <node id='-102191' action='modify' visible='true' lat='43.67341746556' lon='40.19967358297' />
+  <way id='-102480' action='modify' visible='true'>
+    <nd ref='-102184' />
+    <nd ref='-102185' />
+    <nd ref='-102186' />
+    <nd ref='-102187' />
+    <nd ref='-102188' />
+    <nd ref='-102189' />
+    <nd ref='-102190' />
+    <nd ref='-102191' />
+    <nd ref='-102184' />
+    <tag k='building' v='yes' />
+    <tag k='building:levels' v='5' />
+    <tag k='n' v='1' />
+    <tag k='roof:height' v='5' />
+    <tag k='roof:shape' v='hipped' />
+  </way>
+</osm>

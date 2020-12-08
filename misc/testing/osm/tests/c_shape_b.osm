@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<osm version='0.6' generator='JOSM'>
+  <node id='-102205' action='modify' visible='true' lat='43.67337459825' lon='40.19986359337' />
+  <node id='-102206' action='modify' visible='true' lat='43.67331498665' lon='40.19981127217' />
+  <node id='-102207' action='modify' visible='true' lat='43.67324866492' lon='40.19995571148' />
+  <node id='-102208' action='modify' visible='true' lat='43.67330906121' lon='40.20000872134' />
+  <node id='-102209' action='modify' visible='true' lat='43.67333888771' lon='40.19994376342' />
+  <node id='-102210' action='modify' visible='true' lat='43.67332067905' lon='40.19992778165' />
+  <node id='-102211' action='modify' visible='true' lat='43.67330950752' lon='40.19995211165' />
+  <node id='-102212' action='modify' visible='true' lat='43.67329019034' lon='40.19993515693' />
+  <node id='-102213' action='modify' visible='true' lat='43.67332121245' lon='40.19986759515' />
+  <node id='-102214' action='modify' visible='true' lat='43.67334162028' lon='40.19988550714' />
+  <node id='-102215' action='modify' visible='true' lat='43.67332889046' lon='40.19991323092' />
+  <node id='-102216' action='modify' visible='true' lat='43.67334522383' lon='40.19992756675' />
+  <way id='-102485' action='modify' visible='true'>
+    <nd ref='-102205' />
+    <nd ref='-102206' />
+    <nd ref='-102207' />
+    <nd ref='-102208' />
+    <nd ref='-102209' />
+    <nd ref='-102210' />
+    <nd ref='-102211' />
+    <nd ref='-102212' />
+    <nd ref='-102213' />
+    <nd ref='-102214' />
+    <nd ref='-102215' />
+    <nd ref='-102216' />
+    <nd ref='-102205' />
+    <tag k='building' v='yes' />
+    <tag k='building:levels' v='5' />
+    <tag k='n' v='2' />
+    <tag k='roof:height' v='5' />
+    <tag k='roof:shape' v='hipped' />
+  </way>
+</osm>

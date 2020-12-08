@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<osm version='0.6' generator='JOSM'>
+  <node id='-102236' action='modify' visible='true' lat='43.67353361536' lon='40.19973774742' />
+  <node id='-102237' action='modify' visible='true' lat='43.67346682197' lon='40.19967703728' />
+  <node id='-102238' action='modify' visible='true' lat='43.67339859531' lon='40.1998205218' />
+  <node id='-102239' action='modify' visible='true' lat='43.67342546764' lon='40.19984494667' />
+  <node id='-102240' action='modify' visible='true' lat='43.67347287272' lon='40.19974525108' />
+  <node id='-102241' action='modify' visible='true' lat='43.67351279383' lon='40.19978153635' />
+  <way id='-102503' action='modify' visible='true'>
+    <nd ref='-102236' />
+    <nd ref='-102237' />
+    <nd ref='-102238' />
+    <nd ref='-102239' />
+    <nd ref='-102240' />
+    <nd ref='-102241' />
+    <nd ref='-102236' />
+    <tag k='building' v='yes' />
+    <tag k='building:levels' v='5' />
+    <tag k='building:part' v='yes' />
+    <tag k='n' v='3' />
+    <tag k='roof:height' v='7' />
+    <tag k='roof:shape' v='hipped' />
+  </way>
+</osm>
