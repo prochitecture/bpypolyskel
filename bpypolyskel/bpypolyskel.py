@@ -615,7 +615,7 @@ def mergeNodeClusters(skeleton,edgeContours):
     contourVertices = [edge.p1 for contour in edgeContours for edge in contour]
 
     # Merge all clusters that have small distances due to floating-point inaccuracies
-    smallThresh = 0.5
+    smallThresh = 0.1
     hadCluster = True
     while hadCluster:
         hadCluster = False
