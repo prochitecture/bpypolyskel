@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.7 b85c4387">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-15T13:03:03Z"/>
+
+  <node id="1223453313" lat="56.1380835" lon="40.4028718"/>
+  <node id="1223453363" lat="56.1382997" lon="40.4023617"/>
+  <node id="1223453370" lat="56.1386563" lon="40.4033332"/>
+  <node id="1223453397" lat="56.1381480" lon="40.4026408"/>
+  <node id="1223453398" lat="56.1382685" lon="40.4030733"/>
+  <node id="1223453435" lat="56.1381428" lon="40.4023704"/>
+  <node id="1223453438" lat="56.1382482" lon="40.4024913"/>
+  <node id="1223453455" lat="56.1381559" lon="40.4028628"/>
+  <node id="1223453463" lat="56.1382484" lon="40.4033289"/>
+  <node id="1223453465" lat="56.1386214" lon="40.4031334"/>
+  <node id="1223453511" lat="56.1380773" lon="40.4026473"/>
+  <node id="1223453543" lat="56.1383017" lon="40.4024810"/>
+  <node id="1223453582" lat="56.1382174" lon="40.4035835"/>
+  <node id="1223453588" lat="56.1382346" lon="40.4030773"/>
+  <node id="1838737890" lat="56.1381725" lon="40.4033647"/>
+  <way id="106298338">
+    <nd ref="1223453435"/>
+    <nd ref="1223453363"/>
+    <nd ref="1223453543"/>
+    <nd ref="1223453438"/>
+    <nd ref="1223453398"/>
+    <nd ref="1223453588"/>
+    <nd ref="1223453463"/>
+    <nd ref="1223453465"/>
+    <nd ref="1223453370"/>
+    <nd ref="1223453582"/>
+    <nd ref="1838737890"/>
+    <nd ref="1223453455"/>
+    <nd ref="1223453313"/>
+    <nd ref="1223453511"/>
+    <nd ref="1223453397"/>
+    <nd ref="1223453435"/>
+    <tag k="addr:city" v="Владимир"/>
+    <tag k="addr:country" v="RU"/>
+    <tag k="addr:housenumber" v="30А"/>
+    <tag k="addr:street" v="улица Мира"/>
+    <tag k="building" v="kindergarten"/>
+    <tag k="building:colour" v="#EAEECE"/>
+    <tag k="building:levels" v="2"/>
+    <tag k="roof:colour" v="#ABAAA5"/>
+    <tag k="roof:shape" v="hipped"/>
+  </way>
+
+</osm>

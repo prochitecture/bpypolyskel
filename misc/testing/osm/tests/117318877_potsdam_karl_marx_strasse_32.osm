@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.7 b85c4387">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-15T12:45:03Z"/>
+
+  <node id="1321276752" lat="52.4059990" lon="13.1068862"/>
+  <node id="1321276765" lat="52.4061052" lon="13.1070110"/>
+  <node id="1321276778" lat="52.4060051" lon="13.1072372"/>
+  <node id="1321276827" lat="52.4059004" lon="13.1071169"/>
+  <node id="7063417591" lat="52.4060936" lon="13.1069942"/>
+  <node id="7063417592" lat="52.4060926" lon="13.1069965"/>
+  <node id="7063417593" lat="52.4060771" lon="13.1070767"/>
+  <node id="7063417594" lat="52.4060748" lon="13.1070741"/>
+  <node id="7063417595" lat="52.4060150" lon="13.1068932"/>
+  <node id="7063417596" lat="52.4060477" lon="13.1069307"/>
+  <node id="7063417597" lat="52.4060117" lon="13.1069009"/>
+  <node id="7063417598" lat="52.4060446" lon="13.1069379"/>
+  <way id="117318877">
+    <nd ref="1321276827"/>
+    <nd ref="1321276778"/>
+    <nd ref="7063417594"/>
+    <nd ref="7063417593"/>
+    <nd ref="1321276765"/>
+    <nd ref="7063417592"/>
+    <nd ref="7063417591"/>
+    <nd ref="7063417598"/>
+    <nd ref="7063417596"/>
+    <nd ref="7063417595"/>
+    <nd ref="7063417597"/>
+    <nd ref="1321276752"/>
+    <nd ref="1321276827"/>
+    <tag k="addr:city" v="Potsdam"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:housenumber" v="32"/>
+    <tag k="addr:postcode" v="14482"/>
+    <tag k="addr:street" v="Karl-Marx-Straße"/>
+    <tag k="addr:suburb" v="Babelsberg"/>
+    <tag k="bldam:criteria" v="Baudenkmal"/>
+    <tag k="building" v="detached"/>
+    <tag k="building:levels" v="2"/>
+    <tag k="description" v="Villa Berglas mit Einfriedung und Resten der Gartenanlage. Bauherr Alexander Berglas, Kaufmann."/>
+    <tag k="heritage" v="4"/>
+    <tag k="heritage:operator" v="bldam"/>
+    <tag k="heritage:website" v="http://ns.gis-bldam-brandenburg.de/hida4web/view?docId=obj09156802.xml"/>
+    <tag k="image" v="https://upload.wikimedia.org/wikipedia/commons/5/56/Karl-Marx-Stra%C3%9Fe_32%2C_Potsdam.jpg"/>
+    <tag k="name" v="Villa Berglas"/>
+    <tag k="ref:bldam" v="09156802"/>
+    <tag k="roof:levels" v="1"/>
+    <tag k="roof:shape" v="hipped"/>
+    <tag k="year_of_construction" v="1905/1925"/>
+  </way>
+
+</osm>

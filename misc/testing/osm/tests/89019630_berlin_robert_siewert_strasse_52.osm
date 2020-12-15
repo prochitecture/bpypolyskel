@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-15T12:28:02Z"/>
+
+  <node id="3955799583" lat="52.4923331" lon="13.5311553"/>
+  <node id="3955799584" lat="52.4923334" lon="13.5311627"/>
+  <node id="3955799585" lat="52.4923337" lon="13.5311479"/>
+  <node id="3955799586" lat="52.4923347" lon="13.5311698"/>
+  <node id="3955799587" lat="52.4923352" lon="13.5311409"/>
+  <node id="3955799588" lat="52.4923367" lon="13.5311764"/>
+  <node id="3955799589" lat="52.4923375" lon="13.5311345"/>
+  <node id="3955799590" lat="52.4923396" lon="13.5311822"/>
+  <node id="3955799591" lat="52.4923406" lon="13.5311290"/>
+  <node id="3955799593" lat="52.4923431" lon="13.5311870"/>
+  <node id="3955799594" lat="52.4923443" lon="13.5311246"/>
+  <node id="3955799595" lat="52.4923471" lon="13.5311905"/>
+  <node id="3955799596" lat="52.4923484" lon="13.5311215"/>
+  <node id="3955799597" lat="52.4923514" lon="13.5311927"/>
+  <node id="3955799598" lat="52.4923528" lon="13.5311199"/>
+  <node id="3955799599" lat="52.4923560" lon="13.5311933"/>
+  <node id="3955799601" lat="52.4923574" lon="13.5311197"/>
+  <node id="3955799602" lat="52.4923604" lon="13.5311987"/>
+  <node id="3955799603" lat="52.4923605" lon="13.5311925"/>
+  <node id="3955799604" lat="52.4923619" lon="13.5311209"/>
+  <node id="3955799605" lat="52.4923647" lon="13.5309757"/>
+  <node id="3955799614" lat="52.4923946" lon="13.5312201"/>
+  <node id="3955799616" lat="52.4923955" lon="13.5311980"/>
+  <node id="3955799621" lat="52.4924077" lon="13.5312077"/>
+  <node id="3955799622" lat="52.4924078" lon="13.5312212"/>
+  <node id="3955799663" lat="52.4924601" lon="13.5312083"/>
+  <node id="3955799664" lat="52.4924624" lon="13.5309779"/>
+  <way id="89019630">
+    <nd ref="3955799664"/>
+    <nd ref="3955799605"/>
+    <nd ref="3955799604"/>
+    <nd ref="3955799601"/>
+    <nd ref="3955799598"/>
+    <nd ref="3955799596"/>
+    <nd ref="3955799594"/>
+    <nd ref="3955799591"/>
+    <nd ref="3955799589"/>
+    <nd ref="3955799587"/>
+    <nd ref="3955799585"/>
+    <nd ref="3955799583"/>
+    <nd ref="3955799584"/>
+    <nd ref="3955799586"/>
+    <nd ref="3955799588"/>
+    <nd ref="3955799590"/>
+    <nd ref="3955799593"/>
+    <nd ref="3955799595"/>
+    <nd ref="3955799597"/>
+    <nd ref="3955799599"/>
+    <nd ref="3955799603"/>
+    <nd ref="3955799602"/>
+    <nd ref="3955799616"/>
+    <nd ref="3955799614"/>
+    <nd ref="3955799622"/>
+    <nd ref="3955799621"/>
+    <nd ref="3955799663"/>
+    <nd ref="3955799664"/>
+    <tag k="addr:city" v="Berlin"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:housenumber" v="52"/>
+    <tag k="addr:postcode" v="10318"/>
+    <tag k="addr:street" v="Robert-Siewert-Straße"/>
+    <tag k="addr:suburb" v="Karlshorst"/>
+    <tag k="building" v="commercial"/>
+    <tag k="building:levels" v="2"/>
+    <tag k="heritage" v="4"/>
+    <tag k="heritage:operator" v="lda"/>
+    <tag k="lda:criteria" v="Gesamtanlage"/>
+    <tag k="ref:lda" v="09040128"/>
+    <tag k="roof:levels" v="1"/>
+    <tag k="roof:shape" v="hipped"/>
+    <tag k="source" v="Yahoo"/>
+    <tag k="start_date" v="1938"/>
+  </way>
+
+</osm>

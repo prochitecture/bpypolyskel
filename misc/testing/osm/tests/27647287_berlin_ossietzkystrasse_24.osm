@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.7 b85c4387">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-15T12:40:02Z"/>
+
+  <node id="2980538764" lat="52.5734690" lon="13.4083155"/>
+  <node id="2980538793" lat="52.5734937" lon="13.4084531"/>
+  <node id="2980538859" lat="52.5735603" lon="13.4084250"/>
+  <node id="2980538862" lat="52.5735619" lon="13.4084344"/>
+  <node id="2980538890" lat="52.5735884" lon="13.4084130"/>
+  <node id="2980538892" lat="52.5735901" lon="13.4084224"/>
+  <node id="2980539045" lat="52.5737368" lon="13.4083502"/>
+  <node id="2980539050" lat="52.5737384" lon="13.4083598"/>
+  <node id="2980539098" lat="52.5737661" lon="13.4083377"/>
+  <node id="2980539107" lat="52.5737681" lon="13.4083471"/>
+  <node id="2980539181" lat="52.5738220" lon="13.4081634"/>
+  <node id="2980539203" lat="52.5738442" lon="13.4083047"/>
+  <way id="27647287">
+    <nd ref="2980539203"/>
+    <nd ref="2980539181"/>
+    <nd ref="2980538764"/>
+    <nd ref="2980538793"/>
+    <nd ref="2980538859"/>
+    <nd ref="2980538862"/>
+    <nd ref="2980538892"/>
+    <nd ref="2980538890"/>
+    <nd ref="2980539045"/>
+    <nd ref="2980539050"/>
+    <nd ref="2980539107"/>
+    <nd ref="2980539098"/>
+    <nd ref="2980539203"/>
+    <tag k="building" v="apartments"/>
+    <tag k="building:levels" v="4"/>
+    <tag k="roof:levels" v="1"/>
+    <tag k="roof:shape" v="hipped"/>
+    <tag k="source" v="Geoportal Berlin / Hausumringe"/>
+  </way>
+
+</osm>

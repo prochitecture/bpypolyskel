@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-15T12:50:03Z"/>
+
+  <node id="803754706" lat="59.9353647" lon="30.3211145"/>
+  <node id="803754770" lat="59.9355349" lon="30.3201576"/>
+  <node id="803754892" lat="59.9358011" lon="30.3203831"/>
+  <node id="803754952" lat="59.9358114" lon="30.3213297"/>
+  <node id="803754980" lat="59.9357104" lon="30.3211197"/>
+  <node id="803755029" lat="59.9359637" lon="30.3200494"/>
+  <node id="803755058" lat="59.9354188" lon="30.3209695"/>
+  <node id="803755067" lat="59.9355246" lon="30.3198155"/>
+  <node id="985020841" lat="59.9357490" lon="30.3202735"/>
+  <node id="985020843" lat="59.9357391" lon="30.3203524"/>
+  <node id="1997401531" lat="59.9354538" lon="30.3208417"/>
+  <node id="1997401532" lat="59.9357734" lon="30.3206082"/>
+  <node id="1997401533" lat="59.9352540" lon="30.3210208"/>
+  <node id="1997401536" lat="59.9354377" lon="30.3208333"/>
+  <node id="1997401543" lat="59.9355138" lon="30.3203029"/>
+  <node id="1997401544" lat="59.9358909" lon="30.3206616">
+    <tag k="access" v="yes"/>
+    <tag k="barrier" v="gate"/>
+  </node>
+  <node id="1997401549" lat="59.9353134" lon="30.3210689"/>
+  <node id="1997401555" lat="59.9355321" lon="30.3203148"/>
+  <node id="5136600980" lat="59.9355067" lon="30.3210140"/>
+  <node id="5136600981" lat="59.9354518" lon="30.3209865"/>
+  <node id="6903094627" lat="59.9357721" lon="30.3203690">
+    <tag k="entrance" v="yes"/>
+  </node>
+  <node id="6903094631" lat="59.9355097" lon="30.3204612">
+    <tag k="entrance" v="yes"/>
+  </node>
+  <node id="6903094632" lat="59.9354326" lon="30.3208701">
+    <tag k="entrance" v="yes"/>
+  </node>
+  <node id="6903094634" lat="59.9355480" lon="30.3201647">
+    <tag k="entrance" v="yes"/>
+  </node>
+  <node id="6903094635" lat="59.9356810" lon="30.3211045">
+    <tag k="entrance" v="yes"/>
+  </node>
+  <node id="6903094636" lat="59.9356079" lon="30.3210667"/>
+  <node id="6903094637" lat="59.9356116" lon="30.3210373"/>
+  <node id="6903094638" lat="59.9355108" lon="30.3209869"/>
+  <node id="6903094639" lat="59.9356432" lon="30.3210850">
+    <tag k="entrance" v="yes"/>
+  </node>
+  <node id="6903094640" lat="59.9354253" lon="30.3209224">
+    <tag k="entrance" v="yes"/>
+  </node>
+  <node id="6903094641" lat="59.9355874" lon="30.3210253">
+    <tag k="entrance" v="yes"/>
+  </node>
+  <way id="66309858">
+    <nd ref="803755029"/>
+    <nd ref="1997401544"/>
+    <nd ref="803754952"/>
+    <nd ref="803754706"/>
+    <nd ref="1997401549"/>
+    <nd ref="1997401533"/>
+    <nd ref="803755067"/>
+    <nd ref="803755029"/>
+  </way>
+  <way id="66309896">
+    <nd ref="803754892"/>
+    <nd ref="1997401532"/>
+    <nd ref="803754980"/>
+    <nd ref="6903094635"/>
+    <nd ref="6903094639"/>
+    <nd ref="6903094636"/>
+    <nd ref="6903094637"/>
+    <nd ref="6903094641"/>
+    <nd ref="6903094638"/>
+    <nd ref="5136600980"/>
+    <nd ref="5136600981"/>
+    <nd ref="803755058"/>
+    <nd ref="6903094640"/>
+    <nd ref="6903094632"/>
+    <nd ref="1997401536"/>
+    <nd ref="1997401531"/>
+    <nd ref="6903094631"/>
+    <nd ref="1997401555"/>
+    <nd ref="1997401543"/>
+    <nd ref="803754770"/>
+    <nd ref="6903094634"/>
+    <nd ref="985020841"/>
+    <nd ref="985020843"/>
+    <nd ref="6903094627"/>
+    <nd ref="803754892"/>
+  </way>
+  <relation id="1028087">
+    <member type="way" ref="66309896" role="inner"/>
+    <member type="way" ref="66309858" role="outer"/>
+    <tag k="addr:city" v="Санкт-Петербург"/>
+    <tag k="addr:country" v="RU"/>
+    <tag k="addr:housenumber" v="17"/>
+    <tag k="addr:postcode" v="191186"/>
+    <tag k="addr:street" v="Невский проспект"/>
+    <tag k="building" v="public"/>
+    <tag k="building:levels" v="3"/>
+    <tag k="historic" v="palace"/>
+    <tag k="name" v="Строгановский дворец"/>
+    <tag k="name:de" v="Stroganow-Palais"/>
+    <tag k="name:en" v="Stroganov Palace"/>
+    <tag k="name:es" v="Palacio Stróganov"/>
+    <tag k="name:fi" v="Stroganovin palatsi"/>
+    <tag k="name:fr" v="Palais Stroganov"/>
+    <tag k="name:pt" v="Palácio Stroganov"/>
+    <tag k="name:ru" v="Строгановский дворец"/>
+    <tag k="palace_type" v="residence"/>
+    <tag k="roof:shape" v="hipped"/>
+    <tag k="source" v="survey"/>
+    <tag k="tourism" v="museum"/>
+    <tag k="type" v="multipolygon"/>
+    <tag k="website" v="http://www.rusmuseum.ru"/>
+    <tag k="wikidata" v="Q1461235"/>
+    <tag k="wikipedia" v="ru:Строгановский дворец"/>
+  </relation>
+
+</osm>

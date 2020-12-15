@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.7 b85c4387">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-15T12:42:03Z"/>
+
+  <node id="1351098730" lat="52.4158210" lon="13.0617998"/>
+  <node id="1351098735" lat="52.4158785" lon="13.0618538"/>
+  <node id="1351098736" lat="52.4158831" lon="13.0618407"/>
+  <node id="1351098738" lat="52.4159033" lon="13.0615640"/>
+  <node id="1351098743" lat="52.4159160" lon="13.0617465"/>
+  <node id="1351098750" lat="52.4159245" lon="13.0617222"/>
+  <node id="1351098752" lat="52.4159578" lon="13.0617535"/>
+  <node id="1351098753" lat="52.4159714" lon="13.0619556"/>
+  <node id="1351098754" lat="52.4159719" lon="13.0618202"/>
+  <node id="1351098756" lat="52.4159775" lon="13.0618042"/>
+  <node id="1351098757" lat="52.4159798" lon="13.0619315"/>
+  <node id="1351098767" lat="52.4159942" lon="13.0616494"/>
+  <node id="1351098769" lat="52.4159961" lon="13.0618501"/>
+  <node id="1351098770" lat="52.4159980" lon="13.0618448"/>
+  <node id="1351098774" lat="52.4160052" lon="13.0618586"/>
+  <node id="1351098779" lat="52.4160156" lon="13.0618289"/>
+  <node id="1351098784" lat="52.4160646" lon="13.0620431"/>
+  <node id="1351098795" lat="52.4161088" lon="13.0619164"/>
+  <node id="4987857028" lat="52.4159350" lon="13.0618894">
+    <tag k="access" v="customers"/>
+    <tag k="entrance" v="main"/>
+  </node>
+  <way id="120504917">
+    <nd ref="1351098774"/>
+    <nd ref="1351098779"/>
+    <nd ref="1351098795"/>
+    <nd ref="1351098784"/>
+    <nd ref="1351098753"/>
+    <nd ref="1351098757"/>
+    <nd ref="4987857028"/>
+    <nd ref="1351098736"/>
+    <nd ref="1351098735"/>
+    <nd ref="1351098730"/>
+    <nd ref="1351098738"/>
+    <nd ref="1351098767"/>
+    <nd ref="1351098752"/>
+    <nd ref="1351098750"/>
+    <nd ref="1351098743"/>
+    <nd ref="1351098756"/>
+    <nd ref="1351098754"/>
+    <nd ref="1351098770"/>
+    <nd ref="1351098769"/>
+    <nd ref="1351098774"/>
+    <tag k="addr:city" v="Potsdam"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:housenumber" v="49D"/>
+    <tag k="addr:postcode" v="14469"/>
+    <tag k="addr:street" v="Große Weinmeisterstraße"/>
+    <tag k="bldam:criteria" v="Baudenkmal"/>
+    <tag k="building" v="kindergarten"/>
+    <tag k="building:architecture" v="neo-gothic"/>
+    <tag k="building:colour" v="yellow"/>
+    <tag k="building:levels" v="1"/>
+    <tag k="building:material" v="brick; plaster"/>
+    <tag k="description" v="Stallgebäude, erbaut 1914, Umbau 1931"/>
+    <tag k="heritage" v="4"/>
+    <tag k="heritage:operator" v="bldam"/>
+    <tag k="heritage:website" v="https://ns.gis-bldam-brandenburg.de/hida4web/view?docId=obj09156147.xml"/>
+    <tag k="historic" v="building"/>
+    <tag k="ref:bldam" v="09157506"/>
+    <tag k="roof:colour" v="red"/>
+    <tag k="roof:levels" v="1"/>
+    <tag k="roof:material" v="roof_tiles"/>
+    <tag k="roof:shape" v="hipped"/>
+    <tag k="start_date" v="1914"/>
+  </way>
+
+</osm>

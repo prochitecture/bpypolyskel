@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-15T12:32:03Z"/>
+
+  <node id="3151636178" lat="52.4915831" lon="13.5358770"/>
+  <node id="3151636181" lat="52.4915930" lon="13.5356916"/>
+  <node id="3151636184" lat="52.4916278" lon="13.5357283"/>
+  <node id="3151636185" lat="52.4916294" lon="13.5356946"/>
+  <node id="3151636188" lat="52.4916669" lon="13.5358870"/>
+  <node id="3151636189" lat="52.4916693" lon="13.5358410"/>
+  <node id="3151636190" lat="52.4916724" lon="13.5357807"/>
+  <node id="3151636191" lat="52.4916748" lon="13.5357339"/>
+  <node id="3151636192" lat="52.4916774" lon="13.5358365"/>
+  <node id="3151636193" lat="52.4916789" lon="13.5357892"/>
+  <way id="89014745">
+    <nd ref="3151636193"/>
+    <nd ref="3151636190"/>
+    <nd ref="3151636191"/>
+    <nd ref="3151636184"/>
+    <nd ref="3151636185"/>
+    <nd ref="3151636181"/>
+    <nd ref="3151636178"/>
+    <nd ref="3151636188"/>
+    <nd ref="3151636189"/>
+    <nd ref="3151636192"/>
+    <nd ref="3151636193"/>
+    <tag k="addr:city" v="Berlin"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:housenumber" v="114"/>
+    <tag k="addr:postcode" v="10318"/>
+    <tag k="addr:street" v="Römerweg"/>
+    <tag k="addr:suburb" v="Karlshorst"/>
+    <tag k="building" v="apartments"/>
+    <tag k="building:levels" v="2"/>
+    <tag k="roof:levels" v="1"/>
+    <tag k="roof:shape" v="hipped"/>
+    <tag k="source" v="Yahoo"/>
+  </way>
+
+</osm>
