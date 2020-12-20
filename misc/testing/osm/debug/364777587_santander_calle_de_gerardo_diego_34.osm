@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:17:03Z"/>
+
+  <node id="3688239578" lat="43.4560919" lon="-3.8460133"/>
+  <node id="3688239579" lat="43.4561041" lon="-3.8457121">
+    <tag k="addr:city" v="Peñacastillo"/>
+    <tag k="addr:country" v="ES"/>
+    <tag k="addr:housenumber" v="34"/>
+    <tag k="addr:postcode" v="39011"/>
+    <tag k="addr:street" v="Calle de Gerardo Diego"/>
+    <tag k="entrance" v="yes"/>
+    <tag k="source" v="catastro"/>
+    <tag k="source:date" v="2013-01"/>
+  </node>
+  <node id="3688239580" lat="43.4561166" lon="-3.8454022"/>
+  <node id="3688239581" lat="43.4561243" lon="-3.8460158"/>
+  <node id="3688239582" lat="43.4561245" lon="-3.8460081"/>
+  <node id="3688239583" lat="43.4561767" lon="-3.8460122"/>
+  <node id="3688239584" lat="43.4561797" lon="-3.8459380"/>
+  <node id="3688239585" lat="43.4561810" lon="-3.8459059"/>
+  <node id="3688239586" lat="43.4561822" lon="-3.8458752"/>
+  <node id="3688239587" lat="43.4561845" lon="-3.8458171"/>
+  <node id="3688239588" lat="43.4561851" lon="-3.8459385"/>
+  <node id="3688239589" lat="43.4561858" lon="-3.8457850"/>
+  <node id="3688239590" lat="43.4561864" lon="-3.8459064"/>
+  <node id="3688239591" lat="43.4561899" lon="-3.8458175"/>
+  <node id="3688239592" lat="43.4561912" lon="-3.8457854"/>
+  <node id="3688239593" lat="43.4561919" lon="-3.8456357"/>
+  <node id="3688239594" lat="43.4561932" lon="-3.8456036"/>
+  <node id="3688239595" lat="43.4561955" lon="-3.8455456"/>
+  <node id="3688239596" lat="43.4561968" lon="-3.8455148"/>
+  <node id="3688239597" lat="43.4561973" lon="-3.8456361"/>
+  <node id="3688239598" lat="43.4561981" lon="-3.8454827"/>
+  <node id="3688239599" lat="43.4561986" lon="-3.8456041"/>
+  <node id="3688239600" lat="43.4562008" lon="-3.8454147"/>
+  <node id="3688239601" lat="43.4562011" lon="-3.8454087"/>
+  <node id="3688239602" lat="43.4562022" lon="-3.8455151"/>
+  <node id="3688239603" lat="43.4562035" lon="-3.8454831"/>
+  <way id="364777587">
+    <nd ref="3688239600"/>
+    <nd ref="3688239601"/>
+    <nd ref="3688239580"/>
+    <nd ref="3688239579"/>
+    <nd ref="3688239578"/>
+    <nd ref="3688239581"/>
+    <nd ref="3688239582"/>
+    <nd ref="3688239583"/>
+    <nd ref="3688239584"/>
+    <nd ref="3688239588"/>
+    <nd ref="3688239590"/>
+    <nd ref="3688239585"/>
+    <nd ref="3688239586"/>
+    <nd ref="3688239587"/>
+    <nd ref="3688239591"/>
+    <nd ref="3688239592"/>
+    <nd ref="3688239589"/>
+    <nd ref="3688239593"/>
+    <nd ref="3688239597"/>
+    <nd ref="3688239599"/>
+    <nd ref="3688239594"/>
+    <nd ref="3688239595"/>
+    <nd ref="3688239596"/>
+    <nd ref="3688239602"/>
+    <nd ref="3688239603"/>
+    <nd ref="3688239598"/>
+    <nd ref="3688239600"/>
+    <tag k="building" v="yes"/>
+    <tag k="building:levels" v="5"/>
+    <tag k="roof:shape" v="hipped"/>
+    <tag k="source" v="catastro"/>
+    <tag k="source:date" v="2013-01"/>
+  </way>
+
+</osm>
