@@ -630,23 +630,23 @@ def mergeNodeClusters(skeleton,edgeContours):
 
     return skeleton
 
-def detectApse(edgeContours):
-    # compute cross-product between consecutive edges of outer contour
-    # set True for angles a, where sin(a) < 0.5 -> 30°
-    outerContour = edgeContours[0]
-    sequence = "".join([ 'L' if abs(p.norm.cross(n.norm))<0.5 else 'H' for p,n in _iterCircularPrevNext(outerContour) ])
-    # match at least 6 low angles in sequence (assume that the first match is longest)
-    pattern = re.compile(r"(L){6,}")
-    # sequence may be circular, like 'LLHHHHHLLLLL'
-    searchRes = pattern.search(sequence+sequence)
-    if searchRes is None:
-        return [], None, None
+# def detectApse(edgeContours):
+#     # compute cross-product between consecutive edges of outer contour
+#     # set True for angles a, where sin(a) < 0.5 -> 30°
+#     outerContour = edgeContours[0]
+#     sequence = "".join([ 'L' if abs(p.norm.cross(n.norm))<0.5 else 'H' for p,n in _iterCircularPrevNext(outerContour) ])
+#     # match at least 6 low angles in sequence (assume that the first match is longest)
+#     pattern = re.compile(r"(L){6,}")
+#     # sequence may be circular, like 'LLHHHHHLLLLL'
+#     searchRes = pattern.search(sequence+sequence)
+#     if searchRes is None:
+#         return [], None, None
     
-    apseIndices = [ i%len(sequence) for i in range(*searchRes.span())]
-    apseVertices = [outerContour[i].p1 for i in apseIndices]
+#     apseIndices = [ i%len(sequence) for i in range(*searchRes.span())]
+#     apseVertices = [outerContour[i].p1 for i in apseIndices]
 
-    center, R = fitCircle3Points(apseVertices)
-    return apseVertices, center, R
+#     center, R = fitCircle3Points(apseVertices)
+#     return apseVertices, center, R
 
 
 def skeletonize(edgeContours):
@@ -681,23 +681,23 @@ return:         A list of subtrees (of type Subtree) of the straight skeleton. A
                 distance to the nearest polygon edge, and sinks is a list of vertices connected to the
                 node. All vertices are of type mathutils.Vector with two dimension x and y. 
     """
-    apseVertices, center, R = detectApse(edgeContours)
+    # apseVertices, center, R = detectApse(edgeContours)
     slav = _SLAV(edgeContours)
 
     output = []
     prioque = _EventQueue()
 
-    # handle apseEvent, if any
-    if apseVertices:
-        (arc, events) = slav.handleApseEvent(apseVertices, center, R)
-        prioque.put_all(events)
-        if arc is not None:
-            output.append(arc)
+    # # handle apseEvent, if any
+    # if apseVertices:
+    #     (arc, events) = slav.handleApseEvent(apseVertices, center, R)
+    #     prioque.put_all(events)
+    #     if arc is not None:
+    #         output.append(arc)
 
     for lav in slav:
         for vertex in lav:
-            if vertex.is_valid:
-                prioque.put(vertex.next_event())
+            # if vertex.is_valid:
+            prioque.put(vertex.next_event())
 
     while not (prioque.empty() or slav.empty()):
         topEventList = prioque.getAllEqualDistance()
