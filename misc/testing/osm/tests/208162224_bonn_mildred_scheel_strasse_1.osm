@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:16:03Z"/>
+
+  <node id="2184889867" lat="50.7057053" lon="7.1441305"/>
+  <node id="2184889876" lat="50.7057888" lon="7.1440423"/>
+  <node id="2184889885" lat="50.7059017" lon="7.1446028"/>
+  <node id="2184889888" lat="50.7059792" lon="7.1445041"/>
+  <node id="2184889891" lat="50.7061526" lon="7.1449554"/>
+  <node id="2184889892" lat="50.7061639" lon="7.1449651"/>
+  <node id="2184889894" lat="50.7061764" lon="7.1449695"/>
+  <node id="2184889896" lat="50.7061887" lon="7.1449695"/>
+  <node id="2184889898" lat="50.7062036" lon="7.1449648"/>
+  <node id="2184889899" lat="50.7062155" lon="7.1449527"/>
+  <node id="2184889906" lat="50.7062172" lon="7.1448381"/>
+  <node id="2184889907" lat="50.7062252" lon="7.1449353"/>
+  <node id="2184889908" lat="50.7062274" lon="7.1448582"/>
+  <node id="2184889910" lat="50.7062316" lon="7.1449098"/>
+  <node id="2184889912" lat="50.7062325" lon="7.1448837"/>
+  <way id="208162224">
+    <nd ref="2184889906"/>
+    <nd ref="2184889908"/>
+    <nd ref="2184889912"/>
+    <nd ref="2184889910"/>
+    <nd ref="2184889907"/>
+    <nd ref="2184889899"/>
+    <nd ref="2184889898"/>
+    <nd ref="2184889896"/>
+    <nd ref="2184889894"/>
+    <nd ref="2184889892"/>
+    <nd ref="2184889891"/>
+    <nd ref="2184889885"/>
+    <nd ref="2184889867"/>
+    <nd ref="2184889876"/>
+    <nd ref="2184889888"/>
+    <nd ref="2184889906"/>
+    <tag k="building:levels" v="5"/>
+    <tag k="building:part" v="yes"/>
+    <tag k="roof:colour" v="grey"/>
+    <tag k="roof:height" v="2"/>
+    <tag k="roof:shape" v="hipped"/>
+    <tag k="source" v="*;HiRes aerial imagery;survey"/>
+  </way>
+
+</osm>

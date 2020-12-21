@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:16:03Z"/>
+
+  <node id="261007975" lat="57.7046634" lon="11.9656090"/>
+  <node id="261007976" lat="57.7046559" lon="11.9656744"/>
+  <node id="261007977" lat="57.7046359" lon="11.9657360"/>
+  <node id="261007978" lat="57.7046078" lon="11.9657765"/>
+  <node id="261007979" lat="57.7045628" lon="11.9657984"/>
+  <node id="261007981" lat="57.7045310" lon="11.9657969"/>
+  <node id="261007983" lat="57.7044991" lon="11.9657723"/>
+  <node id="261007986" lat="57.7044709" lon="11.9657254"/>
+  <node id="261007989" lat="57.7044446" lon="11.9656563"/>
+  <way id="232120027">
+    <nd ref="261007975"/>
+    <nd ref="261007989"/>
+    <nd ref="261007986"/>
+    <nd ref="261007983"/>
+    <nd ref="261007981"/>
+    <nd ref="261007979"/>
+    <nd ref="261007978"/>
+    <nd ref="261007977"/>
+    <nd ref="261007976"/>
+    <nd ref="261007975"/>
+    <tag k="building:colour" v="#FFEE9E"/>
+    <tag k="building:material" v="brick"/>
+    <tag k="building:part" v="yes"/>
+    <tag k="height" v="17"/>
+    <tag k="roof:height" v="2"/>
+    <tag k="roof:material" v="copper"/>
+    <tag k="roof:orientation" v="across"/>
+    <tag k="roof:shape" v="hipped"/>
+  </way>
+
+</osm>

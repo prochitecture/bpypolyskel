@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:16:03Z"/>
+
+  <node id="2567085027" lat="50.9069169" lon="34.7950772"/>
+  <node id="2567085029" lat="50.9067569" lon="34.7953877"/>
+  <node id="2567085031" lat="50.9066704" lon="34.7952756"/>
+  <node id="2567085033" lat="50.9068304" lon="34.7949651"/>
+  <node id="4518944725" lat="50.9068734" lon="34.7950209">
+    <tag k="entrance" v="main"/>
+  </node>
+  <node id="4872067587" lat="50.9066694" lon="34.7953066"/>
+  <node id="4872067588" lat="50.9066744" lon="34.7953366"/>
+  <node id="4872067589" lat="50.9066850" lon="34.7953626"/>
+  <node id="4872067590" lat="50.9067184" lon="34.7953936"/>
+  <node id="4872067591" lat="50.9067380" lon="34.7953954"/>
+  <node id="4872067592" lat="50.9067002" lon="34.7953823"/>
+  <way id="250226546">
+    <nd ref="2567085027"/>
+    <nd ref="2567085029"/>
+    <nd ref="4872067591"/>
+    <nd ref="4872067590"/>
+    <nd ref="4872067592"/>
+    <nd ref="4872067589"/>
+    <nd ref="4872067588"/>
+    <nd ref="4872067587"/>
+    <nd ref="2567085031"/>
+    <nd ref="2567085033"/>
+    <nd ref="4518944725"/>
+    <nd ref="2567085027"/>
+    <tag k="amenity" v="place_of_worship"/>
+    <tag k="building" v="church"/>
+    <tag k="building:levels" v="4"/>
+    <tag k="denomination" v="baptist"/>
+    <tag k="name" v="Будинок молитви"/>
+    <tag k="religion" v="christian"/>
+    <tag k="roof:shape" v="hipped"/>
+  </way>
+
+</osm>

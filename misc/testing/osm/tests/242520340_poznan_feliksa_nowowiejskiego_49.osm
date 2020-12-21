@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:16:03Z"/>
+
+  <node id="4313269578" lat="52.4137326" lon="16.9208007"/>
+  <node id="4313269579" lat="52.4137315" lon="16.9207895"/>
+  <node id="4313269581" lat="52.4137350" lon="16.9208150"/>
+  <node id="4313269582" lat="52.4137345" lon="16.9207725"/>
+  <node id="4313269583" lat="52.4137415" lon="16.9208274"/>
+  <node id="4313269584" lat="52.4137398" lon="16.9207581"/>
+  <node id="4313269586" lat="52.4137419" lon="16.9208908"/>
+  <node id="4313269588" lat="52.4137450" lon="16.9207509"/>
+  <node id="4313269590" lat="52.4137548" lon="16.9207452"/>
+  <node id="4313269592" lat="52.4137603" lon="16.9208543"/>
+  <node id="4313269594" lat="52.4137662" lon="16.9207467"/>
+  <node id="4313269597" lat="52.4137722" lon="16.9209754"/>
+  <node id="4313269598" lat="52.4137774" lon="16.9207548"/>
+  <node id="4313269599" lat="52.4137841" lon="16.9209524"/>
+  <node id="4313269601" lat="52.4137981" lon="16.9207860"/>
+  <node id="4313269604" lat="52.4138217" lon="16.9210435"/>
+  <node id="4313269608" lat="52.4138333" lon="16.9210211"/>
+  <node id="4313269615" lat="52.4138502" lon="16.9206889"/>
+  <node id="4313269616" lat="52.4138506" lon="16.9210482"/>
+  <node id="4313269631" lat="52.4139591" lon="16.9208472"/>
+  <way id="242520340">
+    <nd ref="4313269615"/>
+    <nd ref="4313269601"/>
+    <nd ref="4313269598"/>
+    <nd ref="4313269594"/>
+    <nd ref="4313269590"/>
+    <nd ref="4313269588"/>
+    <nd ref="4313269584"/>
+    <nd ref="4313269582"/>
+    <nd ref="4313269579"/>
+    <nd ref="4313269578"/>
+    <nd ref="4313269581"/>
+    <nd ref="4313269583"/>
+    <nd ref="4313269592"/>
+    <nd ref="4313269586"/>
+    <nd ref="4313269599"/>
+    <nd ref="4313269597"/>
+    <nd ref="4313269604"/>
+    <nd ref="4313269608"/>
+    <nd ref="4313269616"/>
+    <nd ref="4313269631"/>
+    <nd ref="4313269615"/>
+    <tag k="addr:city" v="Poznań"/>
+    <tag k="addr:housenumber" v="49"/>
+    <tag k="addr:street" v="Feliksa Nowowiejskiego"/>
+    <tag k="building" v="yes"/>
+    <tag k="healthcare" v="counselling"/>
+    <tag k="name" v="Poradnia Leczenia Uzależnień NZOZ Mafro-Med"/>
+    <tag k="opening_hours" v="Mo-We 08:00-20:00; Th 08:00-16:00; Fr 08:00-18:00"/>
+    <tag k="phone" v="618525860"/>
+    <tag k="roof:colour" v="red"/>
+    <tag k="roof:shape" v="hipped"/>
+    <tag k="source:addr" v="EMUiA (emuia.geoportal.gov.pl)"/>
+  </way>
+
+</osm>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:16:03Z"/>
+
+  <node id="2191106383" lat="48.8909005" lon="9.1913751"/>
+  <node id="2191106402" lat="48.8909337" lon="9.1927853"/>
+  <node id="2191106423" lat="48.8910075" lon="9.1914372"/>
+  <node id="2191106428" lat="48.8910182" lon="9.1918893"/>
+  <node id="2191106434" lat="48.8910274" lon="9.1922780"/>
+  <node id="2191106439" lat="48.8910354" lon="9.1926201"/>
+  <node id="2191106443" lat="48.8910427" lon="9.1913673"/>
+  <node id="2191106445" lat="48.8910443" lon="9.1914352"/>
+  <node id="2191106455" lat="48.8910662" lon="9.1918867"/>
+  <node id="2191106460" lat="48.8910753" lon="9.1922754"/>
+  <node id="2191106469" lat="48.8911077" lon="9.1925475"/>
+  <node id="2191106470" lat="48.8911093" lon="9.1926161"/>
+  <node id="2191106498" lat="48.8912114" lon="9.1925418"/>
+  <node id="2191106500" lat="48.8912130" lon="9.1926104"/>
+  <node id="2191106503" lat="48.8912296" lon="9.1921219"/>
+  <node id="2191106505" lat="48.8912377" lon="9.1924653"/>
+  <node id="2191106519" lat="48.8912724" lon="9.1924634"/>
+  <node id="2191106520" lat="48.8912758" lon="9.1926070"/>
+  <node id="2191106531" lat="48.8913256" lon="9.1921167"/>
+  <node id="2191106539" lat="48.8913408" lon="9.1927631"/>
+  <node id="5300485074" lat="48.8911624" lon="9.1927728">
+    <tag k="addr:city" v="Ludwigsburg"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:housenumber" v="5"/>
+    <tag k="addr:postcode" v="71638"/>
+    <tag k="addr:street" v="Karlsplatz"/>
+    <tag k="entrance" v="yes"/>
+  </node>
+  <node id="5300485075" lat="48.8909172" lon="9.1920860">
+    <tag k="addr:city" v="Ludwigsburg"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:housenumber" v="47"/>
+    <tag k="addr:postcode" v="71638"/>
+    <tag k="addr:street" v="Leonberger Straße"/>
+    <tag k="entrance" v="yes"/>
+  </node>
+  <way id="208859160">
+    <nd ref="2191106445"/>
+    <nd ref="2191106423"/>
+    <nd ref="2191106428"/>
+    <nd ref="2191106455"/>
+    <nd ref="2191106460"/>
+    <nd ref="2191106434"/>
+    <nd ref="2191106439"/>
+    <nd ref="2191106470"/>
+    <nd ref="2191106469"/>
+    <nd ref="2191106498"/>
+    <nd ref="2191106500"/>
+    <nd ref="2191106520"/>
+    <nd ref="2191106519"/>
+    <nd ref="2191106505"/>
+    <nd ref="2191106503"/>
+    <nd ref="2191106531"/>
+    <nd ref="2191106539"/>
+    <nd ref="5300485074"/>
+    <nd ref="2191106402"/>
+    <nd ref="5300485075"/>
+    <nd ref="2191106383"/>
+    <nd ref="2191106443"/>
+    <nd ref="2191106445"/>
+    <tag k="building" v="terrace"/>
+    <tag k="building:levels" v="2"/>
+    <tag k="heritage" v="4"/>
+    <tag k="heritage:operator" v="lda"/>
+    <tag k="image" v="https://upload.wikimedia.org/wikipedia/commons/a/aa/Ehemalige_Reithauskaserne_Ludwigsburg_Leonberger_Strasse_Karlsplatz_Eckstrasse_DSC_4276.JPG"/>
+    <tag k="roof:levels" v="1"/>
+    <tag k="roof:shape" v="hipped"/>
+    <tag k="source" v="Maps4BW (LGL, www.lgl-bw.de)"/>
+  </way>
+
+</osm>

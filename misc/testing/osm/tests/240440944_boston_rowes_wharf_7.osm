@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:16:03Z"/>
+
+  <node id="2481750188" lat="42.3566070" lon="-71.0499999"/>
+  <node id="2481750189" lat="42.3566085" lon="-71.0494448"/>
+  <node id="2481750194" lat="42.3566412" lon="-71.0494450"/>
+  <node id="2481750195" lat="42.3566413" lon="-71.0493982"/>
+  <node id="2481750196" lat="42.3566415" lon="-71.0493514"/>
+  <node id="2481750197" lat="42.3566416" lon="-71.0493046"/>
+  <node id="2481750200" lat="42.3566576" lon="-71.0493047"/>
+  <node id="2481750201" lat="42.3566674" lon="-71.0492939"/>
+  <node id="2481750203" lat="42.3566790" lon="-71.0492861"/>
+  <node id="2481750204" lat="42.3566902" lon="-71.0492814"/>
+  <node id="2481750206" lat="42.3567035" lon="-71.0492786"/>
+  <node id="2481750208" lat="42.3567157" lon="-71.0492786"/>
+  <node id="2481750209" lat="42.3567313" lon="-71.0492814"/>
+  <node id="2481750211" lat="42.3567452" lon="-71.0492900"/>
+  <node id="2481750213" lat="42.3567599" lon="-71.0493052"/>
+  <node id="2481750214" lat="42.3567730" lon="-71.0494456"/>
+  <node id="2481750215" lat="42.3567732" lon="-71.0493989"/>
+  <node id="2481750216" lat="42.3567733" lon="-71.0493521"/>
+  <node id="2481750217" lat="42.3567734" lon="-71.0493053"/>
+  <node id="2481750219" lat="42.3568018" lon="-71.0500009"/>
+  <node id="2481750220" lat="42.3568033" lon="-71.0494458"/>
+  <way id="240440944">
+    <nd ref="2481750220"/>
+    <nd ref="2481750214"/>
+    <nd ref="2481750215"/>
+    <nd ref="2481750216"/>
+    <nd ref="2481750217"/>
+    <nd ref="2481750213"/>
+    <nd ref="2481750211"/>
+    <nd ref="2481750209"/>
+    <nd ref="2481750208"/>
+    <nd ref="2481750206"/>
+    <nd ref="2481750204"/>
+    <nd ref="2481750203"/>
+    <nd ref="2481750201"/>
+    <nd ref="2481750200"/>
+    <nd ref="2481750197"/>
+    <nd ref="2481750196"/>
+    <nd ref="2481750195"/>
+    <nd ref="2481750194"/>
+    <nd ref="2481750189"/>
+    <nd ref="2481750188"/>
+    <nd ref="2481750219"/>
+    <nd ref="2481750220"/>
+    <tag k="addr:housenumber" v="40"/>
+    <tag k="addr:street" v="Rowes Wharf"/>
+    <tag k="building:levels" v="7"/>
+    <tag k="building:part" v="yes"/>
+    <tag k="name" v="Central Wharf Building"/>
+    <tag k="roof:colour" v="#DDDDDD"/>
+    <tag k="roof:levels" v="1"/>
+    <tag k="roof:shape" v="hipped"/>
+  </way>
+
+</osm>

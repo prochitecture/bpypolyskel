@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:16:03Z"/>
+
+  <node id="365713724" lat="50.8278764" lon="6.9571032"/>
+  <node id="365713726" lat="50.8279340" lon="6.9570237"/>
+  <node id="2531963753" lat="50.8278864" lon="6.9571207"/>
+  <node id="2531963757" lat="50.8279283" lon="6.9571961"/>
+  <node id="2531963759" lat="50.8280131" lon="6.9573492"/>
+  <node id="2531963761" lat="50.8280307" lon="6.9571958"/>
+  <node id="2531963766" lat="50.8280501" lon="6.9572199"/>
+  <node id="2531963769" lat="50.8280554" lon="6.9572297"/>
+  <node id="2533348209" lat="50.8280277" lon="6.9572095"/>
+  <node id="2533348210" lat="50.8280280" lon="6.9572039"/>
+  <node id="2533348211" lat="50.8280284" lon="6.9572155"/>
+  <node id="2533348212" lat="50.8280291" lon="6.9571995"/>
+  <node id="2533348213" lat="50.8280296" lon="6.9572192"/>
+  <node id="2533348214" lat="50.8280316" lon="6.9572230"/>
+  <node id="2533348224" lat="50.8280345" lon="6.9572262"/>
+  <node id="2533348228" lat="50.8280376" lon="6.9572278"/>
+  <node id="2533348233" lat="50.8280408" lon="6.9572282"/>
+  <node id="2533348236" lat="50.8280441" lon="6.9572271"/>
+  <node id="2533348246" lat="50.8280477" lon="6.9572236"/>
+  <node id="2533348248" lat="50.8280506" lon="6.9572366"/>
+  <node id="2533348251" lat="50.8280699" lon="6.9572709"/>
+  <way id="246278866">
+    <nd ref="365713726"/>
+    <nd ref="2531963761"/>
+    <nd ref="2533348212"/>
+    <nd ref="2533348210"/>
+    <nd ref="2533348209"/>
+    <nd ref="2533348211"/>
+    <nd ref="2533348213"/>
+    <nd ref="2533348214"/>
+    <nd ref="2533348224"/>
+    <nd ref="2533348228"/>
+    <nd ref="2533348233"/>
+    <nd ref="2533348236"/>
+    <nd ref="2533348246"/>
+    <nd ref="2531963766"/>
+    <nd ref="2531963769"/>
+    <nd ref="2533348248"/>
+    <nd ref="2533348251"/>
+    <nd ref="2531963759"/>
+    <nd ref="2531963757"/>
+    <nd ref="2531963753"/>
+    <nd ref="365713724"/>
+    <nd ref="365713726"/>
+    <tag k="building:colour" v="#FFFFFF"/>
+    <tag k="building:levels" v="3"/>
+    <tag k="building:material" v="plaster"/>
+    <tag k="building:part" v="yes"/>
+    <tag k="height" v="12"/>
+    <tag k="roof:colour" v="#333333"/>
+    <tag k="roof:height" v="6"/>
+    <tag k="roof:levels" v="1"/>
+    <tag k="roof:material" v="slate"/>
+    <tag k="roof:orientation" v="along"/>
+    <tag k="roof:shape" v="hipped"/>
+  </way>
+
+</osm>

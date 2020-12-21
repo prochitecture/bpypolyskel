@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:16:03Z"/>
+
+  <node id="2426396525" lat="50.0208228" lon="8.3512320"/>
+  <node id="2426396526" lat="50.0208877" lon="8.3508994"/>
+  <node id="2426396527" lat="50.0209016" lon="8.3513556"/>
+  <node id="2426396528" lat="50.0209585" lon="8.3510059"/>
+  <node id="2426396529" lat="50.0209655" lon="8.3507697"/>
+  <node id="2426396530" lat="50.0210374" lon="8.3511224"/>
+  <node id="2426396531" lat="50.0210414" lon="8.3508831"/>
+  <node id="2426396532" lat="50.0210504" lon="8.3510991"/>
+  <node id="2426396533" lat="50.0210524" lon="8.3509266"/>
+  <node id="2426396534" lat="50.0210574" lon="8.3510634"/>
+  <node id="2426396535" lat="50.0210604" lon="8.3509717"/>
+  <node id="2426396536" lat="50.0210604" lon="8.3510199"/>
+  <node id="4935128629" lat="50.0210034" lon="8.3511806">
+    <tag k="addr:housenumber" v="3b"/>
+    <tag k="addr:street" v="Geschwister-Scholl-Straße"/>
+    <tag k="entrance" v="yes"/>
+  </node>
+  <node id="4935128630" lat="50.0209469" lon="8.3512777">
+    <tag k="addr:housenumber" v="3a"/>
+    <tag k="addr:street" v="Geschwister-Scholl-Straße"/>
+    <tag k="entrance" v="yes"/>
+  </node>
+  <node id="4945625917" lat="50.0210232" lon="8.3508559">
+    <tag k="addr:housenumber" v="31"/>
+    <tag k="addr:street" v="Zum Weidbachtal"/>
+    <tag k="entrance" v="yes"/>
+  </node>
+  <way id="234385465">
+    <nd ref="2426396529"/>
+    <nd ref="4945625917"/>
+    <nd ref="2426396531"/>
+    <nd ref="2426396533"/>
+    <nd ref="2426396535"/>
+    <nd ref="2426396536"/>
+    <nd ref="2426396534"/>
+    <nd ref="2426396532"/>
+    <nd ref="2426396530"/>
+    <nd ref="4935128629"/>
+    <nd ref="4935128630"/>
+    <nd ref="2426396527"/>
+    <nd ref="2426396525"/>
+    <nd ref="2426396528"/>
+    <nd ref="2426396526"/>
+    <nd ref="2426396529"/>
+    <tag k="building" v="apartments"/>
+    <tag k="building:levels" v="4"/>
+    <tag k="roof:levels" v="0"/>
+    <tag k="roof:shape" v="hipped"/>
+  </way>
+
+</osm>

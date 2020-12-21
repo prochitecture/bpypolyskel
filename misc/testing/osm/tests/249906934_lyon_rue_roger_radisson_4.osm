@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:16:03Z"/>
+
+  <node id="1395391124" lat="45.7617200" lon="4.8210240"/>
+  <node id="1395391126" lat="45.7617210" lon="4.8210290"/>
+  <node id="1395391132" lat="45.7617260" lon="4.8210350"/>
+  <node id="1395391136" lat="45.7617350" lon="4.8210380"/>
+  <node id="1395391138" lat="45.7617400" lon="4.8209390"/>
+  <node id="1395391141" lat="45.7617470" lon="4.8210390"/>
+  <node id="1395391149" lat="45.7617560" lon="4.8209400"/>
+  <node id="1395391151" lat="45.7617600" lon="4.8209440"/>
+  <node id="1395391155" lat="45.7617660" lon="4.8209550"/>
+  <node id="1395391156" lat="45.7617700" lon="4.8209720"/>
+  <node id="1395391157" lat="45.7617710" lon="4.8209850"/>
+  <node id="2564439521" lat="45.7617189" lon="4.8210143"/>
+  <node id="2564439524" lat="45.7617193" lon="4.8209993"/>
+  <node id="2564439526" lat="45.7617219" lon="4.8209719"/>
+  <node id="2564439529" lat="45.7617274" lon="4.8209537"/>
+  <node id="2564439531" lat="45.7617326" lon="4.8209425"/>
+  <node id="2564439533" lat="45.7617566" lon="4.8210314"/>
+  <node id="2564439535" lat="45.7617646" lon="4.8210172"/>
+  <way id="249906934">
+    <nd ref="1395391138"/>
+    <nd ref="2564439531"/>
+    <nd ref="2564439529"/>
+    <nd ref="2564439526"/>
+    <nd ref="2564439524"/>
+    <nd ref="2564439521"/>
+    <nd ref="1395391124"/>
+    <nd ref="1395391126"/>
+    <nd ref="1395391132"/>
+    <nd ref="1395391136"/>
+    <nd ref="1395391141"/>
+    <nd ref="2564439533"/>
+    <nd ref="2564439535"/>
+    <nd ref="1395391157"/>
+    <nd ref="1395391156"/>
+    <nd ref="1395391155"/>
+    <nd ref="1395391151"/>
+    <nd ref="1395391149"/>
+    <nd ref="1395391138"/>
+    <tag k="building:levels" v="3"/>
+    <tag k="building:part" v="yes"/>
+    <tag k="roof:shape" v="hipped"/>
+  </way>
+
+</osm>
