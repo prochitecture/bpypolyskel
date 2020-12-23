@@ -848,6 +848,35 @@ def polygonize(verts, firstVertIndex, numVerts, holesInfo=None, height=0., tan=0
 	# compute skeleton
     skeleton = skeletonize(edgeContours)
 
+# Check for edge crossings
+# ===========================================================================
+    # # extract all edges
+    # sk_edges = []
+    # for arc in skeleton:
+    #     p1 = arc.source
+    #     for p2 in arc.sinks:
+    #         sk_edges.append( Edge2(p1,p2) )
+
+    # combs = combinations(sk_edges,2)
+    # nrOfIntsects = 0
+    # for e in combs:
+    #     # check for intersection, exclude endpoints
+    #     denom = ((e[0].p2.x-e[0].p1.x)*(e[1].p2.y-e[1].p1.y))-((e[0].p2.y-e[0].p1.y)*(e[1].p2.x-e[1].p1.x))
+    #     if not denom:
+    #         continue
+    #     n1 = ((e[0].p1.y-e[1].p1.y)*(e[1].p2.x-e[1].p1.x))-((e[0].p1.x-e[1].p1.x)*(e[1].p2.y-e[1].p1.y))
+    #     r = n1 / denom
+    #     n2 = ((e[0].p1.y-e[1].p1.y)*(e[0].p2.x-e[0].p1.x))-((e[0].p1.x-e[1].p1.x)*(e[0].p2.y-e[0].p1.y))
+    #     s = n2 / denom
+    #     if ((r <= EPSILON or r >= 1.0-EPSILON) or (s <= EPSILON or s >= 1.0-EPSILON)):
+    #         continue    # no intersection
+    #     else:
+    #         nrOfIntsects += 1
+
+    # if nrOfIntsects:
+    #     return [[-nrOfIntsects,-nrOfIntsects,-nrOfIntsects]]
+# End of check edge crossings ===============================================
+
 	# compute skeleton node heights and append nodes to original verts list,
 	# see also issue #4 at https://github.com/prochitecture/bpypolyskel
     if height:
