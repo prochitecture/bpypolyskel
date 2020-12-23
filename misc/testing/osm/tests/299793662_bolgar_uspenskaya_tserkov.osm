@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:17:03Z"/>
+
+  <node id="3038749366" lat="54.9857373" lon="49.0567205"/>
+  <node id="3038749367" lat="54.9857390" lon="49.0566976"/>
+  <node id="3038749370" lat="54.9857452" lon="49.0567437"/>
+  <node id="3038749371" lat="54.9857567" lon="49.0567618"/>
+  <node id="3038749374" lat="54.9857708" lon="49.0567730"/>
+  <node id="3038749376" lat="54.9857862" lon="49.0567765"/>
+  <node id="3038749381" lat="54.9858014" lon="49.0567718"/>
+  <node id="3038749384" lat="54.9858152" lon="49.0567594"/>
+  <node id="3038749387" lat="54.9858262" lon="49.0567404"/>
+  <node id="3038749388" lat="54.9858279" lon="49.0567176"/>
+  <way id="299793662">
+    <nd ref="3038749366"/>
+    <nd ref="3038749370"/>
+    <nd ref="3038749371"/>
+    <nd ref="3038749374"/>
+    <nd ref="3038749376"/>
+    <nd ref="3038749381"/>
+    <nd ref="3038749384"/>
+    <nd ref="3038749387"/>
+    <nd ref="3038749388"/>
+    <nd ref="3038749367"/>
+    <nd ref="3038749366"/>
+    <tag k="building:levels" v="1"/>
+    <tag k="building:part" v="yes"/>
+    <tag k="roof:colour" v="green"/>
+    <tag k="roof:orientation" v="across"/>
+    <tag k="roof:shape" v="hipped"/>
+  </way>
+
+</osm>

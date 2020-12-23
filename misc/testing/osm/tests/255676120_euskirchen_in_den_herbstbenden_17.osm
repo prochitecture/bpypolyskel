@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:16:03Z"/>
+
+  <node id="2613471885" lat="50.6738995" lon="6.8167500"/>
+  <node id="2613471890" lat="50.6739927" lon="6.8166874"/>
+  <node id="2613471891" lat="50.6739494" lon="6.8165262"/>
+  <node id="2613471893" lat="50.6738993" lon="6.8166080"/>
+  <node id="2717491567" lat="50.6738758" lon="6.8166591"/>
+  <node id="2717491568" lat="50.6738758" lon="6.8166724"/>
+  <node id="2717491569" lat="50.6738774" lon="6.8166862"/>
+  <node id="2717491572" lat="50.6738868" lon="6.8167112"/>
+  <node id="2717491573" lat="50.6738923" lon="6.8167199"/>
+  <node id="5032636879" lat="50.6738810" lon="6.8166997"/>
+  <node id="5032636880" lat="50.6738770" lon="6.8166479"/>
+  <node id="5032636881" lat="50.6738801" lon="6.8166371"/>
+  <node id="5032636882" lat="50.6738847" lon="6.8166268"/>
+  <node id="5032636883" lat="50.6738917" lon="6.8166160"/>
+  <node id="5032636884" lat="50.6739075" lon="6.8166039"/>
+  <node id="5032636885" lat="50.6739149" lon="6.8166024"/>
+  <node id="5032636886" lat="50.6739095" lon="6.8165529"/>
+  <node id="5032636887" lat="50.6739227" lon="6.8166027"/>
+  <way id="255676120">
+    <nd ref="2613471893"/>
+    <nd ref="5032636883"/>
+    <nd ref="5032636882"/>
+    <nd ref="5032636881"/>
+    <nd ref="5032636880"/>
+    <nd ref="2717491567"/>
+    <nd ref="2717491568"/>
+    <nd ref="2717491569"/>
+    <nd ref="5032636879"/>
+    <nd ref="2717491572"/>
+    <nd ref="2717491573"/>
+    <nd ref="2613471885"/>
+    <nd ref="2613471890"/>
+    <nd ref="2613471891"/>
+    <nd ref="5032636886"/>
+    <nd ref="5032636887"/>
+    <nd ref="5032636885"/>
+    <nd ref="5032636884"/>
+    <nd ref="2613471893"/>
+    <tag k="addr:city" v="Euskirchen"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:housenumber" v="17"/>
+    <tag k="addr:postcode" v="53881"/>
+    <tag k="addr:street" v="In den Herbstbenden"/>
+    <tag k="addr:suburb" v="Kleinbüllesheim"/>
+    <tag k="building" v="detached"/>
+    <tag k="roof:shape" v="hipped"/>
+  </way>
+
+</osm>

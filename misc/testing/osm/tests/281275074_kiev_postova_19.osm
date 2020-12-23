@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:17:03Z"/>
+
+  <node id="2852538737" lat="50.4287911" lon="30.4398456"/>
+  <node id="2852538738" lat="50.4286874" lon="30.4397985"/>
+  <node id="2852538739" lat="50.4286336" lon="30.4399500"/>
+  <node id="2852538740" lat="50.4287493" lon="30.4400054"/>
+  <node id="3630032778" lat="50.4286343" lon="30.4399697"/>
+  <node id="3630032779" lat="50.4286389" lon="30.4399881"/>
+  <node id="3630032780" lat="50.4286470" lon="30.4400033"/>
+  <node id="3630032783" lat="50.4286577" lon="30.4400136"/>
+  <node id="3630032785" lat="50.4286671" lon="30.4398223"/>
+  <node id="3630032786" lat="50.4286699" lon="30.4400181"/>
+  <node id="3630032787" lat="50.4286762" lon="30.4398082"/>
+  <node id="3630032789" lat="50.4286824" lon="30.4400162"/>
+  <node id="3630032790" lat="50.4286939" lon="30.4400082"/>
+  <node id="3630032793" lat="50.4286999" lon="30.4397940"/>
+  <node id="3630032794" lat="50.4287032" lon="30.4399950"/>
+  <node id="3630032795" lat="50.4287076" lon="30.4399784"/>
+  <node id="3630032797" lat="50.4287127" lon="30.4397950"/>
+  <way id="281275074">
+    <nd ref="3630032794"/>
+    <nd ref="3630032790"/>
+    <nd ref="3630032789"/>
+    <nd ref="3630032786"/>
+    <nd ref="3630032783"/>
+    <nd ref="3630032780"/>
+    <nd ref="3630032779"/>
+    <nd ref="3630032778"/>
+    <nd ref="2852538739"/>
+    <nd ref="3630032785"/>
+    <nd ref="3630032787"/>
+    <nd ref="2852538738"/>
+    <nd ref="3630032793"/>
+    <nd ref="3630032797"/>
+    <nd ref="2852538737"/>
+    <nd ref="2852538740"/>
+    <nd ref="3630032795"/>
+    <nd ref="3630032794"/>
+    <tag k="addr:housenumber" v="19"/>
+    <tag k="addr:street" v="Постова вулиця"/>
+    <tag k="building" v="house"/>
+    <tag k="building:levels" v="2"/>
+    <tag k="roof:shape" v="hipped"/>
+  </way>
+
+</osm>

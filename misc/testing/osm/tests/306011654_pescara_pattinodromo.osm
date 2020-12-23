@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:17:03Z"/>
+
+  <node id="140709652" lat="42.4720614" lon="14.1927478"/>
+  <node id="140709657" lat="42.4721202" lon="14.1929097"/>
+  <node id="140709661" lat="42.4721162" lon="14.1929982"/>
+  <node id="140709669" lat="42.4720905" lon="14.1930894"/>
+  <node id="140709677" lat="42.4720509" lon="14.1931618"/>
+  <node id="140709683" lat="42.4720114" lon="14.1932021"/>
+  <node id="140709693" lat="42.4718867" lon="14.1932396"/>
+  <node id="140709701" lat="42.4718272" lon="14.1932193"/>
+  <node id="140709706" lat="42.4714374" lon="14.1928433"/>
+  <node id="140709710" lat="42.4713941" lon="14.1927890"/>
+  <node id="140709717" lat="42.4713738" lon="14.1926235"/>
+  <node id="140709726" lat="42.4714000" lon="14.1925235"/>
+  <node id="140709732" lat="42.4714515" lon="14.1924323"/>
+  <node id="140709738" lat="42.4714990" lon="14.1923733"/>
+  <node id="140709745" lat="42.4716137" lon="14.1923411"/>
+  <node id="712351620" lat="42.4716902" lon="14.1923789"/>
+  <node id="3107687890" lat="42.4713723" lon="14.1927166"/>
+  <node id="3107687891" lat="42.4715544" lon="14.1923464"/>
+  <node id="3107687892" lat="42.4721024" lon="14.1928158"/>
+  <node id="3107687893" lat="42.4719540" lon="14.1932396"/>
+  <way id="306011654">
+    <nd ref="712351620"/>
+    <nd ref="140709652"/>
+    <nd ref="3107687892"/>
+    <nd ref="140709657"/>
+    <nd ref="140709661"/>
+    <nd ref="140709669"/>
+    <nd ref="140709677"/>
+    <nd ref="140709683"/>
+    <nd ref="3107687893"/>
+    <nd ref="140709693"/>
+    <nd ref="140709701"/>
+    <nd ref="140709706"/>
+    <nd ref="140709710"/>
+    <nd ref="3107687890"/>
+    <nd ref="140709717"/>
+    <nd ref="140709726"/>
+    <nd ref="140709732"/>
+    <nd ref="140709738"/>
+    <nd ref="3107687891"/>
+    <nd ref="140709745"/>
+    <nd ref="712351620"/>
+    <tag k="building" v="yes"/>
+    <tag k="building:material" v="brick"/>
+    <tag k="building:part" v="yes"/>
+    <tag k="height" v="16"/>
+    <tag k="roof:colour" v="white"/>
+    <tag k="roof:height" v="10"/>
+    <tag k="roof:shape" v="hipped"/>
+  </way>
+
+</osm>

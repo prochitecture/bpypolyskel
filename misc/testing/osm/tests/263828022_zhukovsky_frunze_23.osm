@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:17:03Z"/>
+
+  <node id="2473701152" lat="55.5951487" lon="38.1146806"/>
+  <node id="2473701158" lat="55.5950911" lon="38.1152314"/>
+  <node id="2473701160" lat="55.5952656" lon="38.1150868"/>
+  <node id="2473701162" lat="55.5951725" lon="38.1147643"/>
+  <node id="2473701168" lat="55.5949619" lon="38.1147297"/>
+  <node id="2473701172" lat="55.5952894" lon="38.1151700"/>
+  <node id="2473701174" lat="55.5952917" lon="38.1152392"/>
+  <node id="2473701187" lat="55.5951728" lon="38.1148042"/>
+  <node id="2473701203" lat="55.5951462" lon="38.1153704"/>
+  <node id="2473701207" lat="55.5952472" lon="38.1150621"/>
+  <node id="2473701209" lat="55.5951048" lon="38.1146026"/>
+  <node id="2473701211" lat="55.5949716" lon="38.1148184"/>
+  <node id="2473701215" lat="55.5951095" lon="38.1152998"/>
+  <node id="2473701219" lat="55.5951195" lon="38.1153370"/>
+  <node id="2473701221" lat="55.5950159" lon="38.1149298"/>
+  <node id="2473701224" lat="55.5950912" lon="38.1151990"/>
+  <node id="2473701247" lat="55.5949987" lon="38.1149116"/>
+  <node id="2473701251" lat="55.5952906" lon="38.1151950"/>
+  <node id="2734291502" lat="55.5952832" lon="38.1152469">
+    <tag k="camera:mount" v="wall"/>
+    <tag k="camera:type" v="fixed"/>
+    <tag k="man_made" v="surveillance"/>
+    <tag k="surveillance" v="outdoor"/>
+    <tag k="surveillance:type" v="camera"/>
+    <tag k="surveillance:zone" v="town"/>
+  </node>
+  <node id="2734291503" lat="55.5952913" lon="38.1152237">
+    <tag k="camera:mount" v="wall"/>
+    <tag k="camera:type" v="fixed"/>
+    <tag k="man_made" v="surveillance"/>
+    <tag k="surveillance" v="outdoor"/>
+    <tag k="surveillance:type" v="camera"/>
+    <tag k="surveillance:zone" v="town"/>
+  </node>
+  <way id="263828022">
+    <nd ref="2473701215"/>
+    <nd ref="2473701158"/>
+    <nd ref="2473701224"/>
+    <nd ref="2473701221"/>
+    <nd ref="2473701247"/>
+    <nd ref="2473701211"/>
+    <nd ref="2473701168"/>
+    <nd ref="2473701209"/>
+    <nd ref="2473701152"/>
+    <nd ref="2473701162"/>
+    <nd ref="2473701187"/>
+    <nd ref="2473701207"/>
+    <nd ref="2473701160"/>
+    <nd ref="2473701172"/>
+    <nd ref="2473701251"/>
+    <nd ref="2734291503"/>
+    <nd ref="2473701174"/>
+    <nd ref="2734291502"/>
+    <nd ref="2473701203"/>
+    <nd ref="2473701219"/>
+    <nd ref="2473701215"/>
+    <tag k="building:levels" v="3"/>
+    <tag k="building:part" v="yes"/>
+    <tag k="roof:shape" v="hipped"/>
+  </way>
+
+</osm>

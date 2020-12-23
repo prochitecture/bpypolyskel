@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:17:03Z"/>
+
+  <node id="2779570777" lat="48.8632649" lon="2.3457351"/>
+  <node id="2779570778" lat="48.8632652" lon="2.3457597"/>
+  <node id="2779570784" lat="48.8632704" lon="2.3457958"/>
+  <node id="2779570787" lat="48.8632709" lon="2.3457065"/>
+  <node id="2779570789" lat="48.8632800" lon="2.3456817"/>
+  <node id="2779570790" lat="48.8632822" lon="2.3458143"/>
+  <node id="2779570791" lat="48.8632975" lon="2.3458307"/>
+  <node id="2779570802" lat="48.8633162" lon="2.3458380"/>
+  <node id="2779570806" lat="48.8633358" lon="2.3455310"/>
+  <node id="2779570807" lat="48.8633361" lon="2.3458377"/>
+  <node id="2779570808" lat="48.8633491" lon="2.3455383"/>
+  <node id="2779570809" lat="48.8633548" lon="2.3458289"/>
+  <node id="2779570816" lat="48.8633639" lon="2.3455383"/>
+  <node id="2779570818" lat="48.8633711" lon="2.3458125"/>
+  <node id="2779570829" lat="48.8633833" lon="2.3457830"/>
+  <node id="2779570830" lat="48.8633836" lon="2.3457023"/>
+  <node id="2779570839" lat="48.8633881" lon="2.3457341"/>
+  <node id="2779570840" lat="48.8633884" lon="2.3457603"/>
+  <way id="273063680">
+    <nd ref="2779570806"/>
+    <nd ref="2779570808"/>
+    <nd ref="2779570816"/>
+    <nd ref="2779570830"/>
+    <nd ref="2779570839"/>
+    <nd ref="2779570840"/>
+    <nd ref="2779570829"/>
+    <nd ref="2779570818"/>
+    <nd ref="2779570809"/>
+    <nd ref="2779570807"/>
+    <nd ref="2779570802"/>
+    <nd ref="2779570791"/>
+    <nd ref="2779570790"/>
+    <nd ref="2779570784"/>
+    <nd ref="2779570778"/>
+    <nd ref="2779570777"/>
+    <nd ref="2779570787"/>
+    <nd ref="2779570789"/>
+    <nd ref="2779570806"/>
+    <tag k="building:part" v="yes"/>
+    <tag k="height" v="25"/>
+    <tag k="roof:height" v="7"/>
+    <tag k="roof:material" v="slate"/>
+    <tag k="roof:shape" v="hipped"/>
+  </way>
+
+</osm>

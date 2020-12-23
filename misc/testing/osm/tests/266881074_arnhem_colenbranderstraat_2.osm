@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:17:03Z"/>
+
+  <node id="2723792694" lat="51.9930187" lon="5.8868111"/>
+  <node id="2723792895" lat="51.9930560" lon="5.8869275"/>
+  <node id="2723792897" lat="51.9930562" lon="5.8869370"/>
+  <node id="2723792905" lat="51.9930569" lon="5.8869182"/>
+  <node id="2723792908" lat="51.9930574" lon="5.8869462"/>
+  <node id="2723792931" lat="51.9930587" lon="5.8869095"/>
+  <node id="2723792936" lat="51.9930596" lon="5.8869547"/>
+  <node id="2723792944" lat="51.9930614" lon="5.8869018"/>
+  <node id="2723792946" lat="51.9930626" lon="5.8869621"/>
+  <node id="2723792948" lat="51.9930631" lon="5.8868923"/>
+  <node id="2723792956" lat="51.9930647" lon="5.8868952"/>
+  <node id="2723792962" lat="51.9930661" lon="5.8869682"/>
+  <node id="2723793035" lat="51.9930882" lon="5.8867181"/>
+  <node id="2723793066" lat="51.9930977" lon="5.8868428"/>
+  <node id="2723793081" lat="51.9931038" lon="5.8867468"/>
+  <node id="2723793113" lat="51.9931123" lon="5.8867346"/>
+  <node id="2723793144" lat="51.9931221" lon="5.8868869"/>
+  <node id="2723793189" lat="51.9931390" lon="5.8867836"/>
+  <way id="266881074">
+    <nd ref="2723792948"/>
+    <nd ref="2723792694"/>
+    <nd ref="2723793035"/>
+    <nd ref="2723793081"/>
+    <nd ref="2723793113"/>
+    <nd ref="2723793189"/>
+    <nd ref="2723793066"/>
+    <nd ref="2723793144"/>
+    <nd ref="2723792962"/>
+    <nd ref="2723792946"/>
+    <nd ref="2723792936"/>
+    <nd ref="2723792908"/>
+    <nd ref="2723792897"/>
+    <nd ref="2723792895"/>
+    <nd ref="2723792905"/>
+    <nd ref="2723792931"/>
+    <nd ref="2723792944"/>
+    <nd ref="2723792956"/>
+    <nd ref="2723792948"/>
+    <tag k="building" v="house"/>
+    <tag k="building:levels" v="2"/>
+    <tag k="ref:bag" v="202100000212765"/>
+    <tag k="roof:levels" v="1"/>
+    <tag k="roof:shape" v="hipped"/>
+    <tag k="source" v="BAG"/>
+    <tag k="source:date" v="2014-02-11"/>
+    <tag k="start_date" v="1934"/>
+  </way>
+
+</osm>

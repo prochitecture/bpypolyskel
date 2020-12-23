@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:17:03Z"/>
+
+  <node id="2735926561" lat="55.9527955" lon="40.8879220"/>
+  <node id="2735926563" lat="55.9528015" lon="40.8868530"/>
+  <node id="2735926564" lat="55.9528853" lon="40.8877330"/>
+  <node id="2735926566" lat="55.9528881" lon="40.8872440"/>
+  <node id="2735926568" lat="55.9528895" lon="40.8869889"/>
+  <node id="2735926570" lat="55.9528902" lon="40.8868546"/>
+  <node id="2735926573" lat="55.9529152" lon="40.8879242"/>
+  <node id="2735926575" lat="55.9529163" lon="40.8877335"/>
+  <node id="2735926587" lat="55.9530582" lon="40.8872471"/>
+  <node id="2735926589" lat="55.9530596" lon="40.8869919"/>
+  <way id="268235681">
+    <nd ref="2735926570"/>
+    <nd ref="2735926568"/>
+    <nd ref="2735926589"/>
+    <nd ref="2735926587"/>
+    <nd ref="2735926566"/>
+    <nd ref="2735926564"/>
+    <nd ref="2735926575"/>
+    <nd ref="2735926573"/>
+    <nd ref="2735926561"/>
+    <nd ref="2735926563"/>
+    <nd ref="2735926570"/>
+    <tag k="addr:housenumber" v="8А"/>
+    <tag k="addr:street" v="Коммунистическая улица"/>
+    <tag k="building" v="yes"/>
+    <tag k="building:levels" v="3"/>
+    <tag k="roof:shape" v="hipped"/>
+  </way>
+
+</osm>

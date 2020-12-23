@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:17:03Z"/>
+
+  <node id="1679457082" lat="49.1797500" lon="-0.3690210"/>
+  <node id="1679457087" lat="49.1797510" lon="-0.3689830"/>
+  <node id="1679457092" lat="49.1797530" lon="-0.3690540"/>
+  <node id="1679457103" lat="49.1797550" lon="-0.3689450"/>
+  <node id="1679457112" lat="49.1797570" lon="-0.3690800"/>
+  <node id="1679457129" lat="49.1797610" lon="-0.3689110"/>
+  <node id="1679457138" lat="49.1797640" lon="-0.3689000"/>
+  <node id="1679457155" lat="49.1797700" lon="-0.3689040"/>
+  <node id="1679457899" lat="49.1798600" lon="-0.3689970"/>
+  <node id="1679457901" lat="49.1798600" lon="-0.3690120"/>
+  <node id="1679457934" lat="49.1798630" lon="-0.3689750"/>
+  <node id="1679457935" lat="49.1798630" lon="-0.3690350"/>
+  <node id="1679457942" lat="49.1798650" lon="-0.3689670"/>
+  <node id="1679459651" lat="49.1799370" lon="-0.3697870"/>
+  <node id="1679459709" lat="49.1799570" lon="-0.3694010"/>
+  <node id="1679459775" lat="49.1799790" lon="-0.3694880"/>
+  <node id="1679460657" lat="49.1800400" lon="-0.3697260"/>
+  <node id="5041812484" lat="49.1799443" lon="-0.3697827">
+    <tag k="camera:direction" v="10"/>
+    <tag k="camera:mount" v="wall"/>
+    <tag k="camera:type" v="fixed"/>
+    <tag k="man_made" v="surveillance"/>
+    <tag k="surveillance" v="outdoor"/>
+    <tag k="surveillance:type" v="camera"/>
+    <tag k="surveillance:zone" v="parking"/>
+  </node>
+  <node id="5041812485" lat="49.1800142" lon="-0.3697413">
+    <tag k="camera:direction" v="210"/>
+    <tag k="camera:mount" v="wall"/>
+    <tag k="camera:type" v="fixed"/>
+    <tag k="man_made" v="surveillance"/>
+    <tag k="surveillance" v="outdoor"/>
+    <tag k="surveillance:type" v="camera"/>
+    <tag k="surveillance:zone" v="parking"/>
+  </node>
+  <way id="288314052">
+    <nd ref="1679460657"/>
+    <nd ref="1679459775"/>
+    <nd ref="1679459709"/>
+    <nd ref="1679457935"/>
+    <nd ref="1679457901"/>
+    <nd ref="1679457899"/>
+    <nd ref="1679457934"/>
+    <nd ref="1679457942"/>
+    <nd ref="1679457155"/>
+    <nd ref="1679457138"/>
+    <nd ref="1679457129"/>
+    <nd ref="1679457103"/>
+    <nd ref="1679457087"/>
+    <nd ref="1679457082"/>
+    <nd ref="1679457092"/>
+    <nd ref="1679457112"/>
+    <nd ref="1679459651"/>
+    <nd ref="5041812484"/>
+    <nd ref="5041812485"/>
+    <nd ref="1679460657"/>
+    <tag k="building:levels" v="4"/>
+    <tag k="building:part" v="yes"/>
+    <tag k="roof:material" v="slate"/>
+    <tag k="roof:shape" v="hipped"/>
+  </way>
+
+</osm>

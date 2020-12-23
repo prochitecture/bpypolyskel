@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:17:03Z"/>
+
+  <node id="3234873279" lat="21.2801665" lon="-157.8350009"/>
+  <node id="3234873281" lat="21.2801768" lon="-157.8350092"/>
+  <node id="3234873283" lat="21.2801880" lon="-157.8350161"/>
+  <node id="3234873284" lat="21.2801998" lon="-157.8350216"/>
+  <node id="3234873287" lat="21.2802121" lon="-157.8350256"/>
+  <node id="3234873288" lat="21.2802248" lon="-157.8350280"/>
+  <node id="3234873290" lat="21.2802376" lon="-157.8350289"/>
+  <node id="3234873291" lat="21.2802405" lon="-157.8348951"/>
+  <node id="3234873293" lat="21.2802505" lon="-157.8350281"/>
+  <node id="3234873295" lat="21.2802631" lon="-157.8350258"/>
+  <node id="3234873296" lat="21.2802755" lon="-157.8350219"/>
+  <node id="3234873299" lat="21.2802873" lon="-157.8350165"/>
+  <node id="3234873300" lat="21.2802985" lon="-157.8350097"/>
+  <node id="3234873302" lat="21.2803089" lon="-157.8350016"/>
+  <node id="3234873303" lat="21.2803184" lon="-157.8349922"/>
+  <node id="3234873306" lat="21.2803267" lon="-157.8349817"/>
+  <node id="3234873307" lat="21.2803339" lon="-157.8349703"/>
+  <way id="317242124">
+    <nd ref="3234873279"/>
+    <nd ref="3234873291"/>
+    <nd ref="3234873307"/>
+    <nd ref="3234873306"/>
+    <nd ref="3234873303"/>
+    <nd ref="3234873302"/>
+    <nd ref="3234873300"/>
+    <nd ref="3234873299"/>
+    <nd ref="3234873296"/>
+    <nd ref="3234873295"/>
+    <nd ref="3234873293"/>
+    <nd ref="3234873290"/>
+    <nd ref="3234873288"/>
+    <nd ref="3234873287"/>
+    <nd ref="3234873284"/>
+    <nd ref="3234873283"/>
+    <nd ref="3234873281"/>
+    <nd ref="3234873279"/>
+    <tag k="building" v="amphitheater"/>
+    <tag k="building:levels" v="1"/>
+    <tag k="height" v="5.5"/>
+    <tag k="roof:height" v="2"/>
+    <tag k="roof:shape" v="hipped"/>
+  </way>
+
+</osm>
