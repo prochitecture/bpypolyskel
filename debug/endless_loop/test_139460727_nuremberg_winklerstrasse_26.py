@@ -400,14 +400,30 @@ unitVectors = [
 holesInfo = None
 firstVertIndex = 130
 numPolygonVerts = 130
+faces = []
+
+bpypolyskel.debugOutputs["skeleton"] = 1
 
 
-faces = bpypolyskel.polygonize(verts, firstVertIndex, numPolygonVerts, holesInfo, 0.0, 0.5, None, unitVectors)
+@pytest.mark.dependency()
+@pytest.mark.timeout(10)
+def test_polygonize():
+    global faces
+    faces = bpypolyskel.polygonize(verts, firstVertIndex, numPolygonVerts, holesInfo, 0.0, 0.5, None, unitVectors)
 
 
-for face in faces:
-    assert len(face) >= 3
+@pytest.mark.dependency(depends=["test_polygonize"])
+def test_numVertsInFace():
+    for face in faces:
+        assert len(face) >= 3
 
 
-for face in faces:
-    assert len(face) == len(set(face))
+@pytest.mark.dependency(depends=["test_polygonize"])
+def test_duplication():
+    for face in faces:
+        assert len(face) == len(set(face))
+
+
+@pytest.mark.dependency(depends=["test_polygonize"])
+def test_edgeCrossing():
+    assert not bpypolyskel.checkEdgeCrossing(bpypolyskel.debugOutputs["skeleton"])

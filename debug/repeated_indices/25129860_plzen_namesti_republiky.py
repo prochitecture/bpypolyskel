@@ -416,13 +416,21 @@ holesInfo = None
 firstVertIndex = 135
 numPolygonVerts = 135
 
+bpypolyskel.debugOutputs["skeleton"] = 1
+
 
 faces = bpypolyskel.polygonize(verts, firstVertIndex, numPolygonVerts, holesInfo, 0.0, 0.5, None, unitVectors)
 
 
+# the number of vertices in a face
 for face in faces:
     assert len(face) >= 3
 
 
+# duplications of vertex indices
 for face in faces:
     assert len(face) == len(set(face))
+
+
+# edge crossing
+assert not bpypolyskel.checkEdgeCrossing(bpypolyskel.debugOutputs["skeleton"])
