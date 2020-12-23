@@ -36,6 +36,11 @@ EPSILON = 0.00001
 PARALLEL = 0.01     # set this value to 1-cos(alpha), where alpha is the largest angle 
                     # between lines to accept them as parallelaccepted as 'parallel'.
 
+# enabling debug output.
+# currently implemented: 'skeleton'
+debugRequests = {}
+debugOutputs = {}
+
 def _iterCircularPrevNext(lst):
     prevs, nexts = tee(lst)
     prevs = islice(cycle(prevs), len(lst) - 1, None)
@@ -847,6 +852,10 @@ def polygonize(verts, firstVertIndex, numVerts, holesInfo=None, height=0., tan=0
 
 	# compute skeleton
     skeleton = skeletonize(edgeContours)
+
+    # evetual debug output of skeleton
+    if 'skeleton' in debugRequests:
+        debugOutputs['skeleton'] = skeleton
 
 # Check for edge crossings
 # ===========================================================================
