@@ -39,6 +39,8 @@ firstVertIndex = 9
 numPolygonVerts = 9
 faces = []
 
+bpypolyskel.debugOutputs["skeleton"] = 1
+
 
 @pytest.mark.dependency()
 @pytest.mark.timeout(10)
@@ -57,3 +59,8 @@ def test_numVertsInFace():
 def test_duplication():
     for face in faces:
         assert len(face) == len(set(face))
+
+
+@pytest.mark.dependency(depends=["test_polygonize"])
+def test_edgeCrossing():
+    assert not bpypolyskel.checkEdgeCrossing(bpypolyskel.debugOutputs["skeleton"])
