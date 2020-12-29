@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.7 b85c4387">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-29T16:54:03Z"/>
+
+  <node id="321917312" lat="48.0554063" lon="14.1280413"/>
+  <node id="321917313" lat="48.0555688" lon="14.1279375"/>
+  <node id="321917314" lat="48.0558887" lon="14.1292296"/>
+  <node id="321917315" lat="48.0553653" lon="14.1295726"/>
+  <node id="321917316" lat="48.0550667" lon="14.1286265"/>
+  <node id="321917317" lat="48.0554935" lon="14.1283448"/>
+  <node id="321917318" lat="48.0554492" lon="14.1285801"/>
+  <node id="321917319" lat="48.0552279" lon="14.1287244"/>
+  <node id="321917320" lat="48.0554129" lon="14.1293343"/>
+  <node id="321917321" lat="48.0556224" lon="14.1291959"/>
+  <node id="390345292" lat="48.0550835" lon="14.1286154"/>
+  <node id="390345298" lat="48.0553840" lon="14.1295604"/>
+  <node id="3938368751" lat="48.0558028" lon="14.1289290"/>
+  <node id="3938368755" lat="48.0556250" lon="14.1281382"/>
+  <node id="3938368756" lat="48.0555893" lon="14.1281619"/>
+  <node id="3938369258" lat="48.0555227" lon="14.1279670"/>
+  <node id="3938369259" lat="48.0554150" lon="14.1280357"/>
+  <node id="3938369261" lat="48.0555643" lon="14.1282067"/>
+  <node id="3938369262" lat="48.0555852" lon="14.1282817"/>
+  <node id="3938369263" lat="48.0555241" lon="14.1283200"/>
+  <node id="3938369264" lat="48.0555031" lon="14.1282450"/>
+  <node id="3938369265" lat="48.0556026" lon="14.1283392"/>
+  <node id="3938369266" lat="48.0556271" lon="14.1284278"/>
+  <node id="3938369267" lat="48.0555622" lon="14.1284681"/>
+  <node id="3938369268" lat="48.0555376" lon="14.1283795"/>
+  <node id="3938369269" lat="48.0556408" lon="14.1284749"/>
+  <node id="3938369270" lat="48.0557037" lon="14.1287094"/>
+  <node id="3938369271" lat="48.0556378" lon="14.1287489"/>
+  <node id="3938369272" lat="48.0555750" lon="14.1285144"/>
+  <node id="3938369273" lat="48.0557155" lon="14.1287570"/>
+  <node id="3938369274" lat="48.0557382" lon="14.1288415"/>
+  <node id="3938369275" lat="48.0556731" lon="14.1288806"/>
+  <node id="3938369276" lat="48.0556504" lon="14.1287962"/>
+  <node id="3938369277" lat="48.0557549" lon="14.1288999"/>
+  <node id="3938369278" lat="48.0557782" lon="14.1289856"/>
+  <node id="3938369279" lat="48.0557129" lon="14.1290253"/>
+  <node id="3938369280" lat="48.0556896" lon="14.1289397"/>
+  <node id="3968940386" lat="48.0554325" lon="14.1281324"/>
+  <node id="3968940387" lat="48.0555948" lon="14.1280305"/>
+  <node id="4672103448" lat="48.0552877" lon="14.1284806"/>
+  <node id="4672103449" lat="48.0553373" lon="14.1286530"/>
+  <way id="29275136">
+    <nd ref="3968940387"/>
+    <nd ref="3938368755"/>
+    <nd ref="3938368756"/>
+    <nd ref="3938368751"/>
+    <nd ref="321917314"/>
+    <nd ref="390345298"/>
+    <nd ref="321917315"/>
+    <nd ref="321917316"/>
+    <nd ref="390345292"/>
+    <nd ref="4672103448"/>
+    <nd ref="321917317"/>
+  </way>
+  <way id="40196269">
+    <nd ref="321917318"/>
+    <nd ref="4672103449"/>
+    <nd ref="321917319"/>
+    <nd ref="321917320"/>
+    <nd ref="321917321"/>
+    <nd ref="321917318"/>
+    <tag k="name" v="Schankhof"/>
+  </way>
+  <way id="390678814">
+    <nd ref="3938369261"/>
+    <nd ref="3938369262"/>
+    <nd ref="3938369263"/>
+    <nd ref="3938369264"/>
+    <nd ref="3938369261"/>
+    <tag k="natural" v="water"/>
+    <tag k="water" v="pond"/>
+  </way>
+  <way id="390678815">
+    <nd ref="3938369265"/>
+    <nd ref="3938369266"/>
+    <nd ref="3938369267"/>
+    <nd ref="3938369268"/>
+    <nd ref="3938369265"/>
+    <tag k="natural" v="water"/>
+    <tag k="water" v="pond"/>
+  </way>
+  <way id="390678816">
+    <nd ref="3938369269"/>
+    <nd ref="3938369270"/>
+    <nd ref="3938369271"/>
+    <nd ref="3938369272"/>
+    <nd ref="3938369269"/>
+    <tag k="natural" v="water"/>
+    <tag k="water" v="pond"/>
+  </way>
+  <way id="390678817">
+    <nd ref="3938369273"/>
+    <nd ref="3938369274"/>
+    <nd ref="3938369275"/>
+    <nd ref="3938369276"/>
+    <nd ref="3938369273"/>
+    <tag k="natural" v="water"/>
+    <tag k="water" v="pond"/>
+  </way>
+  <way id="390678818">
+    <nd ref="3938369277"/>
+    <nd ref="3938369278"/>
+    <nd ref="3938369279"/>
+    <nd ref="3938369280"/>
+    <nd ref="3938369277"/>
+    <tag k="natural" v="water"/>
+    <tag k="water" v="pond"/>
+  </way>
+  <way id="393737941">
+    <nd ref="321917317"/>
+    <nd ref="3968940386"/>
+  </way>
+  <way id="393737945">
+    <nd ref="3968940386"/>
+    <nd ref="321917312"/>
+    <nd ref="3938369259"/>
+    <nd ref="3938369258"/>
+    <nd ref="321917313"/>
+    <nd ref="3968940387"/>
+  </way>
+  <relation id="2702124">
+    <member type="way" ref="29275136" role="outer"/>
+    <member type="way" ref="393737941" role="outer"/>
+    <member type="way" ref="393737945" role="outer"/>
+    <member type="way" ref="40196269" role="inner"/>
+    <member type="way" ref="390678814" role="inner"/>
+    <member type="way" ref="390678815" role="inner"/>
+    <member type="way" ref="390678816" role="inner"/>
+    <member type="way" ref="390678817" role="inner"/>
+    <member type="way" ref="390678818" role="inner"/>
+    <tag k="building" v="yes"/>
+    <tag k="building:colour" v="#ffffff"/>
+    <tag k="building:levels" v="2"/>
+    <tag k="roof:colour" v="#000000"/>
+    <tag k="roof:height" v="4"/>
+    <tag k="roof:shape" v="hipped"/>
+    <tag k="type" v="multipolygon"/>
+  </relation>
+
+</osm>

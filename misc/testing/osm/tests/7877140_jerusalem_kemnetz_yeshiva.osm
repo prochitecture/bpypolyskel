@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.7 b85c4387">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-29T16:59:03Z"/>
+
+  <node id="2754824202" lat="31.7932416" lon="35.2168850"/>
+  <node id="2754824211" lat="31.7933627" lon="35.2172722"/>
+  <node id="2754824219" lat="31.7927405" lon="35.2177493">
+    <tag k="addr:housenumber" v="18"/>
+  </node>
+  <node id="2754824222" lat="31.7934523" lon="35.2170377"/>
+  <node id="2754824228" lat="31.7933042" lon="35.2173732"/>
+  <node id="2754824230" lat="31.7933311" lon="35.2172468"/>
+  <node id="2754824233" lat="31.7929901" lon="35.2181047">
+    <tag k="addr:housenumber" v="15"/>
+  </node>
+  <node id="2754824241" lat="31.7931844" lon="35.2169836">
+    <tag k="addr:housenumber" v="24"/>
+  </node>
+  <node id="2754824252" lat="31.7933568" lon="35.2169774"/>
+  <node id="2754824254" lat="31.7936238" lon="35.2171753"/>
+  <node id="2754824262" lat="31.7927446" lon="35.2179076">
+    <tag k="addr:housenumber" v="11"/>
+  </node>
+  <node id="2754824284" lat="31.7935679" lon="35.2172719">
+    <tag k="addr:housenumber" v="27"/>
+  </node>
+  <node id="2754824300" lat="31.7931699" lon="35.2179583">
+    <tag k="addr:housenumber" v="21"/>
+  </node>
+  <node id="2754824303" lat="31.7934539" lon="35.2174685">
+    <tag k="addr:housenumber" v="25"/>
+  </node>
+  <node id="2754824308" lat="31.7932019" lon="35.2172911"/>
+  <node id="2754824317" lat="31.7933082" lon="35.2169384">
+    <tag k="addr:housenumber" v="12"/>
+  </node>
+  <node id="2754824321" lat="31.7932738" lon="35.2171671"/>
+  <node id="2754824326" lat="31.7933195" lon="35.2177002">
+    <tag k="addr:housenumber" v="23"/>
+  </node>
+  <node id="2754824342" lat="31.7928983" lon="35.2174771">
+    <tag k="addr:housenumber" v="20"/>
+  </node>
+  <node id="2754824356" lat="31.7935419" lon="35.2171095">
+    <tag k="addr:housenumber" v="14"/>
+  </node>
+  <node id="2754824360" lat="31.7928799" lon="35.2180162">
+    <tag k="addr:housenumber" v="13"/>
+  </node>
+  <node id="2754824362" lat="31.7926792" lon="35.2178551"/>
+  <node id="2754824364" lat="31.7930697" lon="35.2171815">
+    <tag k="addr:housenumber" v="22"/>
+  </node>
+  <node id="2754824367" lat="31.7932554" lon="35.2171523"/>
+  <node id="2754824370" lat="31.7930549" lon="35.2181566"/>
+  <node id="2754837045" lat="31.7932695" lon="35.2169075">
+    <tag k="addr:housenumber" v="10"/>
+  </node>
+  <node id="5321829143" lat="31.7928197" lon="35.2178491"/>
+  <node id="5321829144" lat="31.7929525" lon="35.2178311"/>
+  <node id="5321829145" lat="31.7928690" lon="35.2177640"/>
+  <node id="5321829147" lat="31.7931276" lon="35.2177809"/>
+  <node id="5321829148" lat="31.7930077" lon="35.2180000"/>
+  <node id="5321829149" lat="31.7929495" lon="35.2176420"/>
+  <node id="5321829150" lat="31.7931853" lon="35.2176785"/>
+  <node id="5321829157" lat="31.7930817" lon="35.2178724"/>
+  <node id="5321829158" lat="31.7929772" lon="35.2177885"/>
+  <node id="5321829166" lat="31.7930073" lon="35.2175396"/>
+  <way id="270466473">
+    <nd ref="2754824254"/>
+    <nd ref="2754824356"/>
+    <nd ref="2754824222"/>
+    <nd ref="2754824230"/>
+    <nd ref="2754824211"/>
+    <nd ref="2754824228"/>
+    <nd ref="2754824308"/>
+    <nd ref="2754824321"/>
+    <nd ref="2754824367"/>
+    <nd ref="2754824252"/>
+    <nd ref="2754824317"/>
+    <nd ref="2754837045"/>
+    <nd ref="2754824202"/>
+    <nd ref="2754824241"/>
+    <nd ref="2754824364"/>
+    <nd ref="2754824342"/>
+    <nd ref="2754824219"/>
+    <nd ref="2754824362"/>
+    <nd ref="2754824262"/>
+    <nd ref="2754824360"/>
+    <nd ref="2754824233"/>
+    <nd ref="2754824370"/>
+    <nd ref="2754824300"/>
+    <nd ref="2754824326"/>
+    <nd ref="2754824303"/>
+    <nd ref="2754824284"/>
+    <nd ref="2754824254"/>
+  </way>
+  <way id="551040447">
+    <nd ref="5321829150"/>
+    <nd ref="5321829166"/>
+    <nd ref="5321829149"/>
+    <nd ref="5321829147"/>
+    <nd ref="5321829150"/>
+  </way>
+  <way id="551040448">
+    <nd ref="5321829157"/>
+    <nd ref="5321829158"/>
+    <nd ref="5321829144"/>
+    <nd ref="5321829145"/>
+    <nd ref="5321829143"/>
+    <nd ref="5321829148"/>
+    <nd ref="5321829157"/>
+  </way>
+  <relation id="7877140">
+    <member type="way" ref="270466473" role="outer"/>
+    <member type="way" ref="551040448" role="inner"/>
+    <member type="way" ref="551040447" role="inner"/>
+    <tag k="building" v="yes"/>
+    <tag k="name" v="ישיבת קמניץ"/>
+    <tag k="name:en" v="Kemnetz Yeshiva"/>
+    <tag k="name:he" v="ישיבת קמניץ"/>
+    <tag k="roof:material" v="roof_tiles"/>
+    <tag k="roof:shape" v="hipped"/>
+    <tag k="type" v="multipolygon"/>
+  </relation>
+
+</osm>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.7 b85c4387">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-29T16:54:03Z"/>
+
+  <node id="889400603" lat="40.9689169" lon="-5.6734648"/>
+  <node id="889400717" lat="40.9690336" lon="-5.6733133"/>
+  <node id="889400765" lat="40.9688818" lon="-5.6734806"/>
+  <node id="889400797" lat="40.9689692" lon="-5.6733329"/>
+  <node id="889400860" lat="40.9689927" lon="-5.6733608"/>
+  <node id="889400866" lat="40.9688230" lon="-5.6734900"/>
+  <node id="889400921" lat="40.9689497" lon="-5.6734992"/>
+  <node id="889401000" lat="40.9689983" lon="-5.6732737"/>
+  <node id="889401080" lat="40.9689478" lon="-5.6733650"/>
+  <node id="889401127" lat="40.9690210" lon="-5.6733938"/>
+  <node id="889401191" lat="40.9689295" lon="-5.6735331"/>
+  <node id="889401237" lat="40.9688491" lon="-5.6734425"/>
+  <node id="889401270" lat="40.9690182" lon="-5.6732425"/>
+  <node id="889401357" lat="40.9689000" lon="-5.6735738"/>
+  <node id="889401452" lat="40.9689998" lon="-5.6734258"/>
+  <node id="889401511" lat="40.9688967" lon="-5.6734987"/>
+  <node id="889401563" lat="40.9688695" lon="-5.6734117"/>
+  <node id="889401594" lat="40.9689209" lon="-5.6733337"/>
+  <node id="889401737" lat="40.9689715" lon="-5.6733927"/>
+  <node id="889401832" lat="40.9690536" lon="-5.6732821"/>
+  <node id="889401872" lat="40.9689022" lon="-5.6734498"/>
+  <node id="889401911" lat="40.9689423" lon="-5.6733015"/>
+  <node id="2904355444" lat="40.9687771" lon="-5.6734375"/>
+  <node id="2904355445" lat="40.9689459" lon="-5.6736263"/>
+  <node id="2904355446" lat="40.9689781" lon="-5.6731277"/>
+  <node id="2904355447" lat="40.9691468" lon="-5.6733169"/>
+  <node id="4634884273" lat="40.9689218" lon="-5.6734041"/>
+  <node id="4634884275" lat="40.9689455" lon="-5.6734318"/>
+  <node id="4634884284" lat="40.9689334" lon="-5.6734178"/>
+  <node id="4634884492" lat="40.9689221" lon="-5.6735991"/>
+  <node id="4634884498" lat="40.9688632" lon="-5.6735329"/>
+  <node id="4634884499" lat="40.9688057" lon="-5.6734702"/>
+  <way id="75422214">
+    <nd ref="889401511"/>
+    <nd ref="889401191"/>
+    <nd ref="889400921"/>
+    <nd ref="889400603"/>
+    <nd ref="889401511"/>
+  </way>
+  <way id="75422354">
+    <nd ref="889401737"/>
+    <nd ref="889401452"/>
+    <nd ref="889401127"/>
+    <nd ref="889400860"/>
+  </way>
+  <way id="75422451">
+    <nd ref="889400797"/>
+    <nd ref="889401911"/>
+    <nd ref="889401594"/>
+    <nd ref="889401080"/>
+  </way>
+  <way id="75422477">
+    <nd ref="889401270"/>
+    <nd ref="889401000"/>
+    <nd ref="889400717"/>
+    <nd ref="889401832"/>
+    <nd ref="889401270"/>
+  </way>
+  <way id="75422536">
+    <nd ref="889400765"/>
+    <nd ref="889401872"/>
+    <nd ref="889401563"/>
+    <nd ref="889401237"/>
+    <nd ref="889400765"/>
+  </way>
+  <way id="286766906">
+    <nd ref="2904355446"/>
+    <nd ref="2904355444"/>
+    <nd ref="4634884499"/>
+    <nd ref="889400866"/>
+    <nd ref="4634884498"/>
+    <nd ref="889401357"/>
+    <nd ref="4634884492"/>
+    <nd ref="2904355445"/>
+    <nd ref="2904355447"/>
+    <nd ref="2904355446"/>
+  </way>
+  <way id="469080371">
+    <nd ref="889401737"/>
+    <nd ref="4634884275"/>
+    <nd ref="4634884284"/>
+    <nd ref="4634884273"/>
+    <nd ref="889401080"/>
+  </way>
+  <way id="889596530">
+    <nd ref="889400860"/>
+    <nd ref="889400797"/>
+  </way>
+  <relation id="3803883">
+    <member type="way" ref="286766906" role="outer"/>
+    <member type="way" ref="75422477" role="inner"/>
+    <member type="way" ref="75422214" role="inner"/>
+    <member type="way" ref="75422536" role="inner"/>
+    <member type="way" ref="75422354" role="inner"/>
+    <member type="way" ref="469080371" role="inner"/>
+    <member type="way" ref="75422451" role="inner"/>
+    <member type="way" ref="889596530" role="inner"/>
+    <tag k="building:levels" v="6"/>
+    <tag k="building:material" v="brick"/>
+    <tag k="building:part" v="yes"/>
+    <tag k="roof:levels" v="1"/>
+    <tag k="roof:material" v="roof_tiles"/>
+    <tag k="roof:shape" v="hipped"/>
+    <tag k="type" v="multipolygon"/>
+  </relation>
+
+</osm>

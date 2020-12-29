@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.7 b85c4387">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-29T21:32:03Z"/>
+
+  <node id="4171175771" lat="43.4575942" lon="-3.8284178">
+    <tag k="addr:city" v="Santander"/>
+    <tag k="addr:country" v="ES"/>
+    <tag k="addr:housenumber" v="18"/>
+    <tag k="addr:postcode" v="39010"/>
+    <tag k="addr:street" v="Calle del Padre Rábago"/>
+  </node>
+  <node id="4171175772" lat="43.4579288" lon="-3.8283475">
+    <tag k="addr:city" v="Santander"/>
+    <tag k="addr:country" v="ES"/>
+    <tag k="addr:housenumber" v="19"/>
+    <tag k="addr:postcode" v="39010"/>
+    <tag k="addr:street" v="Avenida de Valdecilla"/>
+  </node>
+  <node id="4171175773" lat="43.4576377" lon="-3.8285996">
+    <tag k="addr:city" v="Santander"/>
+    <tag k="addr:country" v="ES"/>
+    <tag k="addr:housenumber" v="20"/>
+    <tag k="addr:postcode" v="39010"/>
+    <tag k="addr:street" v="Calle del Padre Rábago"/>
+  </node>
+  <node id="4171175774" lat="43.4578709" lon="-3.8285608">
+    <tag k="addr:city" v="Santander"/>
+    <tag k="addr:country" v="ES"/>
+    <tag k="addr:housenumber" v="21"/>
+    <tag k="addr:postcode" v="39010"/>
+    <tag k="addr:street" v="Avenida de Valdecilla"/>
+  </node>
+  <node id="4171175775" lat="43.4578178" lon="-3.8287900">
+    <tag k="addr:city" v="Santander"/>
+    <tag k="addr:country" v="ES"/>
+    <tag k="addr:housenumber" v="23"/>
+    <tag k="addr:postcode" v="39010"/>
+    <tag k="addr:street" v="Avenida de Valdecilla"/>
+  </node>
+  <node id="4171175777" lat="43.4575865" lon="-3.8283766"/>
+  <node id="4171175778" lat="43.4575898" lon="-3.8283466"/>
+  <node id="4171175779" lat="43.4575950" lon="-3.8283737"/>
+  <node id="4171175780" lat="43.4575957" lon="-3.8283339"/>
+  <node id="4171175781" lat="43.4576021" lon="-3.8284604"/>
+  <node id="4171175782" lat="43.4576107" lon="-3.8284574"/>
+  <node id="4171175783" lat="43.4576137" lon="-3.8285318"/>
+  <node id="4171175784" lat="43.4576162" lon="-3.8283139"/>
+  <node id="4171175785" lat="43.4576184" lon="-3.8283259"/>
+  <node id="4171175786" lat="43.4576216" lon="-3.8285735"/>
+  <node id="4171175787" lat="43.4576242" lon="-3.8285280"/>
+  <node id="4171175788" lat="43.4576321" lon="-3.8285698"/>
+  <node id="4171175989" lat="43.4576352" lon="-3.8286454"/>
+  <node id="4171175990" lat="43.4576431" lon="-3.8286873"/>
+  <node id="4171175991" lat="43.4576457" lon="-3.8286416"/>
+  <node id="4171175992" lat="43.4576536" lon="-3.8286835"/>
+  <node id="4171175993" lat="43.4576606" lon="-3.8287653"/>
+  <node id="4171175994" lat="43.4576675" lon="-3.8288012"/>
+  <node id="4171175995" lat="43.4576685" lon="-3.8287626"/>
+  <node id="4171175996" lat="43.4576754" lon="-3.8287984"/>
+  <node id="4171175997" lat="43.4576789" lon="-3.8288612"/>
+  <node id="4171175998" lat="43.4576803" lon="-3.8288248">
+    <tag k="addr:city" v="Santander"/>
+    <tag k="addr:country" v="ES"/>
+    <tag k="addr:housenumber" v="22"/>
+    <tag k="addr:postcode" v="39010"/>
+    <tag k="addr:province" v="Cantabria"/>
+    <tag k="addr:street" v="Calle del Padre Rábago"/>
+  </node>
+  <node id="4171175999" lat="43.4576856" lon="-3.8288970"/>
+  <node id="4171176000" lat="43.4576866" lon="-3.8288583"/>
+  <node id="4171176002" lat="43.4576935" lon="-3.8288943"/>
+  <node id="4171176003" lat="43.4576951" lon="-3.8284557"/>
+  <node id="4171176004" lat="43.4576998" lon="-3.8289278"/>
+  <node id="4171176006" lat="43.4577078" lon="-3.8285227"/>
+  <node id="4171176007" lat="43.4577174" lon="-3.8285193"/>
+  <node id="4171176009" lat="43.4577283" lon="-3.8286304"/>
+  <node id="4171176010" lat="43.4577288" lon="-3.8287024"/>
+  <node id="4171176011" lat="43.4577306" lon="-3.8287120"/>
+  <node id="4171176012" lat="43.4577378" lon="-3.8286269"/>
+  <node id="4171176013" lat="43.4577411" lon="-3.8286980"/>
+  <node id="4171176015" lat="43.4577451" lon="-3.8284373"/>
+  <node id="4171176016" lat="43.4577523" lon="-3.8286940"/>
+  <node id="4171176017" lat="43.4577544" lon="-3.8287046"/>
+  <node id="4171176018" lat="43.4577719" lon="-3.8286875"/>
+  <node id="4171176019" lat="43.4577773" lon="-3.8284255"/>
+  <node id="4171176020" lat="43.4577839" lon="-3.8286367"/>
+  <node id="4171176022" lat="43.4577929" lon="-3.8284197"/>
+  <node id="4171176023" lat="43.4577931" lon="-3.8288948"/>
+  <node id="4171176025" lat="43.4578010" lon="-3.8288613"/>
+  <node id="4171176026" lat="43.4578073" lon="-3.8285469"/>
+  <node id="4171176027" lat="43.4578091" lon="-3.8288630"/>
+  <node id="4171176028" lat="43.4578092" lon="-3.8288259"/>
+  <node id="4171176029" lat="43.4578122" lon="-3.8285219"/>
+  <node id="4171176030" lat="43.4578172" lon="-3.8288276"/>
+  <node id="4171176031" lat="43.4578260" lon="-3.8287554"/>
+  <node id="4171176032" lat="43.4578268" lon="-3.8284072"/>
+  <node id="4171176033" lat="43.4578338" lon="-3.8287589"/>
+  <node id="4171176034" lat="43.4578345" lon="-3.8287202"/>
+  <node id="4171176035" lat="43.4578390" lon="-3.8284028"/>
+  <node id="4171176036" lat="43.4578422" lon="-3.8287236"/>
+  <node id="4171176037" lat="43.4578836" lon="-3.8282205"/>
+  <node id="4171176038" lat="43.4578858" lon="-3.8282325"/>
+  <node id="4171176039" lat="43.4578954" lon="-3.8282292"/>
+  <node id="4171176040" lat="43.4579024" lon="-3.8284231"/>
+  <node id="4171176041" lat="43.4579106" lon="-3.8284283"/>
+  <node id="4171176042" lat="43.4579225" lon="-3.8283338"/>
+  <node id="4171176043" lat="43.4579255" lon="-3.8282338"/>
+  <node id="4171176044" lat="43.4579311" lon="-3.8283373"/>
+  <node id="4171176045" lat="43.4579315" lon="-3.8282936"/>
+  <way id="416354431">
+    <nd ref="4171176023"/>
+    <nd ref="4171176025"/>
+    <nd ref="4171176027"/>
+    <nd ref="4171176030"/>
+    <nd ref="4171176028"/>
+    <nd ref="4171175775"/>
+    <nd ref="4171176031"/>
+    <nd ref="4171176033"/>
+    <nd ref="4171176036"/>
+    <nd ref="4171176034"/>
+    <nd ref="4171175774"/>
+    <nd ref="4171176040"/>
+    <nd ref="4171176041"/>
+    <nd ref="4171175772"/>
+    <nd ref="4171176044"/>
+    <nd ref="4171176042"/>
+    <nd ref="4171176045"/>
+    <nd ref="4171176043"/>
+    <nd ref="4171176039"/>
+    <nd ref="4171176038"/>
+    <nd ref="4171176037"/>
+    <nd ref="4171175784"/>
+    <nd ref="4171175785"/>
+    <nd ref="4171175780"/>
+    <nd ref="4171175778"/>
+    <nd ref="4171175779"/>
+    <nd ref="4171175777"/>
+    <nd ref="4171175771"/>
+    <nd ref="4171175781"/>
+    <nd ref="4171175782"/>
+    <nd ref="4171175787"/>
+    <nd ref="4171175783"/>
+    <nd ref="4171175786"/>
+    <nd ref="4171175788"/>
+    <nd ref="4171175773"/>
+    <nd ref="4171175991"/>
+    <nd ref="4171175989"/>
+    <nd ref="4171175990"/>
+    <nd ref="4171175992"/>
+    <nd ref="4171175995"/>
+    <nd ref="4171175993"/>
+    <nd ref="4171175994"/>
+    <nd ref="4171175996"/>
+    <nd ref="4171175998"/>
+    <nd ref="4171176000"/>
+    <nd ref="4171175997"/>
+    <nd ref="4171175999"/>
+    <nd ref="4171176002"/>
+    <nd ref="4171176004"/>
+    <nd ref="4171176023"/>
+  </way>
+  <way id="416354432">
+    <nd ref="4171176020"/>
+    <nd ref="4171176026"/>
+    <nd ref="4171176029"/>
+    <nd ref="4171176035"/>
+    <nd ref="4171176032"/>
+    <nd ref="4171176022"/>
+    <nd ref="4171176019"/>
+    <nd ref="4171176015"/>
+    <nd ref="4171176003"/>
+    <nd ref="4171176006"/>
+    <nd ref="4171176007"/>
+    <nd ref="4171176012"/>
+    <nd ref="4171176009"/>
+    <nd ref="4171176013"/>
+    <nd ref="4171176010"/>
+    <nd ref="4171176011"/>
+    <nd ref="4171176017"/>
+    <nd ref="4171176016"/>
+    <nd ref="4171176018"/>
+    <nd ref="4171176020"/>
+  </way>
+  <relation id="6195528">
+    <member type="way" ref="416354431" role="outer"/>
+    <member type="way" ref="416354432" role="inner"/>
+    <tag k="building" v="yes"/>
+    <tag k="building:levels" v="8"/>
+    <tag k="roof:orientation" v="along"/>
+    <tag k="roof:shape" v="hipped"/>
+    <tag k="source" v="catastro"/>
+    <tag k="source:date" v="2013-01"/>
+    <tag k="type" v="multipolygon"/>
+  </relation>
+
+</osm>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:17:03Z"/>
+
+  <node id="3307966286" lat="51.9820858" lon="7.6400410"/>
+  <node id="3307966287" lat="51.9820973" lon="7.6402026"/>
+  <node id="3307966288" lat="51.9820990" lon="7.6402023"/>
+  <node id="3307966289" lat="51.9821045" lon="7.6402799"/>
+  <node id="3307966290" lat="51.9821098" lon="7.6402885"/>
+  <node id="3307966291" lat="51.9821157" lon="7.6402938"/>
+  <node id="3307966292" lat="51.9821245" lon="7.6402997"/>
+  <node id="3307966293" lat="51.9821311" lon="7.6400168"/>
+  <node id="3307966294" lat="51.9821322" lon="7.6400324"/>
+  <node id="3307966295" lat="51.9821329" lon="7.6403030"/>
+  <node id="3307966296" lat="51.9821417" lon="7.6403038"/>
+  <node id="3307966297" lat="51.9821513" lon="7.6403027"/>
+  <node id="3307966298" lat="51.9821585" lon="7.6402997"/>
+  <node id="3307966299" lat="51.9821656" lon="7.6400103"/>
+  <node id="3307966300" lat="51.9821661" lon="7.6402941"/>
+  <node id="3307966301" lat="51.9821665" lon="7.6400256"/>
+  <node id="3307966302" lat="51.9821712" lon="7.6400248"/>
+  <node id="3307966303" lat="51.9821731" lon="7.6402866"/>
+  <node id="3307966304" lat="51.9821782" lon="7.6402788"/>
+  <node id="3307966305" lat="51.9821803" lon="7.6401871"/>
+  <node id="3307966306" lat="51.9821820" lon="7.6401863"/>
+  <node id="3307966307" lat="51.9821830" lon="7.6402713"/>
+  <node id="3307966308" lat="51.9821858" lon="7.6402641"/>
+  <way id="324043693">
+    <nd ref="3307966299"/>
+    <nd ref="3307966293"/>
+    <nd ref="3307966294"/>
+    <nd ref="3307966286"/>
+    <nd ref="3307966287"/>
+    <nd ref="3307966288"/>
+    <nd ref="3307966289"/>
+    <nd ref="3307966290"/>
+    <nd ref="3307966291"/>
+    <nd ref="3307966292"/>
+    <nd ref="3307966295"/>
+    <nd ref="3307966296"/>
+    <nd ref="3307966297"/>
+    <nd ref="3307966298"/>
+    <nd ref="3307966300"/>
+    <nd ref="3307966303"/>
+    <nd ref="3307966304"/>
+    <nd ref="3307966307"/>
+    <nd ref="3307966308"/>
+    <nd ref="3307966305"/>
+    <nd ref="3307966306"/>
+    <nd ref="3307966302"/>
+    <nd ref="3307966301"/>
+    <nd ref="3307966299"/>
+    <tag k="addr:city" v="Münster"/>
+    <tag k="addr:housenumber" v="86"/>
+    <tag k="addr:postcode" v="48147"/>
+    <tag k="addr:street" v="Im Hagenfeld"/>
+    <tag k="building" v="house"/>
+    <tag k="building:levels" v="2"/>
+    <tag k="roof:levels" v="1"/>
+    <tag k="roof:shape" v="hipped"/>
+  </way>
+
+</osm>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.7 b85c4387">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-29T16:54:03Z"/>
+
+  <node id="1889588111" lat="14.5978800" lon="120.9861680"/>
+  <node id="1889588115" lat="14.5979437" lon="120.9863425"/>
+  <node id="1889588116" lat="14.5982469" lon="120.9860251"/>
+  <node id="1889588117" lat="14.5983105" lon="120.9861996"/>
+  <node id="4177415912" lat="14.5979050" lon="120.9862366"/>
+  <node id="4177415913" lat="14.5979183" lon="120.9862728"/>
+  <node id="4177415914" lat="14.5979799" lon="120.9862075"/>
+  <node id="4177415915" lat="14.5979931" lon="120.9862437"/>
+  <node id="4177415916" lat="14.5980592" lon="120.9861778"/>
+  <node id="4177415917" lat="14.5980719" lon="120.9862130"/>
+  <node id="4177415918" lat="14.5981214" lon="120.9861538"/>
+  <node id="4177415919" lat="14.5981341" lon="120.9861890"/>
+  <way id="178612998">
+    <nd ref="1889588117"/>
+    <nd ref="1889588115"/>
+    <nd ref="4177415913"/>
+    <nd ref="4177415915"/>
+    <nd ref="4177415914"/>
+    <nd ref="4177415912"/>
+    <nd ref="1889588111"/>
+    <nd ref="1889588116"/>
+    <nd ref="1889588117"/>
+  </way>
+  <way id="417123609">
+    <nd ref="4177415918"/>
+    <nd ref="4177415919"/>
+    <nd ref="4177415917"/>
+    <nd ref="4177415916"/>
+    <nd ref="4177415918"/>
+  </way>
+  <relation id="6203500">
+    <member type="way" ref="178612998" role="outer"/>
+    <member type="way" ref="417123609" role="inner"/>
+    <tag k="addr:city" v="Manila"/>
+    <tag k="addr:province" v="Metro Manila"/>
+    <tag k="building" v="yes"/>
+    <tag k="building:levels" v="2"/>
+    <tag k="heritage" v="yes"/>
+    <tag k="roof:shape" v="hipped"/>
+    <tag k="type" v="multipolygon"/>
+  </relation>
+
+</osm>

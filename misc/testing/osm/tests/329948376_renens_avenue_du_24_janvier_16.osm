@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:17:03Z"/>
+
+  <node id="3369007862" lat="46.5381517" lon="6.5879596"/>
+  <node id="3369007863" lat="46.5381287" lon="6.5878733"/>
+  <node id="3369007864" lat="46.5381456" lon="6.5879140"/>
+  <node id="3369007865" lat="46.5381502" lon="6.5880001"/>
+  <node id="3369007866" lat="46.5381296" lon="6.5880603"/>
+  <node id="3369007867" lat="46.5381397" lon="6.5880393"/>
+  <node id="3369007868" lat="46.5381152" lon="6.5880845"/>
+  <node id="3369008297" lat="46.5380792" lon="6.5878004"/>
+  <node id="3369008298" lat="46.5381011" lon="6.5881014"/>
+  <node id="3369008299" lat="46.5379817" lon="6.5881782"/>
+  <node id="3369008300" lat="46.5379477" lon="6.5880508"/>
+  <node id="3369008301" lat="46.5380490" lon="6.5879871"/>
+  <node id="3369008302" lat="46.5380596" lon="6.5879596"/>
+  <node id="3369008303" lat="46.5380188" lon="6.5879102"/>
+  <way id="329948376">
+    <nd ref="3369008297"/>
+    <nd ref="3369007863"/>
+    <nd ref="3369007864"/>
+    <nd ref="3369007862"/>
+    <nd ref="3369007865"/>
+    <nd ref="3369007867"/>
+    <nd ref="3369007866"/>
+    <nd ref="3369007868"/>
+    <nd ref="3369008298"/>
+    <nd ref="3369008299"/>
+    <nd ref="3369008300"/>
+    <nd ref="3369008301"/>
+    <nd ref="3369008302"/>
+    <nd ref="3369008303"/>
+    <nd ref="3369008297"/>
+    <tag k="addr:city" v="Renens"/>
+    <tag k="addr:country" v="CH"/>
+    <tag k="addr:housenumber" v="16"/>
+    <tag k="addr:postcode" v="1020"/>
+    <tag k="addr:street" v="Avenue du 24-Janvier"/>
+    <tag k="building" v="apartments"/>
+    <tag k="building:levels" v="6"/>
+    <tag k="roof:levels" v="1"/>
+    <tag k="roof:shape" v="hipped"/>
+  </way>
+
+</osm>
