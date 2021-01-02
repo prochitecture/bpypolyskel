@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:19:02Z"/>
+
+  <node id="4032910131" lat="42.5688756" lon="-0.5477081"/>
+  <node id="4032910132" lat="42.5688293" lon="-0.5477153"/>
+  <node id="4032910136" lat="42.5688874" lon="-0.5476160"/>
+  <node id="4032910139" lat="42.5690001" lon="-0.5476192"/>
+  <node id="4032910144" lat="42.5688500" lon="-0.5478097"/>
+  <node id="4032910145" lat="42.5688645" lon="-0.5478229"/>
+  <node id="4032910146" lat="42.5688715" lon="-0.5478212"/>
+  <node id="4032910148" lat="42.5689469" lon="-0.5477371"/>
+  <node id="4032926286" lat="42.5689184" lon="-0.5476195"/>
+  <node id="6301235913" lat="42.5688878" lon="-0.5476113"/>
+  <node id="6301235914" lat="42.5688522" lon="-0.5478148"/>
+  <node id="6301235915" lat="42.5688553" lon="-0.5478189"/>
+  <node id="6301235916" lat="42.5688595" lon="-0.5478216"/>
+  <node id="6301235917" lat="42.5688685" lon="-0.5478225"/>
+  <node id="6301235918" lat="42.5688739" lon="-0.5478193"/>
+  <node id="6301235919" lat="42.5688428" lon="-0.5477770">
+    <tag k="addr:housenumber" v="47"/>
+    <tag k="addr:postcode" v="22700"/>
+    <tag k="addr:street" v="Calle Mayor"/>
+  </node>
+  <node id="6301235920" lat="42.5689224" lon="-0.5475860"/>
+  <way id="400778054">
+    <nd ref="4032910139"/>
+    <nd ref="6301235920"/>
+    <nd ref="4032926286"/>
+    <nd ref="6301235913"/>
+    <nd ref="4032910136"/>
+    <nd ref="4032910131"/>
+    <nd ref="4032910132"/>
+    <nd ref="6301235919"/>
+    <nd ref="4032910144"/>
+    <nd ref="6301235914"/>
+    <nd ref="6301235915"/>
+    <nd ref="6301235916"/>
+    <nd ref="4032910145"/>
+    <nd ref="6301235917"/>
+    <nd ref="4032910146"/>
+    <nd ref="6301235918"/>
+    <nd ref="4032910148"/>
+    <nd ref="4032910139"/>
+    <tag k="building" v="apartments"/>
+    <tag k="building:colour" v="yellow"/>
+    <tag k="building:levels" v="4"/>
+    <tag k="building:levels:underground" v="1"/>
+    <tag k="building:material" v="cement"/>
+    <tag k="roof:colour" v="brown"/>
+    <tag k="roof:material" v="roof_tiles"/>
+    <tag k="roof:orientation" v="across"/>
+    <tag k="roof:shape" v="hipped"/>
+  </way>
+
+</osm>

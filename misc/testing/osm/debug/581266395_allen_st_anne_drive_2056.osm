@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-24T22:39:03Z"/>
+
+  <node id="5562108304" lat="33.0888799" lon="-96.7331867"/>
+  <node id="5562108305" lat="33.0888799" lon="-96.7333263"/>
+  <node id="5562108306" lat="33.0888226" lon="-96.7333267"/>
+  <node id="5562108307" lat="33.0888030" lon="-96.7333357"/>
+  <node id="5562108308" lat="33.0887908" lon="-96.7333268"/>
+  <node id="5562108309" lat="33.0887255" lon="-96.7333250"/>
+  <node id="5562108310" lat="33.0887058" lon="-96.7333035"/>
+  <node id="5562108311" lat="33.0887057" lon="-96.7332644"/>
+  <node id="5562108312" lat="33.0886948" lon="-96.7332644"/>
+  <node id="5562108313" lat="33.0886947" lon="-96.7331868"/>
+  <way id="581266395">
+    <nd ref="5562108304"/>
+    <nd ref="5562108313"/>
+    <nd ref="5562108312"/>
+    <nd ref="5562108311"/>
+    <nd ref="5562108310"/>
+    <nd ref="5562108309"/>
+    <nd ref="5562108308"/>
+    <nd ref="5562108307"/>
+    <nd ref="5562108306"/>
+    <nd ref="5562108305"/>
+    <nd ref="5562108304"/>
+    <tag k="addr:housenumber" v="2056"/>
+    <tag k="addr:street" v="St Anne Drive"/>
+    <tag k="building" v="house"/>
+    <tag k="height" v="6.8"/>
+    <tag k="roof:height" v="2.8"/>
+    <tag k="roof:shape" v="hipped"/>
+  </way>
+
+</osm>

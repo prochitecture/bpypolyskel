@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:17:03Z"/>
+
+  <node id="2532336133" lat="43.4419739" lon="-3.8590535"/>
+  <node id="2532336134" lat="43.4419761" lon="-3.8590268"/>
+  <node id="2532336139" lat="43.4419787" lon="-3.8590795"/>
+  <node id="2532336140" lat="43.4419827" lon="-3.8589537"/>
+  <node id="2532336141" lat="43.4419834" lon="-3.8592507"/>
+  <node id="2532336142" lat="43.4419850" lon="-3.8590030"/>
+  <node id="2532336144" lat="43.4419856" lon="-3.8592241"/>
+  <node id="2532336146" lat="43.4419882" lon="-3.8592768"/>
+  <node id="2532336148" lat="43.4419898" lon="-3.8591015"/>
+  <node id="2532336152" lat="43.4419945" lon="-3.8592002"/>
+  <node id="2532336157" lat="43.4419993" lon="-3.8592989"/>
+  <node id="2532336171" lat="43.4420111" lon="-3.8595455"/>
+  <node id="2532336190" lat="43.4420282" lon="-3.8595440"/>
+  <node id="2532336257" lat="43.4420560" lon="-3.8595415"/>
+  <node id="2532336291" lat="43.4420725" lon="-3.8589455"/>
+  <node id="2532336293" lat="43.4420752" lon="-3.8589989"/>
+  <node id="2532336304" lat="43.4420794" lon="-3.8590895"/>
+  <node id="2532336310" lat="43.4420846" lon="-3.8591960"/>
+  <node id="2532336316" lat="43.4420872" lon="-3.8590247"/>
+  <node id="2532336317" lat="43.4420873" lon="-3.8590284"/>
+  <node id="2532336320" lat="43.4420888" lon="-3.8590580"/>
+  <node id="2532336321" lat="43.4420889" lon="-3.8592871"/>
+  <node id="2532336322" lat="43.4420890" lon="-3.8590617"/>
+  <node id="2532336325" lat="43.4420940" lon="-3.8593932"/>
+  <node id="2532336331" lat="43.4420967" lon="-3.8592219"/>
+  <node id="2532336332" lat="43.4420968" lon="-3.8592256"/>
+  <node id="2532336338" lat="43.4420982" lon="-3.8592553"/>
+  <node id="2532336339" lat="43.4420984" lon="-3.8592589"/>
+  <node id="2532336340" lat="43.4420984" lon="-3.8594843"/>
+  <node id="2532336344" lat="43.4421010" lon="-3.8595374"/>
+  <node id="2532336375" lat="43.4421061" lon="-3.8594193"/>
+  <node id="2532336377" lat="43.4421062" lon="-3.8594230"/>
+  <node id="2532336383" lat="43.4421077" lon="-3.8594526"/>
+  <node id="2532336385" lat="43.4421079" lon="-3.8594563"/>
+  <node id="3688207736" lat="43.4420879" lon="-3.8590405">
+    <tag k="addr:city" v="Peñacastillo"/>
+    <tag k="addr:country" v="ES"/>
+    <tag k="addr:housenumber" v="58-1"/>
+    <tag k="addr:postcode" v="39011"/>
+    <tag k="addr:street" v="Calle de Manuel Pombo Angulo"/>
+    <tag k="entrance" v="yes"/>
+  </node>
+  <node id="3688207737" lat="43.4420975" lon="-3.8592404">
+    <tag k="addr:city" v="Peñacastillo"/>
+    <tag k="addr:country" v="ES"/>
+    <tag k="addr:housenumber" v="58-2"/>
+    <tag k="addr:postcode" v="39011"/>
+    <tag k="addr:street" v="Calle de Manuel Pombo Angulo"/>
+    <tag k="entrance" v="yes"/>
+  </node>
+  <node id="3688207738" lat="43.4421070" lon="-3.8594386">
+    <tag k="addr:city" v="Peñacastillo"/>
+    <tag k="addr:country" v="ES"/>
+    <tag k="addr:housenumber" v="58-3"/>
+    <tag k="addr:postcode" v="39011"/>
+    <tag k="addr:street" v="Calle de Manuel Pombo Angulo"/>
+    <tag k="entrance" v="yes"/>
+  </node>
+  <way id="364775144">
+    <nd ref="2532336317"/>
+    <nd ref="2532336316"/>
+    <nd ref="2532336293"/>
+    <nd ref="2532336291"/>
+    <nd ref="2532336140"/>
+    <nd ref="2532336142"/>
+    <nd ref="2532336134"/>
+    <nd ref="2532336133"/>
+    <nd ref="2532336139"/>
+    <nd ref="2532336148"/>
+    <nd ref="2532336152"/>
+    <nd ref="2532336144"/>
+    <nd ref="2532336141"/>
+    <nd ref="2532336146"/>
+    <nd ref="2532336157"/>
+    <nd ref="2532336171"/>
+    <nd ref="2532336190"/>
+    <nd ref="2532336257"/>
+    <nd ref="2532336344"/>
+    <nd ref="2532336340"/>
+    <nd ref="2532336385"/>
+    <nd ref="2532336383"/>
+    <nd ref="3688207738"/>
+    <nd ref="2532336377"/>
+    <nd ref="2532336375"/>
+    <nd ref="2532336325"/>
+    <nd ref="2532336321"/>
+    <nd ref="2532336339"/>
+    <nd ref="2532336338"/>
+    <nd ref="3688207737"/>
+    <nd ref="2532336332"/>
+    <nd ref="2532336331"/>
+    <nd ref="2532336310"/>
+    <nd ref="2532336304"/>
+    <nd ref="2532336322"/>
+    <nd ref="2532336320"/>
+    <nd ref="3688207736"/>
+    <nd ref="2532336317"/>
+    <tag k="building" v="yes"/>
+    <tag k="building:levels" v="4"/>
+    <tag k="roof:shape" v="hipped"/>
+    <tag k="source" v="catastro"/>
+    <tag k="source:date" v="2013-01"/>
+  </way>
+
+</osm>

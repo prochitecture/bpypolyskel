@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:17:03Z"/>
+
+  <node id="2272339906" lat="54.1770545" lon="15.5689279"/>
+  <node id="2272339907" lat="54.1769575" lon="15.5689600"/>
+  <node id="2272339908" lat="54.1770030" lon="15.5689170"/>
+  <node id="2272339913" lat="54.1769356" lon="15.5690405"/>
+  <node id="2272339915" lat="54.1769460" lon="15.5691277"/>
+  <node id="2272339923" lat="54.1770927" lon="15.5689879"/>
+  <node id="3096923364" lat="54.1769366" lon="15.5690854"/>
+  <node id="3096923365" lat="54.1769429" lon="15.5689973"/>
+  <node id="3096923366" lat="54.1769681" lon="15.5691956"/>
+  <node id="3096923367" lat="54.1769783" lon="15.5689324"/>
+  <node id="3096923368" lat="54.1770293" lon="15.5689155"/>
+  <node id="3096923369" lat="54.1770763" lon="15.5689531"/>
+  <node id="3096923370" lat="54.1771149" lon="15.5690557"/>
+  <node id="3127384822" lat="54.1769992" lon="15.5691659"/>
+  <node id="3127386630" lat="54.1770837" lon="15.5690854"/>
+  <node id="3464337362" lat="54.1769847" lon="15.5692030"/>
+  <node id="3464337363" lat="54.1769944" lon="15.5691938"/>
+  <node id="3464337364" lat="54.1771013" lon="15.5690942"/>
+  <node id="3464337365" lat="54.1771105" lon="15.5690856"/>
+  <way id="339248492">
+    <nd ref="3127386630"/>
+    <nd ref="3127384822"/>
+    <nd ref="3464337363"/>
+    <nd ref="3464337362"/>
+    <nd ref="3096923366"/>
+    <nd ref="2272339915"/>
+    <nd ref="3096923364"/>
+    <nd ref="2272339913"/>
+    <nd ref="3096923365"/>
+    <nd ref="2272339907"/>
+    <nd ref="3096923367"/>
+    <nd ref="2272339908"/>
+    <nd ref="3096923368"/>
+    <nd ref="2272339906"/>
+    <nd ref="3096923369"/>
+    <nd ref="2272339923"/>
+    <nd ref="3096923370"/>
+    <nd ref="3464337365"/>
+    <nd ref="3464337364"/>
+    <nd ref="3127386630"/>
+    <tag k="building:part" v="yes"/>
+    <tag k="roof:colour" v="darkseagreen"/>
+    <tag k="roof:material" v="cooper sheet"/>
+    <tag k="roof:shape" v="hipped"/>
+    <tag k="source" v="Geoportal 2: Ortofotomapa (aerial image)"/>
+  </way>
+
+</osm>

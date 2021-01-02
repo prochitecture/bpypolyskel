@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.7 b85c4387">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-26T18:09:03Z"/>
+
+  <node id="1399662615" lat="51.5283979" lon="9.9480039"/>
+  <node id="1399662619" lat="51.5284226" lon="9.9481669"/>
+  <node id="1399662644" lat="51.5285747" lon="9.9481073"/>
+  <node id="1399662645" lat="51.5285773" lon="9.9481245"/>
+  <node id="1399662676" lat="51.5287296" lon="9.9480466"/>
+  <node id="1399662677" lat="51.5287322" lon="9.9480638"/>
+  <node id="1399662747" lat="51.5291121" lon="9.9478968"/>
+  <node id="1399662748" lat="51.5291143" lon="9.9479116"/>
+  <node id="1399662780" lat="51.5292650" lon="9.9478369"/>
+  <node id="1399662781" lat="51.5292672" lon="9.9478517"/>
+  <node id="1399662830" lat="51.5294338" lon="9.9475981"/>
+  <node id="1399662853" lat="51.5295183" lon="9.9475650"/>
+  <node id="1399662858" lat="51.5295267" lon="9.9475617"/>
+  <node id="1399662859" lat="51.5295283" lon="9.9476713"/>
+  <node id="1399662860" lat="51.5295373" lon="9.9477302"/>
+  <node id="1399662863" lat="51.5295425" lon="9.9476657"/>
+  <node id="4559284093" lat="51.5294612" lon="9.9477600">
+    <tag k="entrance" v="main"/>
+  </node>
+  <node id="4559284094" lat="51.5293550" lon="9.9478016">
+    <tag k="addr:city" v="Göttingen"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:housenumber" v="18"/>
+    <tag k="addr:postcode" v="37085"/>
+    <tag k="addr:street" v="Münchhausenstraße"/>
+    <tag k="entrance" v="main"/>
+  </node>
+  <node id="4559284095" lat="51.5291926" lon="9.9478809">
+    <tag k="addr:city" v="Göttingen"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:housenumber" v="20"/>
+    <tag k="addr:postcode" v="37085"/>
+    <tag k="addr:street" v="Münchhausenstraße"/>
+    <tag k="entrance" v="main"/>
+  </node>
+  <node id="4559284096" lat="51.5290374" lon="9.9479261">
+    <tag k="addr:city" v="Göttingen"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:housenumber" v="22"/>
+    <tag k="addr:postcode" v="37085"/>
+    <tag k="addr:street" v="Münchhausenstraße"/>
+    <tag k="entrance" v="main"/>
+  </node>
+  <node id="4559284097" lat="51.5289242" lon="9.9479704">
+    <tag k="addr:city" v="Göttingen"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:housenumber" v="24"/>
+    <tag k="addr:postcode" v="37085"/>
+    <tag k="addr:street" v="Münchhausenstraße"/>
+    <tag k="entrance" v="main"/>
+  </node>
+  <node id="4559284098" lat="51.5288089" lon="9.9480156">
+    <tag k="addr:city" v="Göttingen"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:housenumber" v="26"/>
+    <tag k="addr:postcode" v="37085"/>
+    <tag k="addr:street" v="Münchhausenstraße"/>
+    <tag k="entrance" v="main"/>
+  </node>
+  <node id="4559284099" lat="51.5286626" lon="9.9480911">
+    <tag k="addr:city" v="Göttingen"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:housenumber" v="28"/>
+    <tag k="addr:postcode" v="37085"/>
+    <tag k="addr:street" v="Münchhausenstraße"/>
+    <tag k="entrance" v="main"/>
+  </node>
+  <node id="4559284183" lat="51.5285399" lon="9.9479483"/>
+  <node id="4559284184" lat="51.5285646" lon="9.9481113"/>
+  <node id="4559284187" lat="51.5287248" lon="9.9478759"/>
+  <node id="4559284188" lat="51.5287495" lon="9.9480388"/>
+  <node id="4559284191" lat="51.5288431" lon="9.9478295"/>
+  <node id="4559284192" lat="51.5288678" lon="9.9479925"/>
+  <node id="4559284195" lat="51.5289572" lon="9.9477848"/>
+  <node id="4559284196" lat="51.5289819" lon="9.9479478"/>
+  <node id="4559284200" lat="51.5290687" lon="9.9477411"/>
+  <node id="4559284201" lat="51.5290935" lon="9.9479041"/>
+  <node id="4559284204" lat="51.5292596" lon="9.9476663"/>
+  <node id="4559284206" lat="51.5292843" lon="9.9478293"/>
+  <node id="4559284210" lat="51.5293984" lon="9.9476120"/>
+  <node id="4559284212" lat="51.5294231" lon="9.9477749"/>
+  <node id="4559284216" lat="51.5295346" lon="9.9476136">
+    <tag k="entrance" v="yes"/>
+  </node>
+  <node id="6176580950" lat="51.5293289" lon="9.9476392">
+    <tag k="entrance" v="service"/>
+  </node>
+  <node id="6176580951" lat="51.5291641" lon="9.9477037">
+    <tag k="entrance" v="service"/>
+  </node>
+  <node id="6176580952" lat="51.5290134" lon="9.9477628">
+    <tag k="entrance" v="service"/>
+  </node>
+  <node id="6176580953" lat="51.5288993" lon="9.9478075">
+    <tag k="entrance" v="service"/>
+  </node>
+  <node id="6176580954" lat="51.5287827" lon="9.9478532">
+    <tag k="entrance" v="service"/>
+  </node>
+  <node id="6176580955" lat="51.5286319" lon="9.9479123">
+    <tag k="entrance" v="service"/>
+  </node>
+  <way id="660450005">
+    <nd ref="1399662853"/>
+    <nd ref="1399662830"/>
+    <nd ref="4559284210"/>
+    <nd ref="6176580950"/>
+    <nd ref="4559284204"/>
+    <nd ref="6176580951"/>
+    <nd ref="4559284200"/>
+    <nd ref="6176580952"/>
+    <nd ref="4559284195"/>
+    <nd ref="6176580953"/>
+    <nd ref="4559284191"/>
+    <nd ref="6176580954"/>
+    <nd ref="4559284187"/>
+    <nd ref="6176580955"/>
+    <nd ref="4559284183"/>
+    <nd ref="1399662615"/>
+    <nd ref="1399662619"/>
+    <nd ref="4559284184"/>
+    <nd ref="1399662644"/>
+    <nd ref="1399662645"/>
+    <nd ref="4559284099"/>
+    <nd ref="1399662677"/>
+    <nd ref="1399662676"/>
+    <nd ref="4559284188"/>
+    <nd ref="4559284098"/>
+    <nd ref="4559284192"/>
+    <nd ref="4559284097"/>
+    <nd ref="4559284196"/>
+    <nd ref="4559284096"/>
+    <nd ref="4559284201"/>
+    <nd ref="1399662747"/>
+    <nd ref="1399662748"/>
+    <nd ref="4559284095"/>
+    <nd ref="1399662781"/>
+    <nd ref="1399662780"/>
+    <nd ref="4559284206"/>
+    <nd ref="4559284094"/>
+    <nd ref="4559284212"/>
+    <nd ref="4559284093"/>
+    <nd ref="1399662860"/>
+    <nd ref="1399662859"/>
+    <nd ref="1399662863"/>
+    <nd ref="4559284216"/>
+    <nd ref="1399662858"/>
+    <nd ref="1399662853"/>
+    <tag k="building" v="apartments"/>
+    <tag k="building:levels" v="3"/>
+    <tag k="operator" v="Wohnungsgenossenschaft eG Göttingen"/>
+    <tag k="roof:levels" v="1"/>
+    <tag k="roof:shape" v="hipped"/>
+    <tag k="start_date" v="1927"/>
+  </way>
+
+</osm>

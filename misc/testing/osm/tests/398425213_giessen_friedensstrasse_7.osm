@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:19:02Z"/>
+
+  <node id="4011851123" lat="50.5820035" lon="8.6964836"/>
+  <node id="4011851124" lat="50.5820147" lon="8.6964272"/>
+  <node id="4011851125" lat="50.5820160" lon="8.6964178"/>
+  <node id="4011851126" lat="50.5820161" lon="8.6964370"/>
+  <node id="4011851127" lat="50.5820193" lon="8.6964439"/>
+  <node id="4011851128" lat="50.5820199" lon="8.6964097">
+    <tag k="entrance" v="main"/>
+  </node>
+  <node id="4011851129" lat="50.5820235" lon="8.6964062"/>
+  <node id="4011851131" lat="50.5820248" lon="8.6964522"/>
+  <node id="4011851132" lat="50.5820297" lon="8.6964043"/>
+  <node id="4011851133" lat="50.5820352" lon="8.6964063"/>
+  <node id="4011851135" lat="50.5820396" lon="8.6964111"/>
+  <node id="4011851136" lat="50.5820464" lon="8.6964211"/>
+  <node id="4011851138" lat="50.5820557" lon="8.6965725"/>
+  <node id="4011851140" lat="50.5820685" lon="8.6963890"/>
+  <node id="4011851168" lat="50.5821207" lon="8.6964779"/>
+  <way id="398425213">
+    <nd ref="4011851168"/>
+    <nd ref="4011851140"/>
+    <nd ref="4011851136"/>
+    <nd ref="4011851135"/>
+    <nd ref="4011851133"/>
+    <nd ref="4011851132"/>
+    <nd ref="4011851129"/>
+    <nd ref="4011851128"/>
+    <nd ref="4011851125"/>
+    <nd ref="4011851124"/>
+    <nd ref="4011851126"/>
+    <nd ref="4011851127"/>
+    <nd ref="4011851131"/>
+    <nd ref="4011851123"/>
+    <nd ref="4011851138"/>
+    <nd ref="4011851168"/>
+    <tag k="addr:city" v="Gießen"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:housenumber" v="7"/>
+    <tag k="addr:postcode" v="35394"/>
+    <tag k="addr:street" v="Friedensstraße"/>
+    <tag k="building" v="apartments"/>
+    <tag k="building:levels" v="2"/>
+    <tag k="roof:colour" v="red"/>
+    <tag k="roof:shape" v="hipped"/>
+  </way>
+
+</osm>

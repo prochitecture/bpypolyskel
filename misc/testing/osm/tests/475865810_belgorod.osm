@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:19:02Z"/>
+
+  <node id="1185859369" lat="50.5933448" lon="36.6039454"/>
+  <node id="1185861097" lat="50.5932546" lon="36.6035685"/>
+  <node id="1185861242" lat="50.5932875" lon="36.6038807"/>
+  <node id="1185862027" lat="50.5934055" lon="36.6037903"/>
+  <node id="4695529725" lat="50.5932598" lon="36.6035703"/>
+  <node id="4695529726" lat="50.5932386" lon="36.6036767"/>
+  <node id="4695529727" lat="50.5933141" lon="36.6039175"/>
+  <node id="4695529728" lat="50.5933711" lon="36.6036205"/>
+  <node id="4695529729" lat="50.5933934" lon="36.6037993"/>
+  <node id="4695529730" lat="50.5933489" lon="36.6039368"/>
+  <node id="4695529892" lat="50.5933553" lon="36.6036049"/>
+  <node id="4695529904" lat="50.5934007" lon="36.6038288"/>
+  <node id="4695529908" lat="50.5934025" lon="36.6038250"/>
+  <node id="4695529909" lat="50.5933559" lon="36.6036251"/>
+  <node id="4695529910" lat="50.5932659" lon="36.6038364"/>
+  <node id="4695529911" lat="50.5932410" lon="36.6037324"/>
+  <node id="4695529912" lat="50.5932432" lon="36.6036214"/>
+  <node id="4695529913" lat="50.5933576" lon="36.6036057"/>
+  <node id="4695529914" lat="50.5932502" lon="36.6037864"/>
+  <way id="475865810">
+    <nd ref="1185861097"/>
+    <nd ref="4695529912"/>
+    <nd ref="4695529726"/>
+    <nd ref="4695529911"/>
+    <nd ref="4695529914"/>
+    <nd ref="4695529910"/>
+    <nd ref="1185861242"/>
+    <nd ref="4695529727"/>
+    <nd ref="1185859369"/>
+    <nd ref="4695529730"/>
+    <nd ref="4695529904"/>
+    <nd ref="4695529908"/>
+    <nd ref="4695529729"/>
+    <nd ref="1185862027"/>
+    <nd ref="4695529728"/>
+    <nd ref="4695529909"/>
+    <nd ref="4695529913"/>
+    <nd ref="4695529892"/>
+    <nd ref="4695529725"/>
+    <nd ref="1185861097"/>
+    <tag k="building:colour" v="lightgrey"/>
+    <tag k="building:part" v="yes"/>
+    <tag k="height" v="17"/>
+    <tag k="min_height" v="13"/>
+    <tag k="roof:colour" v="#996600"/>
+    <tag k="roof:height" v="3.75"/>
+    <tag k="roof:material" v="metal"/>
+    <tag k="roof:shape" v="hipped"/>
+  </way>
+
+</osm>

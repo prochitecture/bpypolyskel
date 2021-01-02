@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:19:02Z"/>
+
+  <node id="2671101657" lat="51.1772843" lon="15.7592776"/>
+  <node id="3124553097" lat="51.1772501" lon="15.7592294"/>
+  <node id="3124553099" lat="51.1772532" lon="15.7592171"/>
+  <node id="3124553100" lat="51.1772941" lon="15.7592223"/>
+  <node id="3124553101" lat="51.1772921" lon="15.7592532"/>
+  <node id="4143818986" lat="51.1770371" lon="15.7590553"/>
+  <node id="4143818987" lat="51.1769468" lon="15.7592509"/>
+  <node id="4143818988" lat="51.1771707" lon="15.7594447"/>
+  <node id="4143822889" lat="51.1772520" lon="15.7595976"/>
+  <node id="4143822890" lat="51.1773704" lon="15.7594508"/>
+  <node id="4143822891" lat="51.1772390" lon="15.7592207"/>
+  <node id="4143822892" lat="51.1772588" lon="15.7592073"/>
+  <node id="4143822893" lat="51.1772666" lon="15.7592033"/>
+  <node id="4143822894" lat="51.1772747" lon="15.7592017"/>
+  <node id="4143822895" lat="51.1772837" lon="15.7592045"/>
+  <node id="4143822896" lat="51.1772902" lon="15.7592134"/>
+  <node id="4143822897" lat="51.1772956" lon="15.7592329"/>
+  <node id="4143822898" lat="51.1772947" lon="15.7592435"/>
+  <node id="4143822899" lat="51.1772896" lon="15.7592619"/>
+  <node id="4143822900" lat="51.1772862" lon="15.7592706"/>
+  <node id="4143822950" lat="51.1770269" lon="15.7590773"/>
+  <node id="4143822951" lat="51.1773391" lon="15.7594888"/>
+  <node id="4143822955" lat="51.1772842" lon="15.7595573"/>
+  <node id="4143822958" lat="51.1773157" lon="15.7595181"/>
+  <node id="4143836258" lat="51.1769637" lon="15.7592655"/>
+  <way id="413051330">
+    <nd ref="4143818986"/>
+    <nd ref="4143822950"/>
+    <nd ref="4143818987"/>
+    <nd ref="4143836258"/>
+    <nd ref="4143818988"/>
+    <nd ref="4143822889"/>
+    <nd ref="4143822955"/>
+    <nd ref="4143822958"/>
+    <nd ref="4143822951"/>
+    <nd ref="4143822890"/>
+    <nd ref="2671101657"/>
+    <nd ref="4143822900"/>
+    <nd ref="4143822899"/>
+    <nd ref="3124553101"/>
+    <nd ref="4143822898"/>
+    <nd ref="4143822897"/>
+    <nd ref="3124553100"/>
+    <nd ref="4143822896"/>
+    <nd ref="4143822895"/>
+    <nd ref="4143822894"/>
+    <nd ref="4143822893"/>
+    <nd ref="4143822892"/>
+    <nd ref="3124553099"/>
+    <nd ref="3124553097"/>
+    <nd ref="4143822891"/>
+    <nd ref="4143818986"/>
+    <tag k="addr:city:simc" v="0368378"/>
+    <tag k="addr:housenumber" v="111"/>
+    <tag k="addr:place" v="Grodziec"/>
+    <tag k="building" v="yes"/>
+    <tag k="building:colour" v="wheat"/>
+    <tag k="building:levels" v="4"/>
+    <tag k="roof:colour" v="orange"/>
+    <tag k="roof:shape" v="hipped"/>
+    <tag k="source:addr" v="zagrodno.e-mapa.net"/>
+  </way>
+
+</osm>

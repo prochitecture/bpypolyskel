@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:17:03Z"/>
+
+  <node id="3677306327" lat="43.4581629" lon="-3.8462624">
+    <tag k="addr:city" v="Santander"/>
+    <tag k="addr:country" v="ES"/>
+    <tag k="addr:housenumber" v="78"/>
+    <tag k="addr:postcode" v="39011"/>
+    <tag k="addr:street" v="Avenida del Cardenal Herrera Oria"/>
+    <tag k="entrance" v="yes"/>
+  </node>
+  <node id="3677306328" lat="43.4581461" lon="-3.8464903">
+    <tag k="addr:city" v="Santander"/>
+    <tag k="addr:country" v="ES"/>
+    <tag k="addr:housenumber" v="80"/>
+    <tag k="addr:postcode" v="39011"/>
+    <tag k="addr:street" v="Avenida del Cardenal Herrera Oria"/>
+    <tag k="entrance" v="yes"/>
+  </node>
+  <node id="3677306329" lat="43.4581289" lon="-3.8467176">
+    <tag k="addr:city" v="Santander"/>
+    <tag k="addr:country" v="ES"/>
+    <tag k="addr:housenumber" v="82"/>
+    <tag k="addr:postcode" v="39011"/>
+    <tag k="addr:street" v="Avenida del Cardenal Herrera Oria"/>
+    <tag k="entrance" v="yes"/>
+  </node>
+  <node id="3677306383" lat="43.4581193" lon="-3.8467984"/>
+  <node id="3677306384" lat="43.4581210" lon="-3.8467761"/>
+  <node id="3677306385" lat="43.4581245" lon="-3.8467767"/>
+  <node id="3677306386" lat="43.4581277" lon="-3.8468324"/>
+  <node id="3677306387" lat="43.4581297" lon="-3.8466581"/>
+  <node id="3677306388" lat="43.4581301" lon="-3.8467998"/>
+  <node id="3677306389" lat="43.4581314" lon="-3.8466360"/>
+  <node id="3677306390" lat="43.4581333" lon="-3.8466586"/>
+  <node id="3677306391" lat="43.4581362" lon="-3.8465708"/>
+  <node id="3677306392" lat="43.4581379" lon="-3.8465487"/>
+  <node id="3677306393" lat="43.4581415" lon="-3.8465492"/>
+  <node id="3677306394" lat="43.4581421" lon="-3.8466375"/>
+  <node id="3677306395" lat="43.4581466" lon="-3.8464306"/>
+  <node id="3677306396" lat="43.4581470" lon="-3.8465723"/>
+  <node id="3677306397" lat="43.4581482" lon="-3.8464085"/>
+  <node id="3677306398" lat="43.4581502" lon="-3.8464312"/>
+  <node id="3677306399" lat="43.4581531" lon="-3.8463433"/>
+  <node id="3677306400" lat="43.4581547" lon="-3.8463212"/>
+  <node id="3677306401" lat="43.4581583" lon="-3.8463216"/>
+  <node id="3677306402" lat="43.4581590" lon="-3.8464100"/>
+  <node id="3677306403" lat="43.4581634" lon="-3.8462032"/>
+  <node id="3677306404" lat="43.4581638" lon="-3.8463448"/>
+  <node id="3677306405" lat="43.4581651" lon="-3.8461809"/>
+  <node id="3677306406" lat="43.4581670" lon="-3.8462036"/>
+  <node id="3677306407" lat="43.4581758" lon="-3.8461825"/>
+  <node id="3677306408" lat="43.4581782" lon="-3.8461499"/>
+  <node id="3677306409" lat="43.4581993" lon="-3.8468424"/>
+  <node id="3677306410" lat="43.4582499" lon="-3.8461599"/>
+  <way id="363563003">
+    <nd ref="3677306402"/>
+    <nd ref="3677306397"/>
+    <nd ref="3677306395"/>
+    <nd ref="3677306398"/>
+    <nd ref="3677306328"/>
+    <nd ref="3677306393"/>
+    <nd ref="3677306392"/>
+    <nd ref="3677306391"/>
+    <nd ref="3677306396"/>
+    <nd ref="3677306394"/>
+    <nd ref="3677306389"/>
+    <nd ref="3677306387"/>
+    <nd ref="3677306390"/>
+    <nd ref="3677306329"/>
+    <nd ref="3677306385"/>
+    <nd ref="3677306384"/>
+    <nd ref="3677306383"/>
+    <nd ref="3677306388"/>
+    <nd ref="3677306386"/>
+    <nd ref="3677306409"/>
+    <nd ref="3677306410"/>
+    <nd ref="3677306408"/>
+    <nd ref="3677306407"/>
+    <nd ref="3677306405"/>
+    <nd ref="3677306403"/>
+    <nd ref="3677306406"/>
+    <nd ref="3677306327"/>
+    <nd ref="3677306401"/>
+    <nd ref="3677306400"/>
+    <nd ref="3677306399"/>
+    <nd ref="3677306404"/>
+    <nd ref="3677306402"/>
+    <tag k="building" v="yes"/>
+    <tag k="building:levels" v="5"/>
+    <tag k="roof:shape" v="hipped"/>
+    <tag k="source" v="catastro"/>
+    <tag k="source:date" v="2013-01"/>
+  </way>
+
+</osm>

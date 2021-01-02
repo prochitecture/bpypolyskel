@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.7 b85c4387">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-26T18:09:03Z"/>
+
+  <node id="5717067254" lat="48.9091551" lon="24.6785662"/>
+  <node id="5717067255" lat="48.9100086" lon="24.6778940"/>
+  <node id="5717067256" lat="48.9099869" lon="24.6778301"/>
+  <node id="5717067257" lat="48.9102015" lon="24.6776611"/>
+  <node id="5717067258" lat="48.9100093" lon="24.6770963"/>
+  <node id="5717067259" lat="48.9098725" lon="24.6772040"/>
+  <node id="5717067260" lat="48.9100129" lon="24.6776167">
+    <tag k="access" v="private"/>
+    <tag k="addr:flats" v="33-56"/>
+    <tag k="entrance" v="yes"/>
+    <tag k="ref" v="2"/>
+    <tag k="wheelchair" v="limited"/>
+    <tag k="wheelchair:description" v="сходинка на вході"/>
+  </node>
+  <node id="5717067261" lat="48.9096815" lon="24.6778776">
+    <tag k="access" v="private"/>
+    <tag k="addr:flats" v="89-120"/>
+    <tag k="entrance" v="yes"/>
+    <tag k="ref" v="4"/>
+    <tag k="wheelchair" v="limited"/>
+    <tag k="wheelchair:description" v="сходинка на вході"/>
+  </node>
+  <node id="5717067262" lat="48.9096635" lon="24.6778247"/>
+  <node id="5717067263" lat="48.9093172" lon="24.6780975"/>
+  <node id="5717067264" lat="48.9093351" lon="24.6781504">
+    <tag k="access" v="private"/>
+    <tag k="addr:flats" v="121-152"/>
+    <tag k="entrance" v="yes"/>
+    <tag k="ref" v="5"/>
+    <tag k="wheelchair" v="limited"/>
+    <tag k="wheelchair:description" v="сходинка на вході"/>
+  </node>
+  <node id="5717067265" lat="48.9090038" lon="24.6784113">
+    <tag k="access" v="private"/>
+    <tag k="addr:flats" v="185-216"/>
+    <tag k="entrance" v="yes"/>
+    <tag k="ref" v="7"/>
+    <tag k="wheelchair" v="limited"/>
+    <tag k="wheelchair:description" v="сходинка на вході"/>
+  </node>
+  <node id="5717067266" lat="48.9088634" lon="24.6779987"/>
+  <node id="5717067267" lat="48.9087266" lon="24.6781065"/>
+  <node id="5717067268" lat="48.9089188" lon="24.6786713"/>
+  <node id="5717067269" lat="48.9091334" lon="24.6785023"/>
+  <node id="6028348698" lat="48.9091695" lon="24.6782809">
+    <tag k="access" v="private"/>
+    <tag k="addr:flats" v="153-184"/>
+    <tag k="entrance" v="yes"/>
+    <tag k="ref" v="6"/>
+    <tag k="wheelchair" v="limited"/>
+    <tag k="wheelchair:description" v="сходинка на вході"/>
+  </node>
+  <node id="6028348699" lat="48.9098472" lon="24.6777471">
+    <tag k="access" v="private"/>
+    <tag k="addr:flats" v="57-88"/>
+    <tag k="entrance" v="yes"/>
+    <tag k="ref" v="3"/>
+    <tag k="wheelchair" v="limited"/>
+    <tag k="wheelchair:description" v="сходинка на вході"/>
+  </node>
+  <node id="6028348700" lat="48.9089136" lon="24.6781461">
+    <tag k="access" v="private"/>
+    <tag k="addr:flats" v="217-255"/>
+    <tag k="entrance" v="yes"/>
+    <tag k="ref" v="8"/>
+    <tag k="wheelchair" v="limited"/>
+    <tag k="wheelchair:description" v="сходинка на вході"/>
+  </node>
+  <node id="6028348701" lat="48.9099227" lon="24.6773517">
+    <tag k="access" v="private"/>
+    <tag k="addr:flats" v="1-32"/>
+    <tag k="entrance" v="yes"/>
+    <tag k="ref" v="1"/>
+    <tag k="wheelchair" v="limited"/>
+    <tag k="wheelchair:description" v="сходинка на вході"/>
+  </node>
+  <way id="601569601">
+    <nd ref="5717067269"/>
+    <nd ref="5717067268"/>
+    <nd ref="5717067267"/>
+    <nd ref="5717067266"/>
+    <nd ref="6028348700"/>
+    <nd ref="5717067265"/>
+    <nd ref="6028348698"/>
+    <nd ref="5717067264"/>
+    <nd ref="5717067263"/>
+    <nd ref="5717067262"/>
+    <nd ref="5717067261"/>
+    <nd ref="6028348699"/>
+    <nd ref="5717067260"/>
+    <nd ref="6028348701"/>
+    <nd ref="5717067259"/>
+    <nd ref="5717067258"/>
+    <nd ref="5717067257"/>
+    <nd ref="5717067256"/>
+    <nd ref="5717067255"/>
+    <nd ref="5717067254"/>
+    <nd ref="5717067269"/>
+    <tag k="addr:housenumber" v="2"/>
+    <tag k="addr:street" v="Слобідська вулиця"/>
+    <tag k="building" v="yes"/>
+    <tag k="building:entrances" v="8"/>
+    <tag k="building:levels" v="9"/>
+    <tag k="roof:shape" v="hipped"/>
+  </way>
+
+</osm>

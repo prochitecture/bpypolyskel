@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:19:02Z"/>
+
+  <node id="1050206898" lat="50.5828324" lon="8.6977077"/>
+  <node id="1050207013" lat="50.5827674" lon="8.6978023"/>
+  <node id="4011851910" lat="50.5827786" lon="8.6977459"/>
+  <node id="4011851912" lat="50.5827799" lon="8.6977365"/>
+  <node id="4011851913" lat="50.5827800" lon="8.6977557"/>
+  <node id="4011851914" lat="50.5827832" lon="8.6977626"/>
+  <node id="4011851915" lat="50.5827838" lon="8.6977284">
+    <tag k="entrance" v="main"/>
+  </node>
+  <node id="4011851916" lat="50.5827874" lon="8.6977249"/>
+  <node id="4011851917" lat="50.5827887" lon="8.6977709"/>
+  <node id="4011851918" lat="50.5827936" lon="8.6977230"/>
+  <node id="4011851920" lat="50.5827991" lon="8.6977250"/>
+  <node id="4011851921" lat="50.5828035" lon="8.6977298"/>
+  <node id="4011851922" lat="50.5828103" lon="8.6977399"/>
+  <node id="4011851924" lat="50.5828196" lon="8.6978912"/>
+  <node id="4011851929" lat="50.5828846" lon="8.6977966"/>
+  <way id="398425200">
+    <nd ref="4011851929"/>
+    <nd ref="1050206898"/>
+    <nd ref="4011851922"/>
+    <nd ref="4011851921"/>
+    <nd ref="4011851920"/>
+    <nd ref="4011851918"/>
+    <nd ref="4011851916"/>
+    <nd ref="4011851915"/>
+    <nd ref="4011851912"/>
+    <nd ref="4011851910"/>
+    <nd ref="4011851913"/>
+    <nd ref="4011851914"/>
+    <nd ref="4011851917"/>
+    <nd ref="1050207013"/>
+    <nd ref="4011851924"/>
+    <nd ref="4011851929"/>
+    <tag k="addr:city" v="Gießen"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="addr:housenumber" v="31"/>
+    <tag k="addr:postcode" v="35394"/>
+    <tag k="addr:street" v="Friedensstraße"/>
+    <tag k="building" v="apartments"/>
+    <tag k="building:levels" v="2"/>
+    <tag k="operator" v="Wohnbau Gießen"/>
+    <tag k="roof:colour" v="red"/>
+    <tag k="roof:shape" v="hipped"/>
+  </way>
+
+</osm>

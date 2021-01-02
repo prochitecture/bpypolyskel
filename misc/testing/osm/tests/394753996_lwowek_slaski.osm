@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:19:02Z"/>
+
+  <node id="3977262893" lat="51.1091265" lon="15.5839560"/>
+  <node id="3977262906" lat="51.1091491" lon="15.5838453"/>
+  <node id="3977262915" lat="51.1090583" lon="15.5838066"/>
+  <node id="3977262916" lat="51.1090271" lon="15.5839059"/>
+  <node id="5630307095" lat="51.1090507" lon="15.5839210">
+    <tag k="entrance" v="yes"/>
+  </node>
+  <node id="5630307096" lat="51.1091069" lon="15.5839482"/>
+  <node id="5630307098" lat="51.1090110" lon="15.5838528"/>
+  <node id="5630307099" lat="51.1090183" lon="15.5838267"/>
+  <node id="5630307100" lat="51.1090133" lon="15.5838848"/>
+  <node id="5630307101" lat="51.1090198" lon="15.5838973"/>
+  <node id="5630307102" lat="51.1090239" lon="15.5838172"/>
+  <node id="5630307103" lat="51.1090141" lon="15.5838374"/>
+  <node id="5630307104" lat="51.1090118" lon="15.5838697"/>
+  <node id="6453457269" lat="51.1090417" lon="15.5838053"/>
+  <node id="6453457270" lat="51.1090309" lon="15.5838105"/>
+  <way id="394753996">
+    <nd ref="3977262906"/>
+    <nd ref="3977262915"/>
+    <nd ref="6453457269"/>
+    <nd ref="6453457270"/>
+    <nd ref="5630307102"/>
+    <nd ref="5630307099"/>
+    <nd ref="5630307103"/>
+    <nd ref="5630307098"/>
+    <nd ref="5630307104"/>
+    <nd ref="5630307100"/>
+    <nd ref="5630307101"/>
+    <nd ref="3977262916"/>
+    <nd ref="5630307095"/>
+    <nd ref="5630307096"/>
+    <nd ref="3977262893"/>
+    <nd ref="3977262906"/>
+    <tag k="amenity" v="biergarten"/>
+    <tag k="building" v="yes"/>
+    <tag k="building:colour" v="white"/>
+    <tag k="building:levels" v="1"/>
+    <tag k="name" v="Sklep Firmowy Browaru Lwówek"/>
+    <tag k="roof:colour" v="grey"/>
+    <tag k="roof:shape" v="hipped"/>
+  </way>
+
+</osm>

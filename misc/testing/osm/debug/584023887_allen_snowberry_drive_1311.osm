@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.7 b85c4387">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-26T18:09:03Z"/>
+
+  <node id="5583145923" lat="33.1254877" lon="-96.7034265"/>
+  <node id="5583145925" lat="33.1254872" lon="-96.7033915"/>
+  <node id="5583145927" lat="33.1254598" lon="-96.7033921"/>
+  <node id="5583145929" lat="33.1254348" lon="-96.7034155"/>
+  <node id="5583145931" lat="33.1253780" lon="-96.7034167"/>
+  <node id="5583145933" lat="33.1253777" lon="-96.7033938"/>
+  <node id="5583145935" lat="33.1253533" lon="-96.7033943"/>
+  <node id="5583145937" lat="33.1253522" lon="-96.7033123"/>
+  <node id="5583145939" lat="33.1254911" lon="-96.7033095"/>
+  <node id="5583145941" lat="33.1254913" lon="-96.7033227"/>
+  <node id="5583145943" lat="33.1255867" lon="-96.7033208"/>
+  <node id="5583145945" lat="33.1255882" lon="-96.7034244"/>
+  <way id="584023887">
+    <nd ref="5583145945"/>
+    <nd ref="5583145943"/>
+    <nd ref="5583145941"/>
+    <nd ref="5583145939"/>
+    <nd ref="5583145937"/>
+    <nd ref="5583145935"/>
+    <nd ref="5583145933"/>
+    <nd ref="5583145931"/>
+    <nd ref="5583145929"/>
+    <nd ref="5583145927"/>
+    <nd ref="5583145925"/>
+    <nd ref="5583145923"/>
+    <nd ref="5583145945"/>
+    <tag k="addr:housenumber" v="1311"/>
+    <tag k="addr:street" v="Snowberry Drive"/>
+    <tag k="building" v="terrace"/>
+    <tag k="height" v="8.7"/>
+    <tag k="roof:height" v="3.4"/>
+    <tag k="roof:shape" v="hipped"/>
+  </way>
+
+</osm>

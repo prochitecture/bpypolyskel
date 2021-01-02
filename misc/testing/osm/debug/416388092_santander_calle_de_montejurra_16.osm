@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:19:02Z"/>
+
+  <node id="4171410171" lat="43.4591868" lon="-3.8278636"/>
+  <node id="4171410180" lat="43.4592129" lon="-3.8278940"/>
+  <node id="4171410183" lat="43.4592165" lon="-3.8278841"/>
+  <node id="4171410185" lat="43.4592214" lon="-3.8277685"/>
+  <node id="4171410186" lat="43.4592379" lon="-3.8279111"/>
+  <node id="4171410187" lat="43.4592400" lon="-3.8277812"/>
+  <node id="4171410188" lat="43.4592415" lon="-3.8279013"/>
+  <node id="4171415689" lat="43.4592435" lon="-3.8277713"/>
+  <node id="4171415690" lat="43.4592435" lon="-3.8279150"/>
+  <node id="4171415692" lat="43.4592472" lon="-3.8279051"/>
+  <node id="4171415694" lat="43.4592620" lon="-3.8279278"/>
+  <node id="4171415695" lat="43.4592657" lon="-3.8279178"/>
+  <node id="4171415696" lat="43.4592693" lon="-3.8279328"/>
+  <node id="4171415697" lat="43.4592729" lon="-3.8279229"/>
+  <node id="4171415698" lat="43.4592762" lon="-3.8278062"/>
+  <node id="4171415701" lat="43.4592798" lon="-3.8277963"/>
+  <node id="4171415704" lat="43.4592885" lon="-3.8279459"/>
+  <node id="4171415707" lat="43.4592943" lon="-3.8279500"/>
+  <node id="4171415708" lat="43.4592979" lon="-3.8279400"/>
+  <node id="4171415711" lat="43.4593076" lon="-3.8278278"/>
+  <node id="4171415713" lat="43.4593112" lon="-3.8278178"/>
+  <node id="4171415719" lat="43.4593277" lon="-3.8279606"/>
+  <node id="4171415724" lat="43.4593438" lon="-3.8278526"/>
+  <node id="4171415726" lat="43.4593475" lon="-3.8278427"/>
+  <node id="4171415728" lat="43.4593527" lon="-3.8278919"/>
+  <node id="4171415733" lat="43.4593624" lon="-3.8278654"/>
+  <way id="416388092">
+    <nd ref="4171415692"/>
+    <nd ref="4171415690"/>
+    <nd ref="4171415694"/>
+    <nd ref="4171415695"/>
+    <nd ref="4171415697"/>
+    <nd ref="4171415696"/>
+    <nd ref="4171415704"/>
+    <nd ref="4171415707"/>
+    <nd ref="4171415708"/>
+    <nd ref="4171415719"/>
+    <nd ref="4171415728"/>
+    <nd ref="4171415733"/>
+    <nd ref="4171415724"/>
+    <nd ref="4171415726"/>
+    <nd ref="4171415713"/>
+    <nd ref="4171415711"/>
+    <nd ref="4171415698"/>
+    <nd ref="4171415701"/>
+    <nd ref="4171415689"/>
+    <nd ref="4171410187"/>
+    <nd ref="4171410185"/>
+    <nd ref="4171410171"/>
+    <nd ref="4171410183"/>
+    <nd ref="4171410180"/>
+    <nd ref="4171410186"/>
+    <nd ref="4171410188"/>
+    <nd ref="4171415692"/>
+    <tag k="addr:city" v="Santander"/>
+    <tag k="addr:country" v="ES"/>
+    <tag k="addr:housenumber" v="16"/>
+    <tag k="addr:postcode" v="39010"/>
+    <tag k="addr:province" v="Cantabria"/>
+    <tag k="addr:street" v="Calle de Montejurra"/>
+    <tag k="building" v="yes"/>
+    <tag k="building:levels" v="5"/>
+    <tag k="roof:orientation" v="along"/>
+    <tag k="roof:shape" v="hipped"/>
+    <tag k="source" v="catastro"/>
+    <tag k="source:date" v="2013-01"/>
+  </way>
+
+</osm>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:19:02Z"/>
+
+  <node id="4198104914" lat="42.9201021" lon="10.7593089"/>
+  <node id="4205822617" lat="42.9197856" lon="10.7595420">
+    <tag k="addr:city" v="Follonica"/>
+    <tag k="addr:country" v="IT"/>
+    <tag k="addr:housenumber" v="20"/>
+    <tag k="addr:postcode" v="58022"/>
+    <tag k="addr:street" v="Via Gorizia"/>
+    <tag k="entrance" v="yes"/>
+  </node>
+  <node id="4205822623" lat="42.9200714" lon="10.7592463">
+    <tag k="addr:city" v="Follonica"/>
+    <tag k="addr:country" v="IT"/>
+    <tag k="addr:housenumber" v="29"/>
+    <tag k="addr:postcode" v="58022"/>
+    <tag k="addr:street" v="Via Fiume"/>
+  </node>
+  <node id="4205822637" lat="42.9197317" lon="10.7594273"/>
+  <node id="4205822638" lat="42.9197401" lon="10.7593645"/>
+  <node id="4205822639" lat="42.9197585" lon="10.7594038"/>
+  <node id="4205822640" lat="42.9198000" lon="10.7595726"/>
+  <node id="4205822641" lat="42.9198002" lon="10.7593118"/>
+  <node id="4205822642" lat="42.9198107" lon="10.7593340"/>
+  <node id="4205822644" lat="42.9198418" lon="10.7594151"/>
+  <node id="4205822645" lat="42.9198822" lon="10.7594975"/>
+  <node id="4205822652" lat="42.9199284" lon="10.7591995"/>
+  <node id="4205822655" lat="42.9199388" lon="10.7592217"/>
+  <node id="4205823292" lat="42.9199786" lon="10.7592902"/>
+  <node id="4205823294" lat="42.9199866" lon="10.7591485"/>
+  <node id="4205823298" lat="42.9200050" lon="10.7591878"/>
+  <node id="4205823303" lat="42.9200231" lon="10.7593811"/>
+  <node id="4205823305" lat="42.9200311" lon="10.7591639"/>
+  <node id="4205823316" lat="42.9200836" lon="10.7593259"/>
+  <node id="4205823319" lat="42.9200911" lon="10.7593189"/>
+  <way id="420624696">
+    <nd ref="4205822637"/>
+    <nd ref="4205822617"/>
+    <nd ref="4205822640"/>
+    <nd ref="4205822645"/>
+    <nd ref="4205822644"/>
+    <nd ref="4205823292"/>
+    <nd ref="4205823303"/>
+    <nd ref="4205823316"/>
+    <nd ref="4205823319"/>
+    <nd ref="4198104914"/>
+    <nd ref="4205822623"/>
+    <nd ref="4205823305"/>
+    <nd ref="4205823298"/>
+    <nd ref="4205823294"/>
+    <nd ref="4205822652"/>
+    <nd ref="4205822655"/>
+    <nd ref="4205822642"/>
+    <nd ref="4205822641"/>
+    <nd ref="4205822638"/>
+    <nd ref="4205822639"/>
+    <nd ref="4205822637"/>
+    <tag k="building:levels" v="7"/>
+    <tag k="building:part" v="yes"/>
+    <tag k="height" v="23"/>
+    <tag k="roof:height" v="1.2"/>
+    <tag k="roof:shape" v="hipped"/>
+  </way>
+
+</osm>

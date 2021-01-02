@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:19:02Z"/>
+
+  <node id="4318639142" lat="43.4610718" lon="-3.8259303">
+    <tag k="addr:city" v="Santander"/>
+    <tag k="addr:country" v="ES"/>
+    <tag k="addr:housenumber" v="1"/>
+    <tag k="addr:postcode" v="39007"/>
+    <tag k="addr:province" v="Cantabria"/>
+    <tag k="addr:street" v="Calle de Salamanca"/>
+  </node>
+  <node id="4318639145" lat="43.4611358" lon="-3.8257676">
+    <tag k="addr:city" v="Santander"/>
+    <tag k="addr:country" v="ES"/>
+    <tag k="addr:housenumber" v="3"/>
+    <tag k="addr:postcode" v="39007"/>
+    <tag k="addr:province" v="Cantabria"/>
+    <tag k="addr:street" v="Calle de Salamanca"/>
+  </node>
+  <node id="4318639148" lat="43.4612035" lon="-3.8255956">
+    <tag k="addr:city" v="Santander"/>
+    <tag k="addr:country" v="ES"/>
+    <tag k="addr:housenumber" v="5"/>
+    <tag k="addr:postcode" v="39007"/>
+    <tag k="addr:province" v="Cantabria"/>
+    <tag k="addr:street" v="Calle de Salamanca"/>
+  </node>
+  <node id="4318639150" lat="43.4612717" lon="-3.8254222">
+    <tag k="addr:city" v="Santander"/>
+    <tag k="addr:country" v="ES"/>
+    <tag k="addr:housenumber" v="7"/>
+    <tag k="addr:postcode" v="39007"/>
+    <tag k="addr:province" v="Cantabria"/>
+    <tag k="addr:street" v="Calle de Salamanca"/>
+  </node>
+  <node id="4318639393" lat="43.4610452" lon="-3.8260111"/>
+  <node id="4318639395" lat="43.4610506" lon="-3.8259843"/>
+  <node id="4318639397" lat="43.4610545" lon="-3.8259872"/>
+  <node id="4318639399" lat="43.4610848" lon="-3.8258973"/>
+  <node id="4318639401" lat="43.4610888" lon="-3.8259001"/>
+  <node id="4318639403" lat="43.4611017" lon="-3.8260768"/>
+  <node id="4318639404" lat="43.4611152" lon="-3.8258200"/>
+  <node id="4318639405" lat="43.4611192" lon="-3.8258229"/>
+  <node id="4318639412" lat="43.4611580" lon="-3.8257112"/>
+  <node id="4318639413" lat="43.4611620" lon="-3.8257142"/>
+  <node id="4318639416" lat="43.4611837" lon="-3.8256458"/>
+  <node id="4318639417" lat="43.4611876" lon="-3.8256488"/>
+  <node id="4318639422" lat="43.4612265" lon="-3.8255371"/>
+  <node id="4318639423" lat="43.4612305" lon="-3.8255400"/>
+  <node id="4318639426" lat="43.4612432" lon="-3.8255075"/>
+  <node id="4318639428" lat="43.4612521" lon="-3.8254719"/>
+  <node id="4318639430" lat="43.4612561" lon="-3.8254750"/>
+  <node id="4318639437" lat="43.4612949" lon="-3.8253632"/>
+  <node id="4318639439" lat="43.4612989" lon="-3.8253661"/>
+  <node id="4318639445" lat="43.4613104" lon="-3.8253367"/>
+  <node id="4318639458" lat="43.4613746" lon="-3.8253843"/>
+  <way id="432939715">
+    <nd ref="4318639401"/>
+    <nd ref="4318639399"/>
+    <nd ref="4318639142"/>
+    <nd ref="4318639395"/>
+    <nd ref="4318639397"/>
+    <nd ref="4318639393"/>
+    <nd ref="4318639403"/>
+    <nd ref="4318639458"/>
+    <nd ref="4318639445"/>
+    <nd ref="4318639439"/>
+    <nd ref="4318639437"/>
+    <nd ref="4318639150"/>
+    <nd ref="4318639428"/>
+    <nd ref="4318639430"/>
+    <nd ref="4318639426"/>
+    <nd ref="4318639423"/>
+    <nd ref="4318639422"/>
+    <nd ref="4318639148"/>
+    <nd ref="4318639416"/>
+    <nd ref="4318639417"/>
+    <nd ref="4318639413"/>
+    <nd ref="4318639412"/>
+    <nd ref="4318639145"/>
+    <nd ref="4318639404"/>
+    <nd ref="4318639405"/>
+    <nd ref="4318639401"/>
+    <tag k="building" v="yes"/>
+    <tag k="building:levels" v="4"/>
+    <tag k="roof:orientation" v="along"/>
+    <tag k="roof:shape" v="hipped"/>
+    <tag k="source" v="catastro"/>
+    <tag k="source:date" v="2013-01"/>
+  </way>
+
+</osm>

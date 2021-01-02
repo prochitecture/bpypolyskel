@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.56.8 7d656e78">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2020-12-20T17:19:02Z"/>
+
+  <node id="4173332189" lat="56.8329835" lon="13.9407533"/>
+  <node id="4173332192" lat="56.8329492" lon="13.9408807"/>
+  <node id="4173332193" lat="56.8329622" lon="13.9408870"/>
+  <node id="4173332194" lat="56.8329757" lon="13.9408849"/>
+  <node id="4173332197" lat="56.8329265" lon="13.9408051"/>
+  <node id="4173332198" lat="56.8329267" lon="13.9408281"/>
+  <node id="4173332199" lat="56.8329310" lon="13.9408497"/>
+  <node id="4173332200" lat="56.8329387" lon="13.9408679"/>
+  <node id="4173332201" lat="56.8329880" lon="13.9408747"/>
+  <node id="4173332202" lat="56.8329977" lon="13.9408574"/>
+  <node id="4173332203" lat="56.8330036" lon="13.9408353"/>
+  <node id="4173332204" lat="56.8330052" lon="13.9408107"/>
+  <node id="4173332205" lat="56.8330021" lon="13.9407867"/>
+  <node id="4173332206" lat="56.8329948" lon="13.9407659"/>
+  <node id="4173332207" lat="56.8332189" lon="13.9409602"/>
+  <node id="4173332208" lat="56.8331524" lon="13.9412277"/>
+  <node id="4173332209" lat="56.8329680" lon="13.9410657"/>
+  <node id="4173332211" lat="56.8328081" lon="13.9412696"/>
+  <node id="4244389763" lat="56.8331770" lon="13.9411341"/>
+  <node id="4244389764" lat="56.8329027" lon="13.9413140"/>
+  <node id="4244435163" lat="56.8328944" lon="13.9413455"/>
+  <node id="5700046778" lat="56.8328609" lon="13.9410691">
+    <tag k="access" v="private"/>
+    <tag k="addr:city" v="Ljungby"/>
+    <tag k="addr:country" v="SE"/>
+    <tag k="addr:housenumber" v="21"/>
+    <tag k="addr:street" v="Stationsgatan"/>
+    <tag k="entrance" v="home"/>
+  </node>
+  <node id="5700046779" lat="56.8328440" lon="13.9411333">
+    <tag k="entrance" v="main"/>
+  </node>
+  <node id="5700046780" lat="56.8328188" lon="13.9412288">
+    <tag k="entrance" v="main"/>
+  </node>
+  <node id="5700046781" lat="56.8330620" lon="13.9408223">
+    <tag k="entrance" v="main"/>
+  </node>
+  <node id="5779294965" lat="56.8331072" lon="13.9408620">
+    <tag k="access" v="private"/>
+    <tag k="addr:city" v="Ljungby"/>
+    <tag k="addr:country" v="SE"/>
+    <tag k="addr:housenumber" v="6"/>
+    <tag k="addr:street" v="Stora Torget"/>
+    <tag k="entrance" v="home"/>
+  </node>
+  <way id="416581931">
+    <nd ref="4173332207"/>
+    <nd ref="4244389763"/>
+    <nd ref="4173332208"/>
+    <nd ref="4173332209"/>
+    <nd ref="4244389764"/>
+    <nd ref="4244435163"/>
+    <nd ref="4173332211"/>
+    <nd ref="5700046780"/>
+    <nd ref="5700046779"/>
+    <nd ref="5700046778"/>
+    <nd ref="4173332197"/>
+    <nd ref="4173332198"/>
+    <nd ref="4173332199"/>
+    <nd ref="4173332200"/>
+    <nd ref="4173332192"/>
+    <nd ref="4173332193"/>
+    <nd ref="4173332194"/>
+    <nd ref="4173332201"/>
+    <nd ref="4173332202"/>
+    <nd ref="4173332203"/>
+    <nd ref="4173332204"/>
+    <nd ref="4173332205"/>
+    <nd ref="4173332206"/>
+    <nd ref="4173332189"/>
+    <nd ref="5700046781"/>
+    <nd ref="5779294965"/>
+    <nd ref="4173332207"/>
+    <tag k="building:levels" v="3"/>
+    <tag k="building:part" v="yes"/>
+    <tag k="roof:shape" v="hipped"/>
+  </way>
+
+</osm>
