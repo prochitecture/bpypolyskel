@@ -4,6 +4,8 @@
 
 How to fit a hipped roof to the walls of a building? No problem, the _bpypolyskel_ library provides a single function that does the whole task automatically. From the footprint of a building, its [_straight skeleton_](https://en.wikipedia.org/wiki/Straight_skeleton) gets computed. From this skeleton all _faces_ get extracted and the height for every vertex of the straight skeleton is calculated. All these computations can easily be done in [Blender](https://www.blender.org/), but the library may also be used in general purpose applications.
 
+The _bpypolyskel_ library was [tested](https://github.com/prochitecture/bpypolyskel/wiki/Testing) against all 320.000 hipped roofs in the OpenStreetMap database. It runs successfully for 99.99% of them.
+
 ## Usage
 The library _bpypolyskel_ provides two functions:
 
