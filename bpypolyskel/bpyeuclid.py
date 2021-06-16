@@ -1,58 +1,61 @@
-import mathutils
+import numpy as np
+
+def normalize(vector): # normlaize to unit vector (unfortunately does not exist in numpy)
+    return vector / np.linalg.norm(vector)
 
 # -------------------------------------------------------------------------
 # from https://bryceboe.com/2006/10/23/line-segment-intersection-algorithm/,
-# works fine with mathutils.Vector
+
 def ccw(A,B,C):
-    return (C.y-A.y) * (B.x-A.x) > (B.y-A.y) * (C.x-A.x)
+    return (C[1]-A[1]) * (B[0]-A[0]) > (B[1]-A[1]) * (C[0]-A[0])
 # Return true if line segments AB and CD intersect
 def intersect(A,B,C,D):
     return ccw(A,C,D) != ccw(B,C,D) and ccw(A,B,C) != ccw(A,B,D)
 # -------------------------------------------------------------------------
 
 def _intersect_line2_line2(A, B):
-    d = B.v.y * A.v.x - B.v.x * A.v.y
+    d = B.v[1] * A.v[0] - B.v[0] * A.v[1]
     if d == 0:
         return None
 
-    dy = A.p.y - B.p.y
-    dx = A.p.x - B.p.x
-    ua = (B.v.x * dy - B.v.y * dx) / d
+    dy = A.p[1] - B.p[1]
+    dx = A.p[0] - B.p[0]
+    ua = (B.v[0] * dy - B.v[1] * dx) / d
     if not A.intsecttest(ua):
         return None
-    ub = (A.v.x * dy - A.v.y * dx) / d
+    ub = (A.v[0] * dy - A.v[1] * dx) / d
     if not B.intsecttest(ub):
         return None
 
-    return mathutils.Vector((A.p.x + ua * A.v.x, A.p.y + ua * A.v.y))
+    return np.array((A.p[0] + ua * A.v[0], A.p[1] + ua * A.v[1]))
 
 class Edge2:
-    def __init__(self, p1, p2, norm=None, verts=None, center=mathutils.Vector((0,0))):  # evtl. conversion from 3D to 2D
+    def __init__(self, p1, p2, norm=None, verts=None, center=np.zeros((1,2))):  # evtl. conversion from 3D to 2D
         """
         Args:
-            p1 (mathutils.Vector | int): Index of the first edge vertex if <verts> is given or
+            p1 (numpy vector | int): Index of the first edge vertex if <verts> is given or
                 the vector of the first edge vertex otherwise
-            p2 (mathutils.Vector | int): Index of the second edge vertex if <verts> is given or
-                the vector of the seconf edge vertex otherwise
-            norm (mathutils.Vector): Normalized edge vector
-            verts (list): Python list of vertices
+            p2 (numpy vector | int): Index of the second edge vertex if <verts> is given or
+                the vector of the second edge vertex otherwise
+            norm : Normalized edge vector
+            verts (numpy array): vertices
         """
-        if verts:
+        if verts is not None:
             self.i1 = p1
             self.i2 = p2
             p1 = verts[p1]-center
             p2 = verts[p2]-center
-        self.p1 = mathutils.Vector((p1[0], p1[1]))
-        self.p2 = mathutils.Vector((p2[0], p2[1]))
-        if norm:
-            self.norm = mathutils.Vector((norm[0], norm[1]))
+        self.p1 = p1[:2]
+        self.p2 = p2[:2]
+        if norm is not None:
+            self.norm = norm[:2]
         else:
             norm = self.p2-self.p1
-            norm.normalize()
-            self.norm = norm
+            self.norm = norm / np.linalg.norm(norm)
+
 
     def length_squared(self):
-        return (self.p2-self.p1).length_squared
+        return np.sum(np.square(self.p2-self.p1))
 
 class Ray2:
     def __init__(self, _p, _v):
@@ -88,22 +91,20 @@ class Line2:
         intsect = _intersect_line2_line2(self,other)
         return intsect
 
-    def distance(self,other): # other is a vector
-        nearest = mathutils.geometry.intersect_point_line(other, self.p, self.p+self.v)[0]
-        dist = (other-nearest).length
-        return dist
+    def distance(self,other): # other is a point
+        return np.cross(self.v,other-self.p)/np.linalg.norm(self.v)
 
 def fitCircle3Points(points):
     N = len(points)
     # circle through three points usingg complex math, see answer in 
     # https://stackoverflow.com/questions/28910718/give-3-points-and-a-plot-circle
-    x = complex(points[0].x, points[0].y)
-    y = complex(points[N//2].x, points[N//2].y)
-    z = complex(points[-1].x, points[-1].y)
+    x = complex(points[0,0], points[0,1])
+    y = complex(points[N//2,0], points[N//2,1])
+    z = complex(points[-1,0], points[-1,0])
     w = z-x
     w /= y-x
     c = (x-y)*(w-abs(w)**2)/2j/w.imag-x
     x0 = -c.real
     y0 = -c.imag
     R = abs(c+x)
-    return mathutils.Vector((x0,y0)), R
+    return np.array((x0,y0)), R

@@ -27,6 +27,8 @@ from itertools import *
 from collections import Counter
 from operator import itemgetter
 import re
+import numpy as np
+from numpy.lib.function_base import vectorize
 
 
 from .bpyeuclid import *
@@ -55,13 +57,16 @@ def _iterCircularPrevThisNext(lst):
     return zip(prevs, this, nexts)
     
 def _approximately_equals(a, b):
-    return a == b or ( (a-b).magnitude <= max( a.magnitude, b.magnitude) * 0.001)
+    return np.array_equal(a,b) or ( np.linalg.norm(a-b) <= max( np.linalg.norm(a), np.linalg.norm(b) ) * 0.001)
 
 def robustFloatEqual(f1,f2):
     if abs(f1-f2) <= EPSILON:
         return True
     else:
         return abs(f1-f2) <= EPSILON * max(abs(f1),abs(f2))
+
+def isInArray(row,array):
+    return (array == row).all(axis=1).any()
 
 class _SplitEvent(namedtuple("_SplitEvent", "distance, intersection_point, vertex, opposite_edge")):
     __slots__ = ()
@@ -113,11 +118,10 @@ class _LAVertex:
 
         dv0 = direction_vectors[0]
         dv1 = direction_vectors[1]
-        self._is_reflex = dv0.cross(dv1) > 0
+        self._is_reflex = np.cross(dv0,dv1) > 0
         if forceConvex:
             self._is_reflex = False
-        op_add_result = creator_vectors[0] + creator_vectors[1]
-        self._bisector = Ray2(self.point, op_add_result * (-1 if self._is_reflex else 1))
+        self._bisector = Ray2(self.point, np.sum(creator_vectors,axis=0) * (-1 if self._is_reflex else 1))
         # Vertex created
 
     def invalidate(self):
@@ -162,15 +166,15 @@ class _LAVertex:
                 i = Line2(selfedge).intersect(Line2(edge.edge))
                 if i is not None and not _approximately_equals(i, self.point):
                     # locate candidate b
-                    linvec = (self.point - i).normalized()
+                    linvec = normalize(self.point - i)
                     edvec = edge.edge.norm
-                    if abs(self.bisector.v.cross(linvec) - 1.0) < EPSILON:
-                        linvec = (self.point - i + edvec*0.01 ).normalized()
-                    if self.bisector.v.cross(linvec) < 0: 
+                    if abs(np.cross(self.bisector.v,linvec) - 1.0) < EPSILON:
+                        linvec = normalize(self.point - i + edvec*0.01)
+                    if np.cross(self.bisector.v,linvec) < 0: 
                         edvec = -edvec
 
                     bisecvec = edvec + linvec
-                    if not bisecvec.magnitude:
+                    if not np.sum(np.square(bisecvec)):
                         continue
                     bisector = Line2(i, bisecvec, 'pv')
 
@@ -181,9 +185,9 @@ class _LAVertex:
 
 					# check eligibility of b
 					# a valid b should lie within the area limited by the edge and the bisectors of its two vertices:
-                    xprev	= ( (edge.bisector_prev.v.normalized()).cross( (b - edge.bisector_prev.p).normalized() )) < EPSILON
-                    xnext	= ( (edge.bisector_next.v.normalized()).cross( (b - edge.bisector_next.p).normalized() )) > -EPSILON
-                    xedge	= ( edge.edge.norm.cross( (b - edge.edge.p1).normalized() )) > -EPSILON
+                    xprev	= ( np.cross(normalize(edge.bisector_prev.v), normalize(b - edge.bisector_prev.p) )) < EPSILON
+                    xnext	= ( np.cross(normalize(edge.bisector_next.v), normalize(b - edge.bisector_next.p) )) > -EPSILON
+                    xedge	= ( np.cross(edge.edge.norm, normalize(b - edge.edge.p1)) ) > -EPSILON
 
                     if not (xprev and xnext and xedge):
                         # Candidate discarded
@@ -203,7 +207,7 @@ class _LAVertex:
         if not events:
             return None
 
-        ev = min(events, key=lambda event: (self.point-event.intersection_point).length)
+        ev = min(events, key=lambda event: np.linalg.norm(self.point-event.intersection_point) )
 
         # Generated new event
         return ev
@@ -253,7 +257,7 @@ class _LAV:
 
     def unify(self, vertex_a, vertex_b, point):
         replacement = _LAVertex(point, vertex_a.edge_prev, vertex_b.edge_next,
-                                (vertex_b.bisector.v.normalized(), vertex_a.bisector.v.normalized()))
+                                (normalize(vertex_b.bisector.v), normalize(vertex_a.bisector.v)))
         replacement.lav = self
 
         if self.head in [vertex_a, vertex_b]:
@@ -364,16 +368,16 @@ class _SLAV:
         y = None  # previous vertex
         norm = event.opposite_edge.norm
         for v in chain.from_iterable(self._lavs):
-            if norm == v.edge_prev.norm and event.opposite_edge.p1 == v.edge_prev.p1:
+            if np.array_equal(norm, v.edge_prev.norm) and np.array_equal(event.opposite_edge.p1, v.edge_prev.p1):
                 x = v
                 y = x.prev
-            elif norm == v.edge_next.norm and event.opposite_edge.p1 == v.edge_next.p1:
+            elif np.array_equal(norm, v.edge_next.norm) and np.array_equal(event.opposite_edge.p1, v.edge_next.p1):
                 y = v
                 x = y.next
 
             if x:
-                xprev	= (y.bisector.v.normalized()).cross((event.intersection_point - y.point).normalized()) <= EPSILON
-                xnext	= (x.bisector.v.normalized()).cross((event.intersection_point - x.point).normalized()) >= -EPSILON
+                xprev	= np.cross( normalize(y.bisector.v), normalize(event.intersection_point - y.point) ) <= EPSILON
+                xnext	= np.cross( normalize(x.bisector.v), normalize(event.intersection_point - x.point) ) >= -EPSILON
 
                 if xprev and xnext:
                     break
@@ -544,7 +548,7 @@ def detectApses(outerContour):
     import re
     # compute cross-product between consecutive edges of outer contour
     # set True for angles a, where sin(a) < 0.5 -> 30°
-    sequence = "".join([ 'L' if abs(p.norm.cross(n.norm))<0.5 else 'H' for p,n in _iterCircularPrevNext(outerContour) ])
+    sequence = "".join([ 'L' if abs(np.cross(p.norm,n.norm))<0.5 else 'H' for p,n in _iterCircularPrevNext(outerContour) ])
     # special case, see test_306011654_pescara_pattinodromo
     if all([p=='L' for p in sequence]):
         return None
@@ -579,7 +583,7 @@ def findClusters(skeleton, candidates, contourVertices, edgeContours, thresh):
         for c in candidates[1:]:
             arc = skeleton[c]
             # use Manhattan distance
-            if abs(ref.source.x-arc.source.x) + abs(ref.source.y-arc.source.y) < thresh:
+            if abs(ref.source[0]-arc.source[0]) + abs(ref.source[1]-arc.source[1]) < thresh:
                 cluster.append(c)
         for c in cluster:
             if c in candidates:
@@ -603,8 +607,8 @@ def findClusters(skeleton, candidates, contourVertices, edgeContours, thresh):
             contourSinks = []
             for node in cluster:
                 sinks = skeleton[node].sinks
-                contourSinks.extend( [s for s in sinks if s in contourVertices] )
-                nrOfContourSinks += sum(el in sinks for el in contourVertices)
+                contourSinks.extend( [s for s in sinks if isInArray(contourVertices,s)] )
+            nrOfContourSinks = len(contourSinks)
 
             # less than 2, then we can merge the cluster
             if nrOfContourSinks < 2:
@@ -616,7 +620,7 @@ def findClusters(skeleton, candidates, contourVertices, edgeContours, thresh):
             minDist = 3*thresh
             combs = combinations(contourSinks,2)
             for pair in combs:
-                minDist = min( (pair[0]-pair[1]).magnitude, minDist )
+                minDist = min( np.linalg.norm(pair[0]-pair[1]), minDist )
  
             if minDist > 2*thresh:
                 clusters.append(cluster)    # contour sinks too far, so merge
@@ -631,19 +635,19 @@ def mergeCluster(skeleton, cluster):
     x,y,height = (0.0,0.0,0.0)
     mergedSources = []
     for node in cluster:
-        x += skeleton[node].source.x
-        y += skeleton[node].source.y
+        x += skeleton[node].source[0]
+        y += skeleton[node].source[1]
         height += skeleton[node].height
         mergedSources.append(skeleton[node].source)
     N = len(cluster)
-    new_source = mathutils.Vector((x/N,y/N))
+    new_source = np.array((x/N,y/N))
     new_height = height/N
 
     # collect all sinks of merged nodes, that point outside the cluster
     new_sinks = []
     for node in cluster:
         for sink in skeleton[node].sinks:
-            if sink not in mergedSources and sink not in new_sinks:
+            if not isInArray(mergedSources,sink) and sink not in new_sinks:
                 new_sinks.append(sink)
 
     # create the merged node
@@ -719,7 +723,7 @@ def detectDormers(slav, edgeContours):
             code = '0'
         return code
 
-    sequence = "".join([ coder(p.norm.cross(n.norm)) for p,n in _iterCircularPrevNext(outerContour) ])
+    sequence = "".join([ coder(np.cross(p.norm,n.norm)) for p,n in _iterCircularPrevNext(outerContour) ])
     N = len(sequence)
    # match a pattern of almost rectangular turns to right, then to left, to left and again to right
     # positive lookahead used to find overlapping patterns
@@ -950,19 +954,16 @@ def polygonize(verts, firstVertIndex, numVerts, holesInfo=None, height=0., tan=0
                         new list.              
     """
     # assume that all vertices of polygon and holes have the same z-value
-    zBase = verts[firstVertIndex][2]
+    zBase = verts[firstVertIndex,2]
 
     # compute center of gravity of polygon
-    center = mathutils.Vector((0.0,0.0,0.0))
-    for i in range(firstVertIndex,firstVertIndex+numVerts):
-        center += verts[i]
-    center /= numVerts
+    center = np.average(verts,axis=0) 
     center[2] = 0.0
 
     # create 2D edges as list and as contours for skeletonization and graph construction
     lastUIndex = numVerts-1
     lastVertIndex = firstVertIndex + lastUIndex
-    if unitVectors:
+    if unitVectors is not None:
         edges2D = [
             Edge2(index, index+1, unitVectors[uIndex], verts, center)\
                 for index, uIndex in zip( range(firstVertIndex, lastVertIndex), range(lastUIndex) )
@@ -979,7 +980,7 @@ def polygonize(verts, firstVertIndex, numVerts, holesInfo=None, height=0., tan=0
     if holesInfo:
         for firstVertIndexHole,numVertsHole in holesInfo:
             lastVertIndexHole = firstVertIndexHole + numVertsHole-1
-            if unitVectors:
+            if unitVectors is not None:
                 lastUIndex = uIndex+numVertsHole-1
                 holeEdges = [
                     Edge2(index, index+1, unitVectors[uIndex], verts, center)\
