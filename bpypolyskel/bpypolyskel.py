@@ -30,9 +30,6 @@ import numpy as np
 from .bpyeuclid import *
 from .poly2FacesGraph import poly2FacesGraph
 
-from .debugPlot import *
-plotState = [1]
-
 EPSILON = 0.00001
 PARALLEL = 0.01     # set this value to 1-cos(alpha), where alpha is the largest angle 
                     # between lines to accept them as parallelaccepted as 'parallel'.
@@ -876,9 +873,6 @@ return:         A list of subtrees (of type Subtree) of the straight skeleton. A
 
     output = mergeNodeClusters(output,edgeContours)
     removeGhosts(output)
-
-    if 1 in plotState:
-        plotIndexedSkeleton(output,edgeContours,'new version')
 
     return output
 
