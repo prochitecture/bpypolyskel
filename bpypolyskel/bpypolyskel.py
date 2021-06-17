@@ -25,14 +25,13 @@ import heapq
 from collections import namedtuple
 from itertools import *
 from collections import Counter
-from operator import itemgetter
-import re
 import numpy as np
-from numpy.lib.function_base import vectorize
-
 
 from .bpyeuclid import *
 from .poly2FacesGraph import poly2FacesGraph
+
+from .debugPlot import *
+plotState = [1]
 
 EPSILON = 0.00001
 PARALLEL = 0.01     # set this value to 1-cos(alpha), where alpha is the largest angle 
@@ -478,12 +477,12 @@ def checkEdgeCrossing(skeleton):
     nrOfIntsects = 0
     for e in combs:
         # check for intersection, exclude endpoints
-        denom = ((e[0].p2.x-e[0].p1.x)*(e[1].p2.y-e[1].p1.y))-((e[0].p2.y-e[0].p1.y)*(e[1].p2.x-e[1].p1.x))
+        denom = ((e[0].p2[0]-e[0].p1[0])*(e[1].p2[1]-e[1].p1[1]))-((e[0].p2[1]-e[0].p1[1])*(e[1].p2[0]-e[1].p1[0]))
         if not denom:
             continue
-        n1 = ((e[0].p1.y-e[1].p1.y)*(e[1].p2.x-e[1].p1.x))-((e[0].p1.x-e[1].p1.x)*(e[1].p2.y-e[1].p1.y))
+        n1 = ((e[0].p1[1]-e[1].p1[1])*(e[1].p2[0]-e[1].p1[0]))-((e[0].p1[0]-e[1].p1[0])*(e[1].p2[1]-e[1].p1[1]))
         r = n1 / denom
-        n2 = ((e[0].p1.y-e[1].p1.y)*(e[0].p2.x-e[0].p1.x))-((e[0].p1.x-e[1].p1.x)*(e[0].p2.y-e[0].p1.y))
+        n2 = ((e[0].p1[1]-e[1].p1[1])*(e[0].p2[0]-e[0].p1[0]))-((e[0].p1[0]-e[1].p1[0])*(e[0].p2[1]-e[0].p1[1]))
         s = n2 / denom
         if ((r <= EPSILON or r >= 1.0-EPSILON) or (s <= EPSILON or s >= 1.0-EPSILON)):
             continue    # no intersection
@@ -495,7 +494,8 @@ def checkEdgeCrossing(skeleton):
 def removeGhosts(skeleton):
     # remove loops
     for arc in skeleton:
-        if arc.source in arc.sinks:
+        if isInVecList(arc.source, arc.sinks):
+        # if arc.source in arc.sinks:
             arc.sinks.remove(arc.source)
     # find and resolve parallel or crossed skeleton edges
     for arc in skeleton:
@@ -508,8 +508,8 @@ def removeGhosts(skeleton):
             for pair in combs:
                 s0 = pair[0]-source
                 s1 = pair[1]-source
-                s0m = s0.magnitude
-                s1m = s1.magnitude
+                s0m = np.linalg.norm(s0)
+                s1m = np.linalg.norm(s1)
                 if s0m!=0.0 and s1m!=0.0:
                     # check if this pair of edges is parallel
                     dotCosineAbs = abs(s0.dot(s1) / (s0m*s1m) - 1.0)
@@ -521,7 +521,7 @@ def removeGhosts(skeleton):
                             farSink = pair[0]
                             nearSink = pair[1]
 
-                        nodeIndexList = [i for i, node in enumerate(skeleton) if node.source == nearSink]
+                        nodeIndexList = [i for i, node in enumerate(skeleton) if (node.source == nearSink).all(0)]
                         if not nodeIndexList:   # both sinks point to polygon vertices (maybe small triangle)
                             break
 
@@ -594,7 +594,7 @@ def findClusters(skeleton, candidates, contourVertices, edgeContours, thresh):
                 isApseCluster = False
                 for apseCenter in apseCenters:
                     for node in cluster:
-                        if abs(apseCenter.x-skeleton[node].source.x) + abs(apseCenter.y-skeleton[node].source.y) < 3.0:
+                        if abs(apseCenter[0]-skeleton[node].source[0]) + abs(apseCenter[1]-skeleton[node].source[1]) < 3.0:
                             isApseCluster = True
                             break
                     if isApseCluster:
@@ -647,7 +647,7 @@ def mergeCluster(skeleton, cluster):
     new_sinks = []
     for node in cluster:
         for sink in skeleton[node].sinks:
-            if not isInArray(mergedSources,sink) and sink not in new_sinks:
+            if not isInVecList(sink, mergedSources) and not isInVecList(sink, new_sinks):
                 new_sinks.append(sink)
 
     # create the merged node
@@ -656,11 +656,11 @@ def mergeCluster(skeleton, cluster):
     # redirect all sinks of nodes outside the cluster, that pointed to 
     # one of the clustered nodes, to the new node
     for arc in skeleton:
-        if arc.source not in mergedSources:
+        if not isInVecList(arc.source, mergedSources):
             to_remove = []
             for i,sink in enumerate(arc.sinks):
-                if sink in mergedSources:
-                    if new_source in arc.sinks:
+                if isInVecList(sink, mergedSources):
+                    if isInVecList(new_source,arc.sinks):
                         to_remove.append(i)
                     else: 
                         arc.sinks[i] = new_source
@@ -683,7 +683,7 @@ def mergeNodeClusters(skeleton,edgeContours):
             source_index = sources[source]
             # source exists, merge sinks
             for sink in p.sinks:
-                if sink not in skeleton[source_index].sinks:
+                if not isInVecList(sink, skeleton[source_index].sinks):
                     skeleton[source_index].sinks.append(sink)
             to_remove.append(i)
         else:
@@ -873,8 +873,12 @@ return:         A list of subtrees (of type Subtree) of the straight skeleton. A
                 else:
                     output.append(arc)
 
+
     output = mergeNodeClusters(output,edgeContours)
     removeGhosts(output)
+
+    if 1 in plotState:
+        plotIndexedSkeleton(output,edgeContours,'new version')
 
     return output
 
@@ -1012,10 +1016,10 @@ def polygonize(verts, firstVertIndex, numVerts, holesInfo=None, height=0., tan=0
         tan_alpha = tan
     skeleton_nodes3D = []
     for arc in skeleton:
-        node = mathutils.Vector((arc.source.x, arc.source.y, arc.height*tan_alpha+zBase))
+        node = np.array((arc.source[0], arc.source[1], arc.height*tan_alpha+zBase))
         skeleton_nodes3D.append(node+center)
     firstSkelIndex = len(verts) # first skeleton index in verts
-    verts.extend(skeleton_nodes3D)
+    verts = np.vstack((verts,skeleton_nodes3D))
 
     # instantiate the graph for faces
     graph = poly2FacesGraph()
@@ -1034,11 +1038,11 @@ def polygonize(verts, firstVertIndex, numVerts, holesInfo=None, height=0., tan=0
         aIndex = index + firstSkelIndex
         for sink in arc.sinks:
             # first search in input edges
-            edge = [edge for edge in edges2D if edge.p1==sink]
+            edge = [edge for edge in edges2D if (edge.p1 == sink).all(0)]
             if edge:
                 sIndex = edge[0].i1
             else: # then it should be a skeleton node
-                skelIndex = [index for index, arc in enumerate(skeleton) if arc.source==sink]
+                skelIndex = [index for index, arc in enumerate(skeleton) if (arc.source == sink).all(0)]
                 if skelIndex:
                     sIndex = skelIndex[0] + firstSkelIndex
                 else:
@@ -1062,15 +1066,15 @@ def polygonize(verts, firstVertIndex, numVerts, holesInfo=None, height=0., tan=0
             for prev, this, _next in _iterCircularPrevThisNext(face):
                 s0 = verts[this]-verts[prev]  # verts are 3D vectors
                 s1 = verts[_next]-verts[this]
-                s0 = s0.xy  # need 2D-vectors
-                s1 = s1.xy 
-                s0m = s0.magnitude
-                s1m = s1.magnitude
+                s0 = s0[:2]  # need 2D-vectors
+                s1 = s1[:2] 
+                s0m = np.linalg.norm(s0)
+                s1m = np.linalg.norm(s1)
                 if s0m and s1m:
                     dotCosine = s0.dot(s1) / (s0m*s1m)
                 else:
                     continue
-                crossSine = s0.cross(s1)
+                crossSine = np.cross(s0,s1)
                 if abs(dotCosine + 1.0) < PARALLEL and crossSine > -EPSILON: # spike edge to left
                     # the spike's peak is at 'this'
                     hadSpikes = True
@@ -1144,10 +1148,10 @@ def polygonize(verts, firstVertIndex, numVerts, holesInfo=None, height=0., tan=0
                 if counts[this] < 3 and this >= firstSkelIndex:
                     s0 = verts[this]-verts[prev]
                     s1 = verts[_next]-verts[this]
-                    s0 = mathutils.Vector((s0[0],s0[1]))    # need 2D-vector
-                    s1 = mathutils.Vector((s1[0],s1[1]))
-                    s0m = s0.magnitude
-                    s1m = s1.magnitude
+                    s0 = s0[:2]  # need 2D-vectors
+                    s1 = s1[:2] 
+                    s0m = np.linalg.norm(s0)
+                    s1m = np.linalg.norm(s1)
                     if s0m!=0.0 and s1m!=0.0:
                         dotCosine = s0.dot(s1) / (s0m*s1m)
                         if abs(dotCosine - 1.0) < PARALLEL: # found adjacent parallel edges
@@ -1167,7 +1171,7 @@ def polygonize(verts, firstVertIndex, numVerts, holesInfo=None, height=0., tan=0
             face.remove(item) 
 
     if faces is None:
-        return faces3D
+        return faces3D, verts
     else:
         faces.extend(faces3D)
-        return faces
+        return faces, verts

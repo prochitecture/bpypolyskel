@@ -1,7 +1,15 @@
 import numpy as np
 
-def normalize(vector): # normlaize to unit vector (unfortunately does not exist in numpy)
+# numpy special functions -------------------------------------------------
+
+def normalize(vector): # normalize to unit vector (unfortunately does not exist in numpy)
     return vector / np.linalg.norm(vector)
+
+def isInArray(row,arr): # check if a row vector is in a matrix
+    return False if arr is None else any((arr[:]==row).all(1))
+
+def isInVecList(row,veclst):
+    return isInArray(np.array(veclst),row) if veclst else False
 
 # -------------------------------------------------------------------------
 # from https://bryceboe.com/2006/10/23/line-segment-intersection-algorithm/,
