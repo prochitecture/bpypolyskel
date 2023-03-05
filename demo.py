@@ -69,7 +69,7 @@ def create_roof(pitch, ax):
     for face in faces:
         for edge in zip(face, face[1:] + face[:1]):
             p1, p2 = VERTS[edge[0]], VERTS[edge[1]]
-            ax.plot([p1.x,p2.x], [p1.y,p2.y], [p1.z,p2.z], 'k')
+            ax.plot([p1.x, p2.x], [p1.y, p2.y], [p1.z, p2.z], 'k')
 
     ax.axis('equal')
     ax.set_zlim(0, 30)
