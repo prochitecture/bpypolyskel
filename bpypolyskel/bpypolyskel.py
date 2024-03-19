@@ -274,12 +274,16 @@ class _LAV:
         return self._len
 
     def __iter__(self):
+        visited = set()
         cur = self.head
         while True:
             yield cur
             cur = cur.next
             if cur == self.head:
                 return
+            if cur in visited:
+                raise RuntimeError("(Infinite loop) circular reference detected in LAV.")
+            visited.add(cur)
 
 class _SLAV:
     def __init__(self, edgeContours):
