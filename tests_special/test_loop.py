@@ -3,7 +3,7 @@ from mathutils import Vector
 from bpypolyskel import bpypolyskel
 
 verts = [
-    Vector((183.2800, 143.3600, 0.0)), # This causes an infinite loop in _LAV 
+    Vector((183.2800, 143.3600, 0.0)), # This causes an infinite loop in _LAV. clean_verts prevents it.
     Vector((220.2800, 143.3600, 0.0)),
     Vector((220.2800, -2.0800, 0.0)),
     Vector((493.6000, -2.0800, 0.0)),
@@ -21,6 +21,8 @@ verts = [
     Vector((10.8800, 493.8400, 0.0)),
     Vector((10.8800, 143.3600, 0.0))    
 ]
+
+verts = bpypolyskel.clean_verts(verts)
 
 unitVectors = None
 

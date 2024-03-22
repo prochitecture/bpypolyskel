@@ -1174,3 +1174,33 @@ def polygonize(verts, firstVertIndex, numVerts, holesInfo=None, height=0., tan=0
     else:
         faces.extend(faces3D)
         return faces
+
+def clean_verts(coords, threshold = 0.99985):
+    """
+    Iterate all coordinates and remove duplicate points and straight angles. Return the clean list of coordinates.    
+    'threshold' is the cosine of the angles to erase. Default is cos(1 degree)~=0.99985, to remove straight angles with
+    a slight offset.
+    """
+    
+    cur_list = []
+    for i in range(len(coords)):
+        prev = cur_list[-1] if cur_list else coords[-1]
+        candidate = coords[i]
+        nextp = coords[i+1 if i+1 < len(coords) else 0]
+
+        v1 = candidate - prev
+        v2 = nextp - candidate
+        v1norm = v1.magnitude
+        v2norm = v2.magnitude
+        if v1norm < EPSILON or v2norm < EPSILON:
+            print(f"Removing duplicate point at {i}: {coords[i]}")
+            continue
+        v1 = v1 / v1norm
+        v2 = v2 / v2norm
+
+        if v1.dot(v2) >= threshold:
+            print(f"Removing straight angle at point {i}: {coords[i]}")
+            continue
+    
+        cur_list.append(candidate)
+    return cur_list
