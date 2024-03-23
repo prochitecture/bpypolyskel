@@ -185,7 +185,8 @@ class _LAVertex:
                     xnext	= ( (edge.bisector_next.v.normalized()).cross( (b - edge.bisector_next.p).normalized() )) > -EPSILON
                     xedge	= ( edge.edge.norm.cross( (b - edge.edge.p1).normalized() )) > -EPSILON
 
-                    if not (xprev and xnext and xedge):
+                    parallel = edge.bisector_next.v.length == 0.
+                    if not (xprev and xnext and xedge and not parallel):
                         # Candidate discarded
                         continue
 
