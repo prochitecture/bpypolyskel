@@ -179,8 +179,8 @@ class _LAVertex:
                     if b is None:
                         continue
 
-					# check eligibility of b
-					# a valid b should lie within the area limited by the edge and the bisectors of its two vertices:
+                    # check eligibility of b
+                    # a valid b should lie within the area limited by the edge and the bisectors of its two vertices:
                     xprev	= ( (edge.bisector_prev.v.normalized()).cross( (b - edge.bisector_prev.p).normalized() )) < EPSILON
                     xnext	= ( (edge.bisector_next.v.normalized()).cross( (b - edge.bisector_next.p).normalized() )) > -EPSILON
                     xedge	= ( edge.edge.norm.cross( (b - edge.edge.p1).normalized() )) > -EPSILON
@@ -219,12 +219,12 @@ class _LAV:
     # edgeContour is a list of edges of class Edge2
     def from_polygon(cls, edgeContour, slav):
         lav = cls(slav)
-        for prev, next in _iterCircularPrevNext(edgeContour):
+        for prev, nxt in _iterCircularPrevNext(edgeContour):
             # V(i) is the current vertex
             # prev is the edge from vertex V(i-1) to V(i)
             # this is the edge from vertex V(i-) to V(i+1)
             lav._len += 1
-            vertex = _LAVertex(next.p1, prev, next)
+            vertex = _LAVertex(nxt.p1, prev, nxt)
             vertex.lav = lav
             if lav.head is None:
                 lav.head = vertex
@@ -275,12 +275,16 @@ class _LAV:
         return self._len
 
     def __iter__(self):
+        visited = set()
         cur = self.head
         while True:
             yield cur
             cur = cur.next
             if cur == self.head:
                 return
+            if cur in visited:
+                raise RuntimeError("(Infinite loop) circular reference detected in LAV.")
+            visited.add(cur)
 
 class _SLAV:
     def __init__(self, edgeContours):
