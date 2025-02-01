@@ -331,7 +331,7 @@ class _SLAV:
         arcs.append( Subtree(ev_edge.intersection_point, ev_edge.distance, [ev_edge.vertex_a.point,ev_edge.vertex_b.point,p] ) )
 
         # from split events
-        arcs.append( Subtree(p, (ev_prev.distance+ev_next.distance)/2.0, [v_prev.point,v_next.point])   )
+        arcs.append( Subtree(p, ev_edge.distance, [v_prev.point,v_next.point])   )
     
         for v in toRemove:
             v.invalidate()
